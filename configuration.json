@@ -1,0 +1,4 @@
+{
+    "environmentVariablesFileLocation": "example.env",
+    "port": 8888
+}
