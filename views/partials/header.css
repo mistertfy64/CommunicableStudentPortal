@@ -1,0 +1,42 @@
+.topnav{
+	background-color:#262626;
+	overflow:hidden;
+}
+.topnav a{
+	float:left;
+	display:block;
+	color:#eeeeee;
+	text-align:center;
+	padding:none;
+	text-decoration:none;
+	font-size:28px;
+}
+.topnav a:hover{
+	color:#000;
+	overflow:hidden;
+}
+.dropdown{
+	float:left;
+	overflow:hidden;
+}
+.dropdown-menu{
+	display:none;
+	position:absolute;
+	background-color:#333;
+	min-width:180px;
+	z-index:1;
+}
+.dropdown .dropdown-btn{
+	font-size:20px;
+	padding:10px;
+	background-color:#333;
+	color:#EEE;
+	border:none;
+}
+.dropdown:hover .dropdown-menu{
+	display:block;
+}
+.topnav a.icon{
+	float:right;
+	display:none;
+}
