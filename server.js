@@ -7,6 +7,7 @@ const _ = require("lodash");
 
 
 const app = express();
+app.use(express.static("public"))
 
 let loadedConfiguration = JSON.parse(fs.readFileSync("configuration.json", "utf8"));
 // get configuration and credentials

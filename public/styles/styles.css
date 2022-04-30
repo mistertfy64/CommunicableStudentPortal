@@ -4,10 +4,30 @@
 */
 
 :root {
-    /* This is the background color to be used for the program. */
-    --default-background-color: "#ffffff";
+	/* This is the background color to be used for the program. */
+	--default-background-color: #ffffff;
+
+	/* This is the background color to be used for the top navigation bar. */
+	--default-top-navigation-bar-background-color: #182859;
+	--default-top-navigation-bar-text-color: #ffffff;
 }
 
+/*
+    For advanced users only!
+    Editing it may make the app look weird!
+*/
+
 body {
-    background-color: var(--default-background-color); 
+	background-color: var(--default-background-color);
+
+    margin: 0;
+}
+
+.top-navigation-bar {
+	background-color: var(--default-top-navigation-bar-background-color);
+	color: var(--default-top-navigation-bar-background-color);  
+}
+
+.top-navigation-bar a {
+    color: var(--default-top-navigation-bar-text-color);
 }
