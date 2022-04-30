@@ -17,11 +17,13 @@
   },
   "homepage": "https://github.com/mistertfy64/CommunicableStudentPortal#readme",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "chalk": "^5.0.1",
     "cheerio": "^1.0.0-rc.10",
     "dotenv": "^16.0.0",
     "ejs": "^3.0.2",
     "express": "^4.17.3",
+    "lodash": "^4.17.21",
     "mongoose": "^5.13.14"
   }
 }

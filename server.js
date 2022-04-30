@@ -3,12 +3,25 @@ const express = require("express");
 const fs = require("fs");
 const { request } = require("http");
 const path = require("path");
+const _ = require("lodash");
 
-const app = express()
+
+const app = express();
+
+let loadedConfiguration = JSON.parse(fs.readFileSync("configuration.json", "utf8"));
 // get configuration and credentials
-const configuration = JSON.parse(fs.readFileSync("configuration.json", "utf8"));
+const configuration = _.cloneDeep(loadedConfiguration)
+// derive a safer configuration object
+const safeConfiguration = stripSensitiveConfigurationData(loadedConfiguration);
 
 require('dotenv').config({path: path.join(__dirname, configuration.environmentVariablesFileLocation)});
+
+
+function stripSensitiveConfigurationData(loadedConfiguration){
+    let newConfiguration = _.cloneDeep(loadedConfiguration);
+    delete newConfiguration.environmentVariablesFileLocation;
+    return newConfiguration;
+}
 
 
 app.set('view engine', 'ejs');

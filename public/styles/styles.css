@@ -1,0 +1,13 @@
+/*
+    This is the CSS file that is used for the program.
+    Feel free to edit to your liking.
+*/
+
+:root {
+    /* This is the background color to be used for the program. */
+    --default-background-color: "#ffffff";
+}
+
+body {
+    background-color: var(--default-background-color); 
+}
