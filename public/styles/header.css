@@ -14,12 +14,12 @@
   }
   
   .topnav a:hover {
-	background-color: rgb(255, 255, 255);
+	background-color: white;
 	color: black;
   }
   
   .topnav a.active {
-	background-color: #000000;
+	background-color: #000;
 	color: white;
   }
 
@@ -32,7 +32,7 @@
 	font-size: 16px;
 	border: none;
 	outline: none;
-	color: white;
+	color: #000;
 	padding: 14px 16px;
 	background-color: inherit;
 	font-family: inherit; 
@@ -67,4 +67,14 @@
   
   .dropdown:hover .dropdown-content {
 	display: block;
+  }
+
+  .sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+  }
+
+  .sticky + .content {
+	padding-top: 60px;
   }
