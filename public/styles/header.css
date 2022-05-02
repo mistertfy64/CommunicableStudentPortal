@@ -19,7 +19,7 @@
 	float:left;
 	overflow:hidden;
 }
-.dropdown-menu{
+.dropdown-content{
 	display:none;
 	position:absolute;
 	background-color:#333;
