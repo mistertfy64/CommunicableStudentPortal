@@ -20,10 +20,6 @@
   .topnav a.active {
 	background-color: #000000;
 	color: white;
-
-  .dropdown{
-	float: left;
-	overflow: hidden;
   }
 
   .dropdown .dropbtn {
