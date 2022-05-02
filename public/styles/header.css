@@ -22,6 +22,11 @@
 	color: white;
   }
 
+  .dropdown {
+	float: left;
+	overflow: hidden;
+  }
+
   .dropdown .dropbtn {
 	font-size: 16px;
 	border: none;
