@@ -84,6 +84,13 @@
 	display: none;
   }
 
+  .login-container{
+	width:28px; 
+	height:28px; 
+	margin:auto;
+	float:right;
+  }
+
   @media screen and (max-width: 600px) {
 	.topnav a:not(:first-child) {display: none;}
 	.topnav a.icon {
