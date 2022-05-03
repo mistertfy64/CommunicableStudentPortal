@@ -35,6 +35,9 @@ app.get("/login", (request, response) => {
     response.render("pages/login"); 
 });
 
+app.get("/chatboard", (request, response) => {
+    response.render("pages/chatboard-menu"); 
+});
 
 app.listen(configuration.port, () => {
     console.log(`App listening on port ${configuration.port}`);
