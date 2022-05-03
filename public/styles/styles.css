@@ -28,7 +28,6 @@ body {
 	background-color: var(--default-background-color);
 	margin: 0;
 	font-family: var(--default-font);
-	padding:5px 30px 10px 30px;
 }
 
 .logo {
