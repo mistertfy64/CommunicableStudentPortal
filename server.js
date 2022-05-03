@@ -35,7 +35,7 @@ app.get("/login", (request, response) => {
     response.render("pages/login"); 
 });
 
-app.get("/chat-board", (request, response) => {
+app.get("/chatboard", (request, response) => {
     response.render("pages/chatboard-menu"); 
 });
 
