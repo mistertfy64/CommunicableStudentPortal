@@ -43,6 +43,10 @@ app.get("/about", (request, response) => {
     response.render("pages/about"); 
 });
 
+app.get("/event", (request, response) => {
+    response.render("pages/events"); 
+});
+
 app.listen(configuration.port, () => {
     console.log(`App listening on port ${configuration.port}`);
 });
