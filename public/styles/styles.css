@@ -70,14 +70,15 @@ body {
 
 .navbar a:hover,
 .top-navigation-bar-dropdown:hover .drop-down-button {
-	background-color: #182859;
-	color: #000;
+	background-color: white;
+	color: #182859;
 }
 
 .top-navigation-bar-dropdown-content {
 	display: none;
 	position: absolute;
-	background-color: #f9f9f9;
+	background-color: white;
+	color:#182859;
 	min-width: 160px;
 	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 	z-index: 1;
