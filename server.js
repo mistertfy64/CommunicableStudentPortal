@@ -28,15 +28,15 @@ function stripSensitiveConfigurationData(loadedConfiguration){
 app.set('view engine', 'ejs');
 
 app.get("/", (request, response) => {
-    response.render("pages/index"); 
+    response.render("pages/index", {configuration: safeConfiguration}); 
 });
 
 app.get("/login", (request, response) => {
-    response.render("pages/login"); 
+    response.render("pages/login", {configuration: safeConfiguration}); 
 });
 
 app.get("/chatboard", (request, response) => {
-    response.render("pages/chatboard-menu"); 
+    response.render("pages/chatboard-menu", {configuration: safeConfiguration}); 
 });
 
 app.get("/about", (request, response) => {

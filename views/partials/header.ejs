@@ -4,39 +4,27 @@
 <link href="/styles/styles.css" rel="stylesheet" />
 <img src="/assets/images/CSP Logo.png" alt="CSP Logo" class="logo" width:>
 <div id="top-navigation-bar">
-	<a class='active' href='/'>HOME</a>
-	<div class='top-navigation-bar-dropdown'>
-		<button class='drop-down-button'>INFORMATION</button>
-		<div class='top-navigation-bar-dropdown-content'>
-			<a href='/about'>ABOUT</a>
-			<a href='/update'>UPDATES</a>
-		</div>
-	</div>
-	<a href='/chatboard'>CHAT BOARDS</a>
-	<a href='/events'>EVENTS</a>
-	<a href='/studymaterial-menu'>STUDY MATERIAL</a>
-	<a href='/leaderboard'>LEADERBOARD</a>
-	<a href='/contact'>CONTACT</a>
-	<div class='top-navigation-bar-dropdown'>
-		<button class='drop-down-button'>SOCIAL</button>
-		<div class='top-navigation-bar-dropdown-content'>
-			<a href=''>EMAIL</a>
-			<a href=''>FACEBOOK</a>
-			<a href=''>LINE</a>
-			<a href=''>YOUTUBE</a>
-		</div>
-	</div>
-
-	<div class="login-container">
-		<!-- <script>
-			if(){
-			echo"<a href="/login">LOGIN</a>";"
-			}if else{
-
-			}
-		</script> -->
-	</div>
 	
+	<% const newConfiguration = Object.entries(configuration).filter(([key, value]) => {return value.position >= 1;}).sort((first, second) => first[1] - second[1]); %>
+	<% for (value of newConfiguration){ %>
+		<% content = value[1]; %>
+		<% if (content.dropdownContent){ %>
+			<%- `<div class='top-navigation-bar-dropdown'>` %>
+			<%- `<button class='drop-down-button'>${content.text}</button>` %>
+			<%- `<div class="top-navigation-bar-dropdown-content">` %>
+			<% const newDropdownContent = Object.entries(content.dropdownContent).sort((first, second) => first[1] - second[1]); %>
+			<% for (dropdownChoice of newDropdownContent){ %>
+				<% dropdownChoiceContent = dropdownChoice[1] %>
+				<%- `<a href=${dropdownChoiceContent.link}>${dropdownChoiceContent.text}</a>` %>
+			<% } %>
+			<%- `</div>` %>
+			<%- `</div>` %>
+
+			<% } else { %>
+			<%- `<a href=${content.link}>${content.text}</a>` %>
+		<% } %>
+	<% } %>
+
 	<a href='javascript:void(0)' class='icon' onclick='myFunction()'>&#9776;</a>
 </div>
 
