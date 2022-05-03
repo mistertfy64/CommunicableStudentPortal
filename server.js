@@ -1,13 +1,23 @@
 // insert modules here
 const express = require("express");
 const fs = require("fs");
-const { request } = require("http");
+const { request } = require("https");
 const path = require("path");
 const _ = require("lodash");
+const helmet = require('helmet');
+const rateLimit = require('express-rate-limit');
 
+const app = express().disable("x-powered-by");;
 
-const app = express();
-app.use(express.static("public"))
+// Limit Allocation of Resources Without Limits or Throttling
+const limiter = rateLimit({
+    windowMs: 1*1000, // 1 second
+    max: 5,
+    message: "Too many requests from this IP, please refresh the page"
+});
+
+app.use(limiter, express.static("public"))
+app.use(helmet());
 
 let loadedConfiguration = JSON.parse(fs.readFileSync("configuration.json", "utf8"));
 // get configuration and credentials
@@ -16,7 +26,6 @@ const configuration = _.cloneDeep(loadedConfiguration)
 const safeConfiguration = stripSensitiveConfigurationData(loadedConfiguration);
 
 require('dotenv').config({path: path.join(__dirname, configuration.environmentVariablesFileLocation)});
-
 
 function stripSensitiveConfigurationData(loadedConfiguration){
     let newConfiguration = _.cloneDeep(loadedConfiguration);
