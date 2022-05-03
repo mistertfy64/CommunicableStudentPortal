@@ -39,6 +39,26 @@ app.get("/chatboard", (request, response) => {
     response.render("pages/chatboard-menu", {configuration: safeConfiguration}); 
 });
 
+app.get("/about", (request, response) => {
+    response.render("pages/about"); 
+});
+
+app.get("/event", (request, response) => {
+    response.render("pages/event"); 
+});
+
+app.get("/contact", (request, response) => {
+    response.render("pages/contact"); 
+});
+
+app.get("/update", (request, response) => {
+    response.render("pages/update"); 
+});
+
+app.get("/study-material", (request, response) => {
+    response.render("pages/studymaterial-menu"); 
+});
+
 app.listen(configuration.port, () => {
     console.log(`App listening on port ${configuration.port}`);
 });
