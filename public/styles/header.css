@@ -85,11 +85,12 @@
   }
 
   .login-container{
-	font-size:16px;
+	float: right;
+	color: #ffffff;
+	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
-	text-align: center;
-	float: right;
+	font-size: 16px;
   }
 
   @media screen and (max-width: 600px) {
