@@ -30,6 +30,14 @@ body {
 	font-family: var(--default-font);
 }
 
+.logo {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	height:50%;
+}
+
 /* Login Page */
 
 
@@ -149,4 +157,17 @@ body {
 		display: block;
 		text-align: left;
 	}
+}
+
+/* Banner */
+
+.banner{
+	float: none;
+	display: block;
+	margin-left: auto;
+  	margin-right: auto;
+	width:100%;
+	max-width:1000px;
+	height:auto;
+
 }
