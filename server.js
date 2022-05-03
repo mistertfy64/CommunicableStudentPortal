@@ -6,7 +6,7 @@ const path = require("path");
 const _ = require("lodash");
 const helmet = require('helmet');
 
-const app = express();
+const app = express().disable("x-powered-by");;
 app.use(express.static("public"))
 app.use(helmet());
 
