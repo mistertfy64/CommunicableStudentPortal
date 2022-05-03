@@ -87,9 +87,12 @@
   .login-container{
 	width: 16px; 
 	height: 16px; 
-	padding: 0px 0px 20px 0px;
+	padding: 14px 16px;
+	margin-top: 6px;
+	margin-right:18px;
 	text-decoration: none;
 	float: right;
+
 	;
   }
 
