@@ -1,13 +1,14 @@
 // insert modules here
 const express = require("express");
 const fs = require("fs");
-const { request } = require("http");
+const { request } = require("https");
 const path = require("path");
 const _ = require("lodash");
-
+const helmet = require('helmet');
 
 const app = express();
 app.use(express.static("public"))
+app.use(helmet());
 
 let loadedConfiguration = JSON.parse(fs.readFileSync("configuration.json", "utf8"));
 // get configuration and credentials
