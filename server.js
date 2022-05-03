@@ -9,6 +9,7 @@ const rateLimit = require('express-rate-limit');
 
 const app = express().disable("x-powered-by");;
 
+// Limit Allocation of Resources Without Limits or Throttling
 const limiter = rateLimit({
     windowMs: 1*1000, // 1 second
     max: 5,
