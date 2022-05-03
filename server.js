@@ -44,7 +44,19 @@ app.get("/about", (request, response) => {
 });
 
 app.get("/event", (request, response) => {
-    response.render("pages/events"); 
+    response.render("pages/event"); 
+});
+
+app.get("/contact", (request, response) => {
+    response.render("pages/contact"); 
+});
+
+app.get("/update", (request, response) => {
+    response.render("pages/update"); 
+});
+
+app.get("/study-material", (request, response) => {
+    response.render("pages/studymaterial-menu"); 
 });
 
 app.listen(configuration.port, () => {
