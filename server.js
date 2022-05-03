@@ -43,7 +43,7 @@ app.get("/about", (request, response) => {
     response.render("pages/about"); 
 });
 
-app.get("/event", (request, response) => {
+app.get("/events", (request, response) => {
     response.render("pages/event"); 
 });
 
@@ -51,11 +51,15 @@ app.get("/contact", (request, response) => {
     response.render("pages/contact"); 
 });
 
-app.get("/update", (request, response) => {
-    response.render("pages/update"); 
+app.get("/leaderboard", (request, response) => {
+    response.render("pages/leaderboard"); 
 });
 
-app.get("/study-material", (request, response) => {
+app.get("/update", (request, response) => {
+    response.render("pages/updates"); 
+});
+
+app.get("studymaterial-menu", (request, response) => {
     response.render("pages/studymaterial-menu"); 
 });
 
