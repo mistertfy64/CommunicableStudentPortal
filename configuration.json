@@ -1,5 +1,45 @@
 {
     "environmentVariablesFileLocation": "example.env",
     "port": 8888,
-    "name": "Development"
+    "name": "Development",
+
+    "topNavigationBarSections": {
+        "home": {
+            "text": "Home",
+            "link": "/",
+            "position": 1
+        },
+        "repository": {
+            "text": "GitHub Repository",
+            "link": "",
+            "position": 2
+        },
+        "chatBoards": {
+            "text": "Chat Boards",
+            "link": "",
+            "position": 3
+        },
+        "dropDownMenu": {
+            "text": "TODO: Remove me!",
+            "link": "",
+            "position": 4,
+            "dropdownContent": {
+                "first": {
+                    "text": "This ",
+                    "link": "",
+                    "position": 1
+                },
+                "second": {
+                    "text": "works!",
+                    "link": "",
+                    "position": 2
+                }
+            }
+        },
+        "login": {
+            "text": "Login",
+            "link": "",
+            "position": -1
+        }
+    }
 }
