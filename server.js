@@ -4,7 +4,7 @@ const fs = require("fs");
 const { request } = require("http");
 const path = require("path");
 const _ = require("lodash");
-
+const mongoose = require("mongoose");
 
 const app = express();
 app.use(express.static("public"))
@@ -17,6 +17,15 @@ const safeConfiguration = stripSensitiveConfigurationData(loadedConfiguration);
 
 require('dotenv').config({path: path.join(__dirname, configuration.environmentVariablesFileLocation)});
 
+mongoose.connect(process.env.DATABASE_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false
+});
+
+mongoose.connection.on("connected", () => {
+    console.log("Successfully connected to database.");
+});
 
 function stripSensitiveConfigurationData(loadedConfiguration){
     let newConfiguration = _.cloneDeep(loadedConfiguration);
