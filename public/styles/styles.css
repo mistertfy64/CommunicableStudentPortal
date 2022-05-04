@@ -192,13 +192,13 @@ body {
 
 }
 
-/*Chatboard Menu*/
+/*List Menu*/
 
-ul, #ChatboardMenuUL {
+ul, #ListMenuUL {
 	list-style-type: none;
   }
   
-  #ChatboardMenuUL {
+  #ListMenuUL {
 	margin: 0;
 	padding: 0;
   }
