@@ -17,6 +17,18 @@
 	    $_SESSION[tel] = $data[tel];
         $_SESSION[year] = $data[year];
         $_SESSION[level] = $data[level];
+        echo"<center>
+            <img src="Loader.gif" style="width:100%; padding:100px 0px; margin:auto; display:blcok;">
+        </center>";
+        echo"<script>
+			setTimeout(\"window.location.href='index.php'\",3000);
+		</script>";
+    }else{
+        session_abort();
+        echo"Login failed!"
+        echo"<script>
+			setTimeout(\"window.location.href='index.php'\",3000);
+		</script>";
     }
 
 ?>
