@@ -82,6 +82,9 @@ p {
 	background-color: var(--default-top-navigation-bar-background-color);
 	color: var(--default-top-navigation-bar-background-color);
 	overflow: hidden;
+	position: fixed;
+	top: 0;
+	width: 100%;
 }
 
 #top-navigation-bar a {
@@ -140,16 +143,6 @@ p {
 
 .top-navigation-bar-dropdown:hover .top-navigation-bar-dropdown-content {
 	display: block;
-}
-
-.sticky {
-	position: fixed;
-	top: 0;
-	width: 100%;
-}
-
-.sticky + .content {
-	padding-top: 60px;
 }
 
 #top-navigation-bar .icon {
