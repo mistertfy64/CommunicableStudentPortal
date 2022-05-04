@@ -242,6 +242,23 @@ ul, #ListMenuUL {
 	display: block;
   }
 
+  .ULDiv1{
+	background-color:rgb(255, 143, 143);
+	color:rgb(164, 0, 0);
+  }
+  .ULDiv2{
+	background-color:rgb(154, 255, 131);
+	color:rgb(0, 111, 0);
+  }
+  .ULDiv3{
+	background-color:rgb(161, 219, 255);
+	color:rgb(9, 0, 130);
+  }
+  .ULDiv4{
+	background-color:rgb(255, 197, 110);
+	color:rgb(189, 97, 0);
+  }
+
   /*Contact*/
 
   .location-div {
