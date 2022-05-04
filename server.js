@@ -40,27 +40,27 @@ app.get("/chatboard", (request, response) => {
 });
 
 app.get("/about", (request, response) => {
-    response.render("pages/about"); 
+    response.render("pages/about", {configuration: safeConfiguration}); 
 });
 
 app.get("/events", (request, response) => {
-    response.render("pages/event"); 
+    response.render("pages/event", {configuration: safeConfiguration}); 
 });
 
 app.get("/contact", (request, response) => {
-    response.render("pages/contact"); 
+    response.render("pages/contact", {configuration: safeConfiguration}); 
 });
 
 app.get("/leaderboard", (request, response) => {
-    response.render("pages/leaderboard"); 
+    response.render("pages/leaderboard", {configuration: safeConfiguration}); 
 });
 
 app.get("/update", (request, response) => {
-    response.render("pages/updates"); 
+    response.render("pages/updates", {configuration: safeConfiguration}); 
 });
 
 app.get("/studymaterial-menu", (request, response) => {
-    response.render("pages/studymaterial-menu"); 
+    response.render("pages/studymaterial-menu", {configuration: safeConfiguration}); 
 });
 
 app.listen(configuration.port, () => {
