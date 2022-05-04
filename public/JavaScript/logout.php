@@ -1,5 +1,5 @@
 <?php
-session_start();
-session_destroy();
-header("index.ejs");
+    session_start();
+    session_destroy();
+    header("index.ejs");
 ?>
