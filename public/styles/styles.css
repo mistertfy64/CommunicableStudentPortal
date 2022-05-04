@@ -65,6 +65,7 @@ p {
 	font-size:12px;
 	text-align:center;
 	vertical-align:text-bottom;
+	margin:auto;
 }
 
 .responsive-iframe {
