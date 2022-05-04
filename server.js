@@ -59,7 +59,7 @@ app.get("/update", (request, response) => {
     response.render("pages/updates"); 
 });
 
-app.get("studymaterial-menu", (request, response) => {
+app.get("/studymaterial-menu", (request, response) => {
     response.render("pages/studymaterial-menu"); 
 });
 
