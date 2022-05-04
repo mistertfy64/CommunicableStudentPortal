@@ -82,9 +82,6 @@ p {
 	background-color: var(--default-top-navigation-bar-background-color);
 	color: var(--default-top-navigation-bar-background-color);
 	overflow: hidden;
-	position: fixed;
-	top: 0;
-	width: 100%;
 }
 
 #top-navigation-bar a {
@@ -148,6 +145,16 @@ p {
 #top-navigation-bar .icon {
 	display: none;
 }
+
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+  }
+  
+  .sticky + .content {
+	padding-top: 60px;
+  }
 
 .login-container {
 	float: right;
