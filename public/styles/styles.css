@@ -61,6 +61,20 @@ p {
 	font-size:18px;
 }
 
+.button {
+	background-color: #182859;
+	border: none;
+	color: white;
+	padding: 16px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	transition-duration: 0.4s;
+	cursor: pointer;
+}
+
 .responsive-iframe {
 	position: absolute;
 	top: 0;
@@ -89,6 +103,17 @@ input[type=text], input[type=password] {
 	padding: 20px; 
 	width: 100px;
 	height: 120px;  
+}
+
+.login-button {
+	background-color:#fefefe;
+	color:#182859;
+	border: 2px solid #182859;
+}
+
+.login-button:hover {
+	background-color: #182859;
+ 	 color: white;
 }
 
 /* Top Navigation Bar */
