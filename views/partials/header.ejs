@@ -25,13 +25,13 @@
 		<% } %>
 	<% } %>
 
-	<a href='javascript:void(0)' class='icon' onclick='myFunction()'>&#9776;</a>
+	<a href='javascript:void(0)' class='icon' onclick='responsiveNav()'>&#9776;</a>
 </div>
 
 
 
 <script>
-	function myFunction() {
+	function responsiveNav() {
 	  var x = document.getElementById("mytop-navigation-bar");
 	  if (x.className === "top-navigation-bar") {
 		x.className += " responsive";
@@ -39,12 +39,13 @@
 		x.className = "top-navigation-bar";
 	  }
 	}
-	window.onscroll = function() {myFunction()};
+	
+	window.onscroll = function() {stickyNav()};
 
 	var navbar = document.getElementById("navbar");
 	var sticky = navbar.offsetTop;
 
-	function myFunction() {
+	function stickyNav() {
  	 if (window.pageYOffset >= sticky) {
   	  navbar.classList.add("sticky")
  	 } else {

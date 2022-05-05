@@ -313,19 +313,19 @@ ul, #ListMenuUL {
 	display: block;
   }
 
-  .ULDiv1{
+  .ColorDiv1{
 	background-color:rgb(255, 143, 143);
 	color:rgb(164, 0, 0);
   }
-  .ULDiv2{
+  .ColorDiv2{
 	background-color:rgb(154, 255, 131);
 	color:rgb(0, 111, 0);
   }
-  .ULDiv3{
+  .ColorDiv3{
 	background-color:rgb(161, 219, 255);
 	color:rgb(9, 0, 130);
   }
-  .ULDiv4{
+  .ColorDiv4{
 	background-color:rgb(255, 197, 110);
 	color:rgb(189, 97, 0);
   }
@@ -351,11 +351,11 @@ ul, #ListMenuUL {
 	padding: 8px;
   }
 
-  #customers tr:nth-child(even){background-color: #f2f2f2;}
+  #leaderboard tr:nth-child(even){background-color: #f2f2f2;}
 
-  #customers tr:hover {background-color: #ddd;}
+  #leaderboard tr:hover {background-color: #ddd;}
   
-  #customers th {
+  #leaderboard th {
 	padding-top: 12px;
 	padding-bottom: 12px;
 	text-align: center;
