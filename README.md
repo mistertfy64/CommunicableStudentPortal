@@ -30,6 +30,8 @@ Copy all the files in the `defaults` folder to the root directory.
 
 After that, run the `node` app.
 
-`node server.js`
+```
+node server.js
+```
 
 If you copied the files in the default folder, a welcome message should pop up. Follow the directions. After you're done with the initial setup process, the app will stop, so you need to start it again.
