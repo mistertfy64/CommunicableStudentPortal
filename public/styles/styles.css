@@ -114,13 +114,6 @@ input[type=text], input[type=password] {
 	border: 1px solid #182859;
 	width:40%;
 	height:35px;
-	text-align:center;
-	margin: 0;
-	position: absolute;
-	left: 50%;
-	-ms-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
-	width: 100%
 	
 }
 
