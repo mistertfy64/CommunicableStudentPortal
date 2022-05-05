@@ -103,7 +103,7 @@ a:hover {
 	border: none;
 }
 
-/* Login */
+/* Login and Signup*/
 
 input[type=text], input[type=password] {
 	width: 40%;
@@ -127,8 +127,22 @@ input[type=text], input[type=password] {
 
 .login-button:hover {
 	background-color: #182859;
- 	 color: #000000;
+ 	 color: #ffffff;
 }
+
+.signup-button {
+	background-color:#fefefe;
+	color:#000000;
+	border: 1px solid #182859;
+	width:40%;
+	height:35px;
+}
+
+.signup-button:hover {
+	background-color: #182859;
+ 	 color: #ffffff;
+}
+
 
 /* Top Navigation Bar */
 #top-navigation-bar {
