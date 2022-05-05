@@ -66,7 +66,7 @@ a {
 }
 
 a:hover {
-	color:#4167dc
+	color:#4167dc;
 }
 
 .button {
@@ -117,8 +117,8 @@ input[type=text], input[type=password] {
 }
 
 .login-button {
-	background-color:#fefefe;
-	color:#000000;
+	background-color:#182859;
+	color:#fefefe;
 	border: 1px solid #182859;
 	width:40%;
 	height:35px;
@@ -126,7 +126,7 @@ input[type=text], input[type=password] {
 }
 
 .login-button:hover {
-	background-color: #182859;
+	background-color: #4167dc;
  	 color: #ffffff;
 }
 
@@ -338,5 +338,7 @@ ul, #ListMenuUL {
   /*Leaderboard*/
 
   .leaderboard-table {
-	  font-size:20px
+	  font-size:20px;
+	  border-collapse:collapse;
+
   }
