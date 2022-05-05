@@ -72,10 +72,15 @@ p {
 	border-radius: 8px;
 	transition-duration: 0.4s;
 	cursor: pointer;
+	margin:auto
 }
 
 .center {
-	margin:auto;
+	margin: 0;
+	position: absolute;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
 }
 
 .responsive-iframe {
@@ -109,7 +114,7 @@ input[type=text], input[type=password] {
 	width:40%;
 	height:35px;
 	text-align:center;
-	margin:auto;
+	
 }
 
 .login-button:hover {
