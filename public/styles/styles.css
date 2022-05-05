@@ -169,9 +169,9 @@ input[type=text], input[type=password] {
 	font-size: 16px;
 	border: none;
 	outline: none;
-	color:  #ffffff;
+	color:  #fefefe;
 	padding: 14px 16px;
-	background-color: inherit;
+	background-color: #182859;
 	font-family: inherit;
 	margin: 0;
 }
