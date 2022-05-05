@@ -14,6 +14,7 @@
 	    $_SESSION[lastname] = $data[lastname];
 	    $_SESSION[username] = $data[username];
 	    $_SESSION[email] = $data[email];
+        $_SESSION[memebrID] = $data[memberID];
 	    $_SESSION[tel] = $data[tel];
         $_SESSION[year] = $data[year];
         $_SESSION[level] = $data[level];
