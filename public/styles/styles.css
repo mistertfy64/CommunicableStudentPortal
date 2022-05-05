@@ -109,6 +109,7 @@ input[type=text], input[type=password] {
 	width:40%;
 	height:35px;
 	text-align:center;
+	margin:auto;
 }
 
 .login-button:hover {
