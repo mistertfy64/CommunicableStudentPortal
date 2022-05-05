@@ -57,6 +57,10 @@ app.get("/login", (request, response) => {
     response.render("pages/login", {configuration: safeConfiguration}); 
 });
 
+app.get("/signin", (request, response) => {
+    response.render("pages/signin", {configuration: safeConfiguration}); 
+});
+
 app.get("/chatboard", (request, response) => {
     response.render("pages/chatboard-menu", {configuration: safeConfiguration}); 
 });

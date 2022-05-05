@@ -61,6 +61,14 @@ p {
 	font-size:18px;
 }
 
+a {
+	color: #182859;
+}
+
+a:hover {
+	color:#4167dc
+}
+
 .button {
 	background-color: #182859;
 	border: none;
@@ -110,7 +118,7 @@ input[type=text], input[type=password] {
 
 .login-button {
 	background-color:#fefefe;
-	color:#182859;
+	color:#000000;
 	border: 1px solid #182859;
 	width:40%;
 	height:35px;
