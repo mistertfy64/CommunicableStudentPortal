@@ -1,4 +1,8 @@
 {
+
+    "projectIsSetUp": false,
+
+
     "environmentVariablesFileLocation": "example.env",
     "port": 8888,
     "name": "Development",
@@ -18,23 +22,6 @@
             "text": "Chat Boards",
             "link": "",
             "position": 3
-        },
-        "dropDownMenu": {
-            "text": "TODO: Remove me!",
-            "link": "",
-            "position": 4,
-            "dropdownContent": {
-                "first": {
-                    "text": "This ",
-                    "link": "",
-                    "position": 1
-                },
-                "second": {
-                    "text": "works!",
-                    "link": "",
-                    "position": 2
-                }
-            }
         },
         "login": {
             "text": "Login",

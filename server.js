@@ -1,10 +1,13 @@
-// insert modules here
 const express = require("express");
 const fs = require("fs");
 const { request } = require("http");
 const path = require("path");
 const _ = require("lodash");
 const mongoose = require("mongoose");
+
+const setup = require(path.join(__dirname, "server", "setup.js"));
+
+
 
 const app = express();
 app.use(express.static("public"))
@@ -17,11 +20,13 @@ const safeConfiguration = stripSensitiveConfigurationData(loadedConfiguration);
 
 require('dotenv').config({path: path.join(__dirname, configuration.environmentVariablesFileLocation)});
 
+function initialize(){
 mongoose.connect(process.env.DATABASE_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false
 });
+}
 
 mongoose.connection.on("connected", () => {
     console.log("Successfully connected to database.");
@@ -31,6 +36,14 @@ function stripSensitiveConfigurationData(loadedConfiguration){
     let newConfiguration = _.cloneDeep(loadedConfiguration);
     delete newConfiguration.environmentVariablesFileLocation;
     return newConfiguration;
+}
+
+function checkInitialSetUpProgress(){
+    if (!safeConfiguration.projectIsSetUp){
+        setup.startSetUp(_.cloneDeep(configuration));
+    } else {
+        initialize();
+    }
 }
 
 
@@ -74,4 +87,6 @@ app.get("/studymaterial-menu", (request, response) => {
 
 app.listen(configuration.port, () => {
     console.log(`App listening on port ${configuration.port}`);
+    checkInitialSetUpProgress();
+
 });
