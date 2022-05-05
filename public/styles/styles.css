@@ -68,12 +68,10 @@ p {
 	text-decoration: none;
 	display: inline-block;
 	font-size: 16px;
-	margin: 0;
 	position: absolute;
 	border-radius: 8px;
 	transition-duration: 0.4s;
 	cursor: pointer;
-	margin:auto;
 }
 
 .center {
