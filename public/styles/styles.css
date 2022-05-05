@@ -116,7 +116,7 @@ input[type=text], input[type=password] {
 	box-sizing: border-box;
 }
 
-.login-button .signup-button {
+.login-button {
 	background-color:#fefefe;
 	color:#000000;
 	border: 1px solid #182859;
