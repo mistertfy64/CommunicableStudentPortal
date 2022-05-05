@@ -76,6 +76,10 @@ p {
 	margin:auto;
 }
 
+.center {
+	margin:auto;
+}
+
 .responsive-iframe {
 	position: absolute;
 	top: 0;
