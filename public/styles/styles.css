@@ -92,7 +92,7 @@ p {
 
 input[type=text], input[type=password] {
 	width: 40%;
-	padding: 12px 20px;
+	padding: auto;
 	margin: 0;
 	display: inline-block;
 	border: 1px solid #ccc;
@@ -105,7 +105,7 @@ input[type=text], input[type=password] {
 	color:#182859;
 	border: 1px solid #182859;
 	width:40%;
-	height:16px;
+	height:30px;
 }
 
 .login-button:hover {
