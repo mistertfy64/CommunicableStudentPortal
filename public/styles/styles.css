@@ -68,7 +68,10 @@ p {
 	text-decoration: none;
 	display: inline-block;
 	font-size: 16px;
-	margin: 4px 2px;
+	margin: 0;
+	position: absolute;
+  	top: 50%;
+ 	left: 50%;
 	border-radius: 8px;
 	transition-duration: 0.4s;
 	cursor: pointer;
@@ -90,7 +93,7 @@ p {
 input[type=text], input[type=password] {
 	width: 40%;
 	padding: 12px 20px;
-	margin: 8px 0;
+	margin: 0;
 	display: inline-block;
 	border: 1px solid #ccc;
 	border-radius: 8px;
@@ -101,6 +104,8 @@ input[type=text], input[type=password] {
 	background-color:#fefefe;
 	color:#182859;
 	border: 1px solid #182859;
+	width:40%;
+	height:16px;
 }
 
 .login-button:hover {
