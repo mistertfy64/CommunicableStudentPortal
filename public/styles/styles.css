@@ -62,9 +62,9 @@ p {
 }
 
 .button {
-	background-color: #182859;
+	background-color: #fefefe;
 	border: none;
-	color: white;
+	color: #182859;
 	text-decoration: none;
 	display: inline-block;
 	font-size: 16px;
@@ -92,6 +92,7 @@ p {
 
 input[type=text], input[type=password] {
 	width: 40%;
+	height: 20px;
 	padding: auto;
 	margin: 0;
 	display: inline-block;
@@ -105,7 +106,7 @@ input[type=text], input[type=password] {
 	color:#182859;
 	border: 1px solid #182859;
 	width:40%;
-	height:30px;
+	height:20px;
 }
 
 .login-button:hover {
