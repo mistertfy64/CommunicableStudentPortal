@@ -127,7 +127,7 @@ input[type=text], input[type=password] {
 
 .login-button:hover {
 	background-color: #182859;
- 	 color: #ffffff;
+ 	 color: #000000;
 }
 
 /* Top Navigation Bar */
