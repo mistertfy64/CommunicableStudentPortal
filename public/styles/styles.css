@@ -334,3 +334,9 @@ ul, #ListMenuUL {
 	overflow: hidden;
 	padding-top: 56.25%;
   }
+
+  /*Leaderboard*/
+
+  .leaderboard-table {
+	  font-size:20px
+  }
