@@ -22,6 +22,11 @@ Change the current working directory:
 cd CommunicableStudentPortal
 ```
 
+Install the required `npm` modules:
+```
+npm install
+```
+
 ### Part 2: Setting Up CommunicableStudentPortal
 
 Copy all the files in the `defaults` folder to the root directory.
