@@ -73,6 +73,7 @@ p {
 	border-radius: 8px;
 	transition-duration: 0.4s;
 	cursor: pointer;
+	margin:auto;
 }
 
 .responsive-iframe {
