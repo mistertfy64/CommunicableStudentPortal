@@ -39,7 +39,7 @@ function stripSensitiveConfigurationData(loadedConfiguration){
 }
 
 function checkInitialSetUpProgress(){
-    if (!safeConfiguration.projectIsSetUp){
+    if (!safeConfiguration.applicationIsSetUp){
         setup.startSetUp(_.cloneDeep(configuration));
     } else {
         initialize();

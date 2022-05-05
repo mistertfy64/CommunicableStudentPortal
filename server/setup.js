@@ -1,5 +1,7 @@
 const chalk = require("chalk");
 const inquirer = require("inquirer");
+const fs = require("fs");
+const path = require("path");
 
 async function startSetUp(configuration) {
 	let itemsToSetUp = "";
@@ -26,7 +28,7 @@ async function startSetUp(configuration) {
 
 	console.log("");
 	console.log(chalk.white(`${chalk.underline(`P`)}ersonalization`));
-	// console.log(chalk.white(`${chalk.underline(`S`)}tyling`));
+	// console.log(chalk.white(`${chalk.underline(`S`)}tyling`)); <-- do it yourself lol -->
 	console.log(chalk.white(`${chalk.underline(`T`)}op Navigation Bar`));
 	console.log("");
 
@@ -46,7 +48,58 @@ async function startSetUp(configuration) {
 	itemsToSetUp.includes("T") &&
 		(await startTopNavigationBarSetup(configuration));
 
-	console.log(configuration);
+	console.log(
+		chalk.white(
+			"Almost there! But first, you have to set some important settings."
+		)
+	);
+
+	await inquirer
+		.prompt({
+			message: chalk.reset(
+				"Enter the port that you want the application to run on."
+			),
+			name: "port",
+			prefix: "",
+		})
+		.then((answers) => {
+			configuration.port = answers.port;
+		});
+
+	await inquirer
+		.prompt({
+			message: chalk.reset(
+				"Enter your MongoDB connection string. This will not be revealed since it is stored in a separate .env file on your machine."
+			),
+			name: "databaseConnectionString",
+			prefix: "",
+		})
+		.then((answers) => {
+			fs.writeFileSync(
+				path.join('./', "/credentials.env"),
+				`DATABASE_URI=${answers.databaseConnectionString}`
+			);
+		});
+
+	configuration.environmentVariablesFileLocation = "credentials.env";
+	configuration.applicationIsSetUp = true;
+
+	// save settings
+	fs.writeFileSync(
+		path.join('./', "/configuration.json"),
+		JSON.stringify(configuration, null, 4)
+	);
+
+	console.log(
+		chalk.white(
+			"You have completed the setup! Please restart (stop and start again) the app to use."
+		)
+	);
+	console.log(
+		chalk.white("You can still edit styling in the styles.css file.")
+	);
+
+	process.exit(0);
 }
 
 async function startPersonalizationSetup(configuration) {
@@ -77,23 +130,28 @@ async function startTopNavigationBarSetup(configuration) {
 			`This is how the top navigation bar will look like (position number): [1 2 3 4              -2 -1]`
 		)
 	);
-	
-    while (!finished){
-    await startTopNavigationBarSectionSetup(configuration);
-    
-	await inquirer
-		.prompt([
-			{
-				message: chalk.reset("Do you want to create an another top navigation bar section? (y/N)"),
-				name: "choice",
-				prefix: "",
-			},
-		])
-		.then((answers) => {
-            // TODO: Actually make this work lol.
-			finished = answers.choice.includes("n") || answers.choice.includes("N") || answers.choice == "";  
-		});
-    }
+
+	while (!finished) {
+		await startTopNavigationBarSectionSetup(configuration);
+
+		await inquirer
+			.prompt([
+				{
+					message: chalk.reset(
+						"Do you want to create an another top navigation bar section? (y/N)"
+					),
+					name: "choice",
+					prefix: "",
+				},
+			])
+			.then((answers) => {
+				// TODO: Actually make this work lol.
+				finished =
+					answers.choice.includes("n") ||
+					answers.choice.includes("N") ||
+					answers.choice == "";
+			});
+	}
 	console.log(chalk.white(`Finished Top Navigation Bar Setup`));
 }
 
