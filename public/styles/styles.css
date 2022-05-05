@@ -66,7 +66,7 @@ a {
 }
 
 a:hover {
-	color:#4167dc
+	color:#4167dc;
 }
 
 .button {
@@ -117,8 +117,8 @@ input[type=text], input[type=password] {
 }
 
 .login-button {
-	background-color:#fefefe;
-	color:#000000;
+	background-color:#182859;
+	color:#fefefe;
 	border: 1px solid #182859;
 	width:40%;
 	height:35px;
@@ -126,7 +126,7 @@ input[type=text], input[type=password] {
 }
 
 .login-button:hover {
-	background-color: #182859;
+	background-color: #4167dc;
  	 color: #ffffff;
 }
 
@@ -169,9 +169,9 @@ input[type=text], input[type=password] {
 	font-size: 16px;
 	border: none;
 	outline: none;
-	color:  #ffffff;
+	color:  #fefefe;
 	padding: 14px 16px;
-	background-color: inherit;
+	background-color: #182859;
 	font-family: inherit;
 	margin: 0;
 }
@@ -185,7 +185,7 @@ input[type=text], input[type=password] {
 .top-navigation-bar-dropdown-content {
 	display: none;
 	position: absolute;
-	background-color: white;
+	background-color: #fefefe;
 	color:#182859;
 	min-width: 160px;
 	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -194,7 +194,7 @@ input[type=text], input[type=password] {
 
 .top-navigation-bar-dropdown-content a {
 	float: none;
-	color: black;
+	color: #182859;
 	padding: 14px 16px;
 	text-decoration: none;
 	display: block;
@@ -202,7 +202,7 @@ input[type=text], input[type=password] {
 }
 
 .top-navigation-bar-dropdown-content a:hover {
-	background-color: #ccc;
+	background-color: rgb(131, 131, 131);
 }
 
 .top-navigation-bar-dropdown:hover .top-navigation-bar-dropdown-content {
@@ -338,5 +338,7 @@ ul, #ListMenuUL {
   /*Leaderboard*/
 
   .leaderboard-table {
-	  font-size:20px
+	  font-size:20px;
+	  border-collapse:collapse;
+
   }
