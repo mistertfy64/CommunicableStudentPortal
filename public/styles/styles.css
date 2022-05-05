@@ -62,9 +62,9 @@ p {
 }
 
 .button {
-	background-color: #fefefe;
+	background-color: #182859;
 	border: none;
-	color: #182859;
+	color: #fefefe;
 	text-decoration: none;
 	display: block;
 	font-size: 20px;
@@ -115,12 +115,18 @@ input[type=text], input[type=password] {
 	width:40%;
 	height:35px;
 	text-align:center;
+	margin: 0;
+	position: absolute;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	width: 100%
 	
 }
 
 .login-button:hover {
 	background-color: #182859;
- 	 color: white;
+ 	 color: #ffffff;
 }
 
 /* Top Navigation Bar */
