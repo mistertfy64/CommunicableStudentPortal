@@ -93,21 +93,14 @@ input[type=text], input[type=password] {
 	margin: 8px 0;
 	display: inline-block;
 	border: 1px solid #ccc;
+	border-radius: 8px;
 	box-sizing: border-box;
-}
-
-.loginborder {
-	border-radius: 15px;
-	border: 5px solid #182859;
-	padding: 20px; 
-	width: 100px;
-	height: 120px;  
 }
 
 .login-button {
 	background-color:#fefefe;
 	color:#182859;
-	border: 2px solid #182859;
+	border: 1px solid #182859;
 }
 
 .login-button:hover {
