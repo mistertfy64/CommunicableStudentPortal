@@ -107,7 +107,7 @@ a:hover {
 	border: none;
 }
 
-.collaspable{
+.collapsible{
   	background-color: #182859;
  	color: white;
  	cursor: pointer;
@@ -126,7 +126,7 @@ a:hover {
 	background-color: #4167dc;
   }
 
-.collaspable-content {
+.collapsible-content {
 	padding: 0 18px;
 	display: none;
 	overflow: hidden;
