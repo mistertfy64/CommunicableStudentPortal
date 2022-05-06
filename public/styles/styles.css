@@ -134,6 +134,9 @@ a:hover {
 	display: none;
 	overflow: hidden;
 	font-family: var(--default-font);
+	background-color: #ccc;
+	border-radius: 8px;
+	width:58%;
 }
 
 /* Login and Signup*/
@@ -397,12 +400,14 @@ ul, #ListMenuUL {
 	width:60%;
 	height:35px;
 	align-content:center;
-	padding:auto;
 	display: block;
 	font-size: 20px;
+	border-radius: 8px;
+	transition-duration: 0.4s;
+	cursor: pointer;
    }
 
-   .add-button:hover {
+   .add-event-button:hover {
 	background-color: greenyellow;
  	color: #ffffff;
 	border: 1px solid greenyellow;
