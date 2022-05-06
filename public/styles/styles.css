@@ -117,11 +117,12 @@ a:hover {
  	border: none;
  	text-align: center;
  	outline: none;
- 	font-size: 20px;
+ 	font-size: 18px;
 	border-radius: 8px;
 	transition-duration: 0.4s;
 	display:block;
 	font-family: var(--default-font);
+	text-align: center;
 }
 
 .active, .collapsible:hover {
@@ -390,11 +391,17 @@ ul, #ListMenuUL {
   /* Events */
 
   .add-event-button {
-	float: center;
-	color: #ffffff;
-	text-align: center;
-	padding: auto;
-	text-decoration: none;
-	font-size: 16px;
-}
+	background-color:green;
+	color:#fefefe;
+	border: 1px solid green;
+	width:40%;
+	height:35px;
+	
+   }
+
+   .add-button:hover {
+	background-color: greenyellow;
+ 	 color: #ffffff;
+	border: 1px solid greenyellow;
+   }
   
