@@ -23,7 +23,7 @@
 		</script>";
     }else{
         session_abort();
-        echo"Login failed!"
+        echo"Login failed!";
         echo"<script>
 			setTimeout(\"window.location.href='/'\",3000);
 		</script>";
