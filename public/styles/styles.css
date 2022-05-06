@@ -107,6 +107,29 @@ a:hover {
 	border: none;
 }
 
+.collaspable{
+  	background-color: #182859;
+ 	color: white;
+ 	cursor: pointer;
+	padding: 18px;
+ 	width: 70%;
+ 	border: none;
+ 	text-align: center;
+ 	outline: none;
+ 	font-size: 15px;
+}
+
+.active, .collapsible:hover {
+	background-color: #4167dc;
+  }
+
+.collaspable-content {
+	padding: 0 18px;
+	display: none;
+	overflow: hidden;
+	background-color: #fefefe;
+}
+
 /* Login and Signup*/
 
 input[type=text], input[type=password] {

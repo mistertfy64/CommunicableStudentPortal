@@ -4,7 +4,7 @@
     $username = $_POST[username];
     $password = $_POST[password];
 
-    $sql = "SELECT FROM [INSERT DATABASE HERE] WHERE username = '$username' AND password = '$password'";
+    $sql = "SELECT FROM [] WHERE username = '$username' AND password = '$password'";
     $query = mysql_query($sql)or die("query error");
     $userfound = mysql_num_rows($query);
 
@@ -18,17 +18,14 @@
 	    $_SESSION[tel] = $data[tel];
         $_SESSION[year] = $data[year];
         $_SESSION[level] = $data[level];
-        echo"<center>
-            <img src="">
-        </center>";
         echo"<script>
-			setTimeout(\"window.location.href='index.php'\",3000);
+			setTimeout(\"window.location.href='/'\",3000);
 		</script>";
     }else{
         session_abort();
         echo"Login failed!"
         echo"<script>
-			setTimeout(\"window.location.href='index.php'\",3000);
+			setTimeout(\"window.location.href='/'\",3000);
 		</script>";
     }
 
