@@ -112,7 +112,7 @@ a:hover {
  	color: white;
  	cursor: pointer;
 	padding: 18px;
- 	width: 70%;
+ 	width: 60%;
 	text-decoration: none;
  	border: none;
  	text-align: center;
@@ -160,6 +160,7 @@ input[type=text], input[type=password] {
 .login-button:hover {
 	background-color: #4167dc;
  	 color: #ffffff;
+	border: 1px solid #4167dc;
 }
 
 
@@ -385,3 +386,7 @@ ul, #ListMenuUL {
 	color: white;
 	text-align:center;
   }
+
+  /* Events */
+
+  
