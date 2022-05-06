@@ -400,11 +400,6 @@ ul, #ListMenuUL {
 	padding:auto;
 	display: block;
 	font-size: 20px;
-	position: absolute;
-	border-radius: 8px;
-	transition-duration: 0.4s;
-	cursor: pointer;
-	margin:auto
    }
 
    .add-button:hover {
