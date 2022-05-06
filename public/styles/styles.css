@@ -343,7 +343,7 @@ ul, #ListMenuUL {
 
   #leaderboard {
 	border-collapse: collapse;
-	width: 70%;
+	width: 60%;
   }
 
   #leaderboard td, #leaderboard th {
@@ -352,18 +352,21 @@ ul, #ListMenuUL {
   }
 
   .leaderboard th:first-child {
-	  width:50px;
-
+	width:50px;
+	text-align:center;
   }
 
-  #leaderboard tr:nth-child(even){background-color: #f2f2f2;}
+  #leaderboard tr {
+	  background-color:#fefefe;
+	  text-align:center;
+  }
 
   #leaderboard tr:hover {background-color: #ddd;}
   
   #leaderboard th {
 	padding-top: 12px;
 	padding-bottom: 12px;
-	text-align: center;
 	background-color: #182859;
 	color: white;
+	text-align:center;
   }
