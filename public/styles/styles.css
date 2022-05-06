@@ -343,12 +343,17 @@ ul, #ListMenuUL {
 
   #leaderboard {
 	border-collapse: collapse;
-	width: 80%;
+	width: 70%;
   }
 
   #leaderboard td, #leaderboard th {
 	border: 1px solid #ddd;
 	padding: 8px;
+  }
+
+  .leaderboard th:first-child {
+	  width:50px;
+
   }
 
   #leaderboard tr:nth-child(even){background-color: #f2f2f2;}
