@@ -120,6 +120,7 @@ a:hover {
  	font-size: 20px;
 	border-radius: 8px;
 	transition-duration: 0.4s;
+	display:block;
 }
 
 .active, .collapsible:hover {
