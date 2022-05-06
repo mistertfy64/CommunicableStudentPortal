@@ -396,7 +396,8 @@ ul, #ListMenuUL {
 	border: 1px solid green;
 	width:60%;
 	height:35px;
-	
+	align-content:center;
+	padding:auto;
    }
 
    .add-button:hover {
