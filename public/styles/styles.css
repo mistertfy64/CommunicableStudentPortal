@@ -121,6 +121,7 @@ a:hover {
 	border-radius: 8px;
 	transition-duration: 0.4s;
 	display:block;
+	font-family: var(--default-font);
 }
 
 .active, .collapsible:hover {
@@ -132,6 +133,7 @@ a:hover {
 	display: none;
 	overflow: hidden;
 	background-color: #fefefe;
+	font-family: var(--default-font);
 }
 
 /* Login and Signup*/
