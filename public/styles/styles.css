@@ -132,7 +132,7 @@ a:hover {
 	padding: 0 18px;
 	display: none;
 	overflow: hidden;
-	background-color: #fefefe;
+	background-color: #ddd;
 	font-family: var(--default-font);
 }
 
