@@ -445,8 +445,13 @@ ul, #ListMenuUL {
 
   /* Columns */
 
-  .chatboard-menu-column ,.studymaterial-menu-column {
+  .chatboard-menu-column1 ,.studymaterial-menu-column1 {
 	column-count: 5;
+	column-rule: 2px solid #182859;
+  }
+
+  .chatboard-menu-column2 ,.studymaterial-menu-column2 {
+	column-count: 4;
 	column-rule: 2px solid #182859;
   }
 
