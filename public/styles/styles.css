@@ -107,6 +107,29 @@ a:hover {
 	border: none;
 }
 
+input[type=text], input[type=password] {
+	width: 40%;
+	height: 35px;
+	padding: 12px 16px;
+	margin: 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	box-sizing: border-box;
+	font-family: var(--default-font);
+}
+
+textarea {
+	height: 150px;
+ 	padding: 12px 16px;
+  	box-sizing: border-box;
+  	border: 1px solid #ccc;
+ 	border-radius: 8px;
+  	background-color: #fefefe;
+  	resize: vertical;
+	font-family: var(--default-font);
+}
+
 /* Collapsible */
 
 .collapsible{
@@ -214,18 +237,7 @@ a:hover {
 	to {top:0; opacity:1}
   }
 
-/* Login and Signup*/
-
-input[type=text], input[type=password] {
-	width: 40%;
-	height: 35px;
-	padding: auto;
-	margin: 0;
-	display: inline-block;
-	border: 1px solid #ccc;
-	border-radius: 8px;
-	box-sizing: border-box;
-}
+/* Login */
 
 .login-button {
 	background-color:#182859;
@@ -501,5 +513,9 @@ ul, #ListMenuUL {
 	background-color: #4167dc;
  	color: #ffffff;
 	border: 1px solid #4167dc;
+	}
+
+	.event-input-description {
+	width:40%;
 	}
   

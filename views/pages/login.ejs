@@ -8,16 +8,18 @@
 	<body>
 		<header><%- include("../partials/header") %></header>
 		<h1>LOGIN</h1>
-		<p><center>
-		<label for="username"><b>Username</b></label><br>
-		<input type="text" placeholder="USERNAME" name="username" required>
-		<br><br>
-		<label for="password"><b>Password</b></label><br>
-		<input type="password" placeholder="PASSWORD" name="password" required>
-		<br><br><br>
-		<div style="display:flex;justify-content:center;align-items:center;">
-			<button type="submit" class="button login-button" value="submit">Login</button>
-		</div>
+		<form action='?action=login' method="post">
+			<p><center>
+			<label for="username"><b>Username</b></label><br>
+			<input type="text" placeholder="USERNAME" name="username" required>
+			<br><br>
+			<label for="password"><b>Password</b></label><br>
+			<input type="password" placeholder="PASSWORD" name="password" required>
+			<br><br><br>
+			<div style="display:flex;justify-content:center;align-items:center;">
+				<button type="submit" class="button login-button" value="submit">Login</button>
+			</div>
+		</form>
 		<br>
 		</center></p>
 

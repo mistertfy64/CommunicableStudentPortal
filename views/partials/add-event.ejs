@@ -3,12 +3,12 @@
     <h2>NEW EVENT</h2>
 </div>
 <br>
-<form>
+<form action="?action=createevent" method="post">
     <label for="event-title"><b>Title</b></label><br>
 	<input type="text" placeholder="TITLE" name="event-title" required>
     <br><br>
-    <label for="event-title"><b>Description</b></label><br>
-	<input type="text" placeholder="DESCRIPTION" name="event-description" required>
+    <label for="event-description"><b>Description</b></label><br>
+	<textarea placeholder="DESCRIPTION" name="event-description" class="event-input-description"></textarea>
     <br><br>
     <label for="event-datetime"><b>Local Date & Time</b></label>
     <input type="datetime-local" name="event-datetime">
