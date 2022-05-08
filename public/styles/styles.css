@@ -126,7 +126,8 @@ textarea {
   	border: 1px solid #ccc;
  	border-radius: 8px;
   	background-color: #fefefe;
-  	resize: vertical;
+  	resize: none;
+	height:100px;
 	font-family: var(--default-font);
 }
 
