@@ -54,6 +54,11 @@ h3 {
 	text-align:center;
 }
 
+h4 {
+	font-size: 20px;
+	text-align:center;
+}
+
 p {
 	padding: 5px 70px 70px 50px;
 	text-align: justify;
@@ -63,6 +68,7 @@ p {
 
 a {
 	color: #182859;
+	text-decoration: none;
 }
 
 a:hover {
@@ -145,7 +151,6 @@ textarea {
  	outline: none;
  	font-size: 18px;
 	border-radius: 8px;
-	transition-duration: 0.4s;
 	display:block;
 	font-family: var(--default-font);
 	text-align: center;
@@ -156,13 +161,13 @@ textarea {
   }
 
 .collapsible-content {
+	width: 58%;
 	padding: 0 18px;
-	display: none;
-	overflow: hidden;
-	font-family: var(--default-font);
-	background-color: #ccc;
-	border-radius: 8px;
-	width:58%;
+ 	max-height: 0;
+  	overflow: hidden;
+  	transition: max-height 0.2s ease-out;
+ 	background-color: #f1f1f1;
+	 border-radius: 8px;
 }
 
 /* Modal */
@@ -331,7 +336,7 @@ textarea {
 	width: 100%;
   }
   
-  .sticky + .content {
+.sticky + .content {
 	padding-top: 60px;
   }
 
@@ -438,6 +443,13 @@ ul, #ListMenuUL {
 	color:rgb(189, 97, 0);
   }
 
+  /* Columns */
+
+  .chatboard-menu-column ,.studymaterial-menu-column {
+	column-count: 5;
+	column-rule: 2px solid #182859;
+  }
+
   /*Contact*/
 
   .location-div {
@@ -495,13 +507,13 @@ ul, #ListMenuUL {
 	cursor: pointer;
    }
 
-   .add-event-button:hover {
+  .add-event-button:hover {
 	background-color: greenyellow;
  	color: #ffffff;
 	border: 1px solid greenyellow;
    }
 
-   .submit-button {
+  .submit-button {
 	background-color:#182859;
 	color:#fefefe;
 	border: 1px solid #182859;
@@ -510,13 +522,13 @@ ul, #ListMenuUL {
 	
 }
 
-	.submit-button:hover {
+  .submit-button:hover {
 	background-color: #4167dc;
  	color: #ffffff;
 	border: 1px solid #4167dc;
 	}
 
-	.event-input-description {
+  .event-input-description {
 	width:40%;
 	}
   
