@@ -6,42 +6,34 @@
 
     <div class="slideshow-pic slideshow-fade">
         <div class="slideshow-number">2/3</div>
-        <img src="Random Banner 1.png" style="width:100%">
+        <img src="assets\images\Random Banner 1.png" style="width:100%">
     </div>
 
     <div class="slideshow-pic slideshow-fade">
         <div class="slideshow-number">3/3</div>
-        <img src="Random Banner 2.png" style="width:100%">
+        <img src="assets\images\Random Banner 2.png" style="width:100%">
     </div>
 
     <a class="slideshow-prev-button" onclick="plusSlides(-1)">&#10094;</a>
     <a class="slideshow-next-button" onclick="plusSlides(1)">&#10095;</a>
-
-    <div style="text-align:center">
-        <span class="slideshow-dot" onclick="currentSlide(1)"></span>
-        <span class="slideshow-dot" onclick="currentSlide(2)"></span>
-        <span class="slideshow-dot" onclick="currentSlide(3)"></span>
-      </div>
 </div>
 
 <script>
     let slideIndex = 1;
     showSlides(slideIndex);
 
-    // Next/previous controls
     function plusSlides(n) {
     showSlides(slideIndex += n);
     }
 
-    // Thumbnail image controls
     function currentSlide(n) {
     showSlides(slideIndex = n);
     }
 
     function showSlides(n) {
     let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
+    let slides = document.getElementsByClassName("slideshow-pic");
+    let dots = document.getElementsByClassName("slideshow-dot");
     if (n > slides.length) {slideIndex = 1}
     if (n < 1) {slideIndex = slides.length}
     for (i = 0; i < slides.length; i++) {
