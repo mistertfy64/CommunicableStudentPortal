@@ -1,0 +1,49 @@
+<div class="slideshow-container">
+    <div class="slideshow-pic slideshow-fade">
+        <div class="slideshow-number">1/3</div>
+        <img src="assets\images\CSP Banner.png" style="width:100%">
+    </div>
+
+    <div class="slideshow-pic slideshow-fade">
+        <div class="slideshow-number">2/3</div>
+        <img src="assets\images\Random Banner 1.png" style="width:100%">
+    </div>
+
+    <div class="slideshow-pic slideshow-fade">
+        <div class="slideshow-number">3/3</div>
+        <img src="assets\images\Random Banner 2.png" style="width:100%">
+    </div>
+    <br>
+
+    <a class="slideshow-prev-button" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="slideshow-next-button" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+    showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+    showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("slideshow-pic");
+    let dots = document.getElementsByClassName("slideshow-dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    }    
+</script>

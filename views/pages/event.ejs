@@ -7,10 +7,41 @@
 	
 	<body>
 		<header><%- include("../partials/header") %></header>
+		<center>
     	<h1>EVENTS</h1>
 		<br>
-		<p>This page will list announcements of the school and link related articles.</p>
-		<br>
+		<p>This page will list futures events of the members of the school and its details.</p>
+		
+		<button type="button" class="add-event-button" id="modal-button" style="display:flex;justify-content:center;align-items:center;width:60%;">NEW EVENT</button>
+		<div id="modal" class="modal">
+			<div class="modal-content"><%- include("../partials/add-event") %></div>
+		</div>
+		<br><br>
+		<%- include("../partials/event-bar") %>
+		</center>
+		<br><br><br><br><br><br><br><br><br><br>
 		<footer><%- include("../partials/footer") %></footer>
+
+		<script>
+			var modal = document.getElementById("modal");
+			
+			var btn = document.getElementById("modal-button");
+			
+			var span = document.getElementsByClassName("close")[0];
+			
+			btn.onclick = function() {
+			  modal.style.display = "block";
+			}
+			
+			span.onclick = function() {
+			  modal.style.display = "none";
+			}
+			
+			window.onclick = function(event) {
+			  if (event.target == modal) {
+				modal.style.display = "none";
+			  }
+			}
+		</script>
 	</body>
 </html>

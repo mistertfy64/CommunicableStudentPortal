@@ -1,40 +1,90 @@
-<h3>Year 1</h3>
-<table id="leaderboard" class="horizontal-center">
-    <tr>
-        <th>RANK</th>
-        <th>NAME</th>
-        <th>SCORE</th>
-    </tr>
-    <tr>
-        <th>1</th>
-        <th>Doe Smith</th>
-        <th>69</th>
-    </tr>
-</table>
-<br>
-<h3>Year 2</h3>
-<table id="leaderboard" class="horizontal-center">
-    <tr>
-        <th>RANK</th>
-        <th>NAME</th>
-        <th>SCORE</th>
-    </tr>
-</table>
-<br>
-<h3>Year 3</h3>
-<table id="leaderboard" class="horizontal-center">
-    <tr>
-        <th>RANK</th>
-        <th>NAME</th>
-        <th>SCORE</th>
-    </tr>
-</table>
-<br>
-<h3>Year 4</h3>
-<table id="leaderboard" class="horizontal-center">
-    <tr>
-        <th>RANK</th>
-        <th>NAME</th>
-        <th>SCORE</th>
-    </tr>
-</table>
+<center>
+    <button type="button" class="collapsible">Year 1</button>
+    <div class="collapsible-content">
+        <br>
+        <table id="leaderboard" class="horizontal-center">
+            <tr>
+                <th>RANK</th>
+                <th>NAME</th>
+                <th>SCORE</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Doe Smith</td>
+                <td>69</td>
+            </tr>
+        </table>
+        <br>
+    </div>
+    <br>
+    <button type="button" class="collapsible">Year 2</button>
+    <div class="collapsible-content">
+        <br>
+        <table id="leaderboard" class="horizontal-center">
+            <tr>
+                <th>RANK</th>
+                <th>NAME</th>
+                <th>SCORE</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Doe Smith</td>
+                <td>69</td>
+            </tr>
+        </table>
+        <br>
+    </div>
+    <br>
+    <button type="button" class="collapsible">Year 3</button>
+    <div class="collapsible-content">
+        <br>
+        <table id="leaderboard" class="horizontal-center">
+            <tr>
+                <th>RANK</th>
+                <th>NAME</th>
+                <th>SCORE</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Doe Smith</td>
+                <td>69</td>
+            </tr>
+        </table>
+        <br>
+    </div>
+    <br>
+    <button type="button" class="collapsible">Year 4</button>
+    <div class="collapsible-content">
+        <br>
+        <table id="leaderboard" class="horizontal-center">
+        <tr>
+            <th>RANK</th>
+            <th>NAME</th>
+               <th>SCORE</th>
+         </tr>
+         <tr>
+            <td>1</td>
+            <td>Doe Smith</td>
+            <td>69</td>
+        </tr>
+        </table>
+        <br>
+    </div>
+</center>
+
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        } 
+    });
+}
+</script>

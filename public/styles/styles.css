@@ -54,6 +54,11 @@ h3 {
 	text-align:center;
 }
 
+h4 {
+	font-size: 20px;
+	text-align:center;
+}
+
 p {
 	padding: 5px 70px 70px 50px;
 	text-align: justify;
@@ -63,10 +68,15 @@ p {
 
 a {
 	color: #182859;
+	text-decoration: none;
 }
 
 a:hover {
 	color:#4167dc;
+}
+
+hr {
+	border:1px solid #182859;
 }
 
 .button {
@@ -107,18 +117,218 @@ a:hover {
 	border: none;
 }
 
-/* Login and Signup*/
-
 input[type=text], input[type=password] {
 	width: 40%;
 	height: 35px;
-	padding: auto;
+	padding: 12px 16px;
 	margin: 0;
 	display: inline-block;
 	border: 1px solid #ccc;
 	border-radius: 8px;
 	box-sizing: border-box;
+	font-family: var(--default-font);
 }
+
+textarea {
+	height: 150px;
+ 	padding: 12px 16px;
+  	box-sizing: border-box;
+  	border: 1px solid #ccc;
+ 	border-radius: 8px;
+  	background-color: #fefefe;
+  	resize: none;
+	height:100px;
+	font-family: var(--default-font);
+}
+
+  /* Slideshow */
+
+  .slideshow-container {
+	width:100%;
+	position: relative;
+	margin: auto;
+  }
+  
+  .slideshow-pics {
+	display: none;
+  }
+  
+  .slideshow-prev-button, .slideshow-next-button {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	margin-top: -22px;
+	padding: 16px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+  }
+  
+  .slideshow-next-button {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+  }
+  
+  .slideshow-prev-button:hover, .slideshow-next-button:hover {
+	background-color: rgba(143, 143, 143, 0.8);
+	color:#fefefe;
+  }
+  
+  .slideshow-caption {
+	color: #f2f2f2;
+	font-size: 15px;
+	padding: 8px 12px;
+	position: absolute;
+	bottom: 8px;
+	width: 100%;
+	text-align: center;
+  }
+  
+  .slideshow-number {
+	color: #f2f2f2;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
+  }
+  
+  .slideshow-dot {
+	height: 15px;
+ 	width: 15px;
+	margin: 0 2px;
+ 	background-color: #bbb;
+  	border-radius: 50%;
+  	display: inline-block;
+  	transition: background-color 0.6s ease;
+  }
+  
+  .active, .slideshow-dot:hover {
+	background-color: #717171;
+  }
+  
+  .slideshow-fade {
+	animation-name: fade;
+	animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+	from {opacity: .4}
+	to {opacity: 1}
+  }
+
+
+/* Collapsible */
+
+.collapsible{
+  	background-color: #182859;
+ 	color: white;
+ 	cursor: pointer;
+	padding: 18px;
+ 	width: 60%;
+	text-decoration: none;
+ 	border: none;
+ 	text-align: center;
+ 	outline: none;
+ 	font-size: 18px;
+	border-radius: 8px;
+	display:block;
+	font-family: var(--default-font);
+	text-align: center;
+	transition-duration: 0.4s;
+}
+
+.active, .collapsible:hover {
+	background-color: #4167dc;
+  }
+
+.collapsible-content {
+	width: 58%;
+	padding: 0 18px;
+ 	max-height: 0;
+  	overflow: hidden;
+  	transition: max-height 0.2s ease-out;
+ 	background-color: #f1f1f1;
+	 border-radius: 8px;
+}
+
+/* Modal */
+
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	padding-top: 100px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,0.4);
+  }
+  
+  .modal-content {
+	background-color: #fefefe;
+	margin: auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+ 	-webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+  
+  .modal-close-button {
+	color: #aaaaaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+  }
+  
+  .modal-close-button:hover,
+  .modal-close-button:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+  }
+
+  .close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+	color: red;
+	text-decoration: none;
+	cursor: pointer;
+  }
+
+  .modal-header {
+	padding: 2px 16px;
+	background-color: #182859;
+	color: white;
+  }
+
+  @keyframes animatetop {
+	from {top: -300px; opacity: 0}
+	to {top: 0; opacity: 1}
+  }
+
+  @-webkit-keyframes animatetop {
+	from {top:-300px; opacity:0} 
+	to {top:0; opacity:1}
+  }
+
+/* Login */
 
 .login-button {
 	background-color:#182859;
@@ -132,19 +342,7 @@ input[type=text], input[type=password] {
 .login-button:hover {
 	background-color: #4167dc;
  	 color: #ffffff;
-}
-
-.signup-button {
-	background-color:#fefefe;
-	color:#000000;
-	border: 1px solid #182859;
-	width:40%;
-	height:35px;
-}
-
-.signup-button:hover {
-	background-color: #182859;
- 	 color: #ffffff;
+	border: 1px solid #4167dc;
 }
 
 
@@ -223,7 +421,7 @@ input[type=text], input[type=password] {
 	width: 100%;
   }
   
-  .sticky + .content {
+.sticky + .content {
 	padding-top: 60px;
   }
 
@@ -313,21 +511,33 @@ ul, #ListMenuUL {
 	display: block;
   }
 
-  .ULDiv1{
+  .ColorDiv1{
 	background-color:rgb(255, 143, 143);
 	color:rgb(164, 0, 0);
   }
-  .ULDiv2{
+  .ColorDiv2{
 	background-color:rgb(154, 255, 131);
 	color:rgb(0, 111, 0);
   }
-  .ULDiv3{
+  .ColorDiv3{
 	background-color:rgb(161, 219, 255);
 	color:rgb(9, 0, 130);
   }
-  .ULDiv4{
+  .ColorDiv4{
 	background-color:rgb(255, 197, 110);
 	color:rgb(189, 97, 0);
+  }
+
+  /* Columns */
+
+  .chatboard-menu-column1 ,.studymaterial-menu-column1 {
+	column-count: 5;
+	column-rule: 2px solid #182859;
+  }
+
+  .chatboard-menu-column2 ,.studymaterial-menu-column2 {
+	column-count: 4;
+	column-rule: 2px solid #182859;
   }
 
   /*Contact*/
@@ -343,7 +553,7 @@ ul, #ListMenuUL {
 
   #leaderboard {
 	border-collapse: collapse;
-	width: 80%;
+	width: 60%;
   }
 
   #leaderboard td, #leaderboard th {
@@ -351,14 +561,64 @@ ul, #ListMenuUL {
 	padding: 8px;
   }
 
-  #customers tr:nth-child(even){background-color: #f2f2f2;}
+  .leaderboard th:first-child {
+	width:50px;
+	text-align:center;
+  }
 
-  #customers tr:hover {background-color: #ddd;}
+  #leaderboard tr {
+	  background-color:#fefefe;
+	  text-align:center;
+  }
+
+  #leaderboard tr:hover {background-color: #ddd;}
   
-  #customers th {
+  #leaderboard th {
 	padding-top: 12px;
 	padding-bottom: 12px;
-	text-align: center;
 	background-color: #182859;
 	color: white;
+	text-align:center;
   }
+
+  /* Events */
+
+  .add-event-button {
+	background-color:green;
+	color:#fefefe;
+	border: 1px solid green;
+	width:60%;
+	height:35px;
+	align-content:center;
+	display: block;
+	font-size: 20px;
+	border-radius: 8px;
+	transition-duration: 0.4s;
+	cursor: pointer;
+   }
+
+  .add-event-button:hover {
+	background-color: greenyellow;
+ 	color: #ffffff;
+	border: 1px solid greenyellow;
+   }
+
+  .submit-button {
+	background-color:#182859;
+	color:#fefefe;
+	border: 1px solid #182859;
+	width:40%;
+	height:35px;
+	
+}
+
+  .submit-button:hover {
+	background-color: #4167dc;
+ 	color: #ffffff;
+	border: 1px solid #4167dc;
+	}
+
+  .event-input-description {
+	width:40%;
+	}
+  

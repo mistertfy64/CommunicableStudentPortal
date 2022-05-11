@@ -82,11 +82,11 @@ app.get("/leaderboard", (request, response) => {
     response.render("pages/leaderboard", {configuration: safeConfiguration}); 
 });
 
-app.get("/update", (request, response) => {
+app.get("/updates", (request, response) => {
     response.render("pages/updates", {configuration: safeConfiguration}); 
 });
 
-app.get("/studymaterial-menu", (request, response) => {
+app.get("/studymaterial", (request, response) => {
     response.render("pages/studymaterial-menu", {configuration: safeConfiguration}); 
 });
 
