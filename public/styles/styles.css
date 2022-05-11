@@ -75,6 +75,10 @@ a:hover {
 	color:#4167dc;
 }
 
+hr {
+	border:1px solid #182859;
+}
+
 .button {
 	background-color: #182859;
 	border: none;
