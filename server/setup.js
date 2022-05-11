@@ -2,6 +2,12 @@ const chalk = require("chalk");
 const inquirer = require("inquirer");
 const fs = require("fs");
 const path = require("path");
+const mongoose = require("mongoose");
+const bcrypt = require("bcrypt");
+
+const schemas = require("./core/schemas.js");
+
+const UserModel = mongoose.model("UserModel", schemas.userSchema, "users");
 
 async function startSetUp(configuration) {
 	let itemsToSetUp = "";
@@ -69,16 +75,19 @@ async function startSetUp(configuration) {
 	await inquirer
 		.prompt({
 			message: chalk.reset(
-				"Enter your MongoDB connection string. This will not be revealed since it is stored in a separate .env file on your machine."
+				"Enter your MongoDB connection string. This will not be revealed since it is stored in a separate .env file on your machine. The database will also be written to with the super administrator account."
 			),
 			name: "databaseConnectionString",
 			prefix: "",
 		})
-		.then((answers) => {
+		.then(async (answers) => {
 			fs.writeFileSync(
-				path.join('./', "/credentials.env"),
+				path.join("./", "/credentials.env"),
 				`DATABASE_URI=${answers.databaseConnectionString}`
 			);
+
+			await connectToDatabaseForSetup(answers.databaseConnectionString);
+			await createDefaultSuperAdministratorAccount();
 		});
 
 	configuration.environmentVariablesFileLocation = "credentials.env";
@@ -86,7 +95,7 @@ async function startSetUp(configuration) {
 
 	// save settings
 	fs.writeFileSync(
-		path.join('./', "/configuration.json"),
+		path.join("./", "/configuration.json"),
 		JSON.stringify(configuration, null, 4)
 	);
 
@@ -191,6 +200,66 @@ async function startTopNavigationBarSectionSetup(configuration) {
 				position: answers.position,
 			};
 		});
+}
+
+async function createDefaultSuperAdministratorAccount() {
+	
+	let password;
+	let hashedPassword;
+
+	await inquirer
+		.prompt({
+			message: chalk.reset(
+				"Enter the password you want to use for the default super administrator account."
+			),
+			name: "defaultPassword",
+			prefix: "",
+		})
+		.then((answers) => {
+			password = answers.defaultPassword;
+		});
+
+		// await bcrypt.genSalt(12, async (error, salt) => {
+		// 	await bcrypt.hash(
+		// 		password,
+		// 		salt,
+		// 		async function (error, hash) {
+		// 			hashedPassword = hash;
+		// 		}
+		// 	);
+		// });
+
+		let salt = bcrypt.genSaltSync(12);
+		hashedPassword = bcrypt.hashSync(password, salt)
+
+
+	let dataToSave = new UserModel({
+		name: "Default Super Administrator",
+		username: "sysop",
+		userID: "sysop",
+		password: hashedPassword,
+		personalEmail: "",
+		professionalEmail: "",
+		membership: {
+			isSuperAdministrator: true,
+			isAdministrator: true,
+			isNormalUser: false,
+		},
+	});
+
+	try {
+		await dataToSave.save();
+	} catch (error) {
+		console.error(chalk.redBright(error));
+	}
+}
+
+async function connectToDatabaseForSetup(databaseConnectionString) {
+	await mongoose.connect(databaseConnectionString, {
+		useNewUrlParser: true,
+		useUnifiedTopology: true,
+		useFindAndModify: false,
+	});
 }
 
 module.exports = { startSetUp };

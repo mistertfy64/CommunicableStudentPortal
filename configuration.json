@@ -1,8 +1,8 @@
 {
     "applicationIsSetUp": true,
     "environmentVariablesFileLocation": "credentials.env",
-    "port": "8888",
-    "name": "mistertfy64 Co. Inc.",
+    "port": "22222",
+    "name": "hi",
     "topNavigationBarSections": {
         "gaioo": {
             "text": "Gaioo Worshiping Palace",
