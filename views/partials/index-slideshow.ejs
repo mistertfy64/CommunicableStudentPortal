@@ -13,6 +13,7 @@
         <div class="slideshow-number">3/3</div>
         <img src="assets\images\Random Banner 2.png" style="width:100%">
     </div>
+    <br>
 
     <a class="slideshow-prev-button" onclick="plusSlides(-1)">&#10094;</a>
     <a class="slideshow-next-button" onclick="plusSlides(1)">&#10095;</a>
@@ -44,5 +45,6 @@
     }
     slides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " active";
-    }
+    setTimeout(showSlides, 2000)
+    }    
 </script>
