@@ -21,6 +21,7 @@ const safeConfiguration = stripSensitiveConfigurationData(loadedConfiguration);
 require('dotenv').config({path: path.join(__dirname, configuration.environmentVariablesFileLocation)});
 
 function initialize(){
+    
 mongoose.connect(process.env.DATABASE_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
