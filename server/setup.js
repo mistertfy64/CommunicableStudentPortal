@@ -202,9 +202,10 @@ async function startTopNavigationBarSectionSetup(configuration) {
 		});
 }
 
-async function createDefaultSuperAdministratorAccount(
-) {
-	let hashedPassword = "";
+async function createDefaultSuperAdministratorAccount() {
+	
+	let password;
+	let hashedPassword;
 
 	await inquirer
 		.prompt({
@@ -214,17 +215,23 @@ async function createDefaultSuperAdministratorAccount(
 			name: "defaultPassword",
 			prefix: "",
 		})
-		.then(async (answers) => {
-			await bcrypt.genSalt(12, async (error, salt) => {
-				await bcrypt.hash(
-					answers.defaultPassword,
-					salt,
-					function (error, hash) {
-						hashedPassword = hash;
-					}
-				);
-			});
+		.then((answers) => {
+			password = answers.defaultPassword;
 		});
+
+		// await bcrypt.genSalt(12, async (error, salt) => {
+		// 	await bcrypt.hash(
+		// 		password,
+		// 		salt,
+		// 		async function (error, hash) {
+		// 			hashedPassword = hash;
+		// 		}
+		// 	);
+		// });
+
+		let salt = bcrypt.genSaltSync(12);
+		hashedPassword = bcrypt.hashSync(password, salt)
+
 
 	let dataToSave = new UserModel({
 		name: "Default Super Administrator",
@@ -241,7 +248,7 @@ async function createDefaultSuperAdministratorAccount(
 	});
 
 	try {
-	await dataToSave.save();
+		await dataToSave.save();
 	} catch (error) {
 		console.error(chalk.redBright(error));
 	}

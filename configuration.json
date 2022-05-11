@@ -1,7 +1,7 @@
 {
     "applicationIsSetUp": true,
     "environmentVariablesFileLocation": "credentials.env",
-    "port": "7777",
+    "port": "22222",
     "name": "hi",
     "topNavigationBarSections": {
         "gaioo": {
