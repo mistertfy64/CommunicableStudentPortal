@@ -30,7 +30,7 @@
     function currentSlide(n) {
     showSlides(slideIndex = n);
     }
-
+    
     function showSlides(n) {
     let i;
     let slides = document.getElementsByClassName("slideshow-pic");
@@ -45,6 +45,5 @@
     }
     slides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " active";
-    setTimeout(showSlides, 2000)
     }    
 </script>
