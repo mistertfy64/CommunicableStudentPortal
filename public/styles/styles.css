@@ -137,7 +137,6 @@ textarea {
  	border-radius: 8px;
   	background-color: #fefefe;
   	resize: none;
-	height:100px;
 	font-family: var(--default-font);
 }
 
@@ -237,7 +236,6 @@ textarea {
 	border-radius: 8px;
 	display:block;
 	font-family: var(--default-font);
-	text-align: center;
 	transition-duration: 0.4s;
 }
 
@@ -351,6 +349,7 @@ textarea {
 	background-color: var(--default-top-navigation-bar-background-color);
 	color: var(--default-top-navigation-bar-background-color);
 	overflow: hidden;
+	z-index:100;
 }
 
 #top-navigation-bar a {
@@ -425,7 +424,7 @@ textarea {
 	padding-top: 60px;
   }
 
-.login-button {
+.top-navigation-bar-login-button {
 	float: right;
 	color: #ffffff;
 	text-align: center;
@@ -482,7 +481,7 @@ ul, #ListMenuUL {
   
   #ListMenuUL {
 	margin: 0;
-	padding: 5px 50px 5px 50px;
+	padding: 5px 50px;
 	font-size:22px;
 	text-align:left;
   }
