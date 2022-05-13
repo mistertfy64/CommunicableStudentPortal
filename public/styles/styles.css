@@ -421,7 +421,7 @@ textarea {
   }
   
 .sticky + .content {
-	padding-top: 60px;
+	padding-top: 80px;
   }
 
 .top-navigation-bar-login-button {
@@ -458,6 +458,13 @@ textarea {
 		display: block;
 		text-align: left;
 	}
+}
+
+@media
+(prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 /* Banner */
@@ -558,11 +565,13 @@ ul, #ListMenuUL {
   #leaderboard td, #leaderboard th {
 	border: 1px solid #ddd;
 	padding: 8px;
+	border-radius: 8px;
   }
 
   .leaderboard th:first-child {
-	width:50px;
-	text-align:center;
+	width: 50px;
+	text-align: center;
+	outline: hidden;
   }
 
   #leaderboard tr {
@@ -570,7 +579,9 @@ ul, #ListMenuUL {
 	  text-align:center;
   }
 
-  #leaderboard tr:hover {background-color: #ddd;}
+  #leaderboard tr:hover {
+	  background-color: #ddd;
+  }
   
   #leaderboard th {
 	padding-top: 12px;
