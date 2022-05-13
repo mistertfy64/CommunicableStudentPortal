@@ -16,6 +16,7 @@ This project is created for [Mahidol University International College's Young Te
 - Completely free to use and maintain**! ([pls donate to mistertfy64](https://www.patreon.com/mistertfy64))
 
 \*You may restrict access to students only, or make it public, some configuration may be required.
+
 \*\*CommunicableStudentPortal is free to download, use, and maintain. However, maintaining may require costs from your server provider (but not from the creators). Check your server provider for details.
 
 
