@@ -140,6 +140,12 @@ textarea {
 	font-family: var(--default-font);
 }
 
+  .avatar {
+	  height: 40px;
+	  width: 40px;
+	  border-radius: 50%;
+  }
+
   /* Slideshow */
 
   .slideshow-container {
@@ -539,6 +545,46 @@ ul, #ListMenuUL {
   .chatboard-menu-column2 ,.studymaterial-menu-column2 {
 	column-count: 4;
 	column-rule: 2px solid #182859;
+  }
+
+  /* Chatboards */
+
+  .chatboard-message-container {
+	background-color: #fefefe;
+	border: 2px solid #182859;
+	border-radius: 8px;
+	width: 60%;
+	height: 10%;
+	display: block;
+	text-align: left;
+	padding: 10%;
+	margin: 0px 20px;
+	align-items: center;
+  }
+
+  .chatboard-message {
+	font-size: 18px;
+	background-color:var(--default-background-color);
+  }
+
+  .chatboard-title{
+	  font-size: 20px;
+	  text-align: right;
+	  vertical-align: baseline;
+  }
+
+  .chatboard-author, .chatboard-time {
+	font-size: 24px;
+	font-weight: bold;
+	color:#182859;
+  }
+
+  .chatboard-time {
+	text-align: right;
+  }
+
+  .chatboard p {
+	  font-size: 18px;
   }
 
   /*Contact*/
