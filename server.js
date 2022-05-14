@@ -90,6 +90,10 @@ app.get("/studymaterial", (request, response) => {
     response.render("pages/studymaterial-menu", {configuration: safeConfiguration}); 
 });
 
+app.get("/chatboardprototype", (request, response) => {
+    response.render("pages/chatboardprototype", {configuration: safeConfiguration}); 
+});
+
 app.listen(configuration.port, () => {
     console.log(`App listening on port ${configuration.port}`);
     checkInitialSetUpProgress();
