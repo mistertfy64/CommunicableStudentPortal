@@ -569,8 +569,7 @@ ul, #ListMenuUL {
   }
 
   .chatboard-message-container {
-	  width:80%;
-	  
+	  width:90%;
   }
 
   .chatboard-title{
@@ -591,6 +590,33 @@ ul, #ListMenuUL {
 	text-align: right;
 	float: right;
   }
+
+  .add-message-button {
+	background-color: green;
+	color: #fefefe;
+	border: 1px solid green;
+	width: 62%;
+	height: 35px;
+	align-content: center;
+	display: block;
+	font-size: 20px;
+	border-radius: 8px;
+	transition-duration: 0.4s;
+	cursor: pointer;
+   }
+
+  .add-message-button:hover {
+	background-color: greenyellow;
+ 	color: #ffffff;
+	border: 1px solid greenyellow;
+   }
+
+   .message-input-context {
+		width:40%;
+   }
+
+
+
 
   /*Contact*/
 

@@ -10,6 +10,13 @@
         <br>
 		<h1>CHAT BOARD</h1>
 		<br>
+		<center>
+			<button type="button" class="add-message-button" id="modal-button" style="display:flex;justify-content:center;align-items:center;">NEW MESSAGE</button>
+			<div id="modal" class="modal">
+				<div class="modal-content"><%- include("../partials/add-message") %></div>
+			</div>
+		</center>
+		<br>
 		<div class="chatboard-container">
 			<img src="assets\images\Tawei.jpg" class="avatar">
 			<span class="chatboard-title">Anyone want to come to my birthday party?</span>
@@ -24,5 +31,27 @@
 			<br>
 		</div>
 		<footer><%- include("../partials/footer") %></footer>
+
+		<script>
+			var modal = document.getElementById("modal");
+			
+			var btn = document.getElementById("modal-button");
+			
+			var span = document.getElementsByClassName("close")[0];
+			
+			btn.onclick = function() {
+			  modal.style.display = "block";
+			}
+			
+			span.onclick = function() {
+			  modal.style.display = "none";
+			}
+			
+			window.onclick = function(event) {
+			  if (event.target == modal) {
+				modal.style.display = "none";
+			  }
+			}
+		</script>
 	</body>
 </html>
