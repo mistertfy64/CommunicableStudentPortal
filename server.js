@@ -86,7 +86,7 @@ app.get("/updates", (request, response) => {
     response.render("pages/updates", {configuration: safeConfiguration}); 
 });
 
-app.get("/studymaterial", (request, response) => {
+app.get("/studymaterial-menu", (request, response) => {
     response.render("pages/studymaterial-menu", {configuration: safeConfiguration}); 
 });
 
