@@ -141,9 +141,10 @@ textarea {
 }
 
   .avatar {
-	  height: 40px;
-	  width: 40px;
+	  height: 50px;
+	  width: 50px;
 	  border-radius: 50%;
+	  vertical-align:middle;
   }
 
   /* Slideshow */
@@ -549,42 +550,46 @@ ul, #ListMenuUL {
 
   /* Chatboards */
 
-  .chatboard-message-container {
+  .chatboard-container {
 	background-color: #fefefe;
 	border: 2px solid #182859;
 	border-radius: 8px;
 	width: 60%;
-	height: 10%;
 	display: block;
 	text-align: left;
-	padding: 10%;
-	margin-left: 20px;
-	align-items: center;
+	padding: 10px 20px;
+	margin: auto;
+	align-items: left;
   }
 
   .chatboard-message {
 	font-size: 18px;
-	background-color:var(--default-background-color);
+	background-color: var(--default-background-color);
+	padding-left: 88px;
+  }
+
+  .chatboard-message-container {
+	  width:80%;
+	  
   }
 
   .chatboard-title{
-	  font-size: 20px;
+	  font-size: 30px;
 	  text-align: right;
-	  vertical-align: baseline;
+	  font-weight: bold;
+	  padding-left: 30px;
+	  vertical-align:middle;
   }
 
   .chatboard-author, .chatboard-time {
-	font-size: 24px;
+	font-size: 14px;
+	color:#484848;
 	font-weight: bold;
-	color:#182859;
   }
 
   .chatboard-time {
 	text-align: right;
-  }
-
-  .chatboard p {
-	  font-size: 18px;
+	float: right;
   }
 
   /*Contact*/
