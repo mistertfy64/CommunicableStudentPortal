@@ -5,6 +5,8 @@ const path = require("path");
 const _ = require("lodash");
 const mongoose = require("mongoose");
 
+const configuration = require("./configuration.js");
+
 const setup = require(path.join(__dirname, "server", "setup.js"));
 
 
@@ -12,13 +14,10 @@ const setup = require(path.join(__dirname, "server", "setup.js"));
 const app = express();
 app.use(express.static("public"))
 
-let loadedConfiguration = JSON.parse(fs.readFileSync("configuration.json", "utf8"));
-// get configuration and credentials
-const configuration = _.cloneDeep(loadedConfiguration)
-// derive a safer configuration object
-const safeConfiguration = stripSensitiveConfigurationData(loadedConfiguration);
+configuration.initialize();
+require('dotenv').config({path: path.join(__dirname, configuration.configuration.environmentVariablesFileLocation)});
 
-require('dotenv').config({path: path.join(__dirname, configuration.environmentVariablesFileLocation)});
+app.set('view engine', 'ejs');
 
 function initialize(){
     
@@ -33,31 +32,22 @@ mongoose.connection.on("connected", () => {
     console.log("Successfully connected to database.");
 });
 
-function stripSensitiveConfigurationData(loadedConfiguration){
-    let newConfiguration = _.cloneDeep(loadedConfiguration);
-    delete newConfiguration.environmentVariablesFileLocation;
-    return newConfiguration;
-}
+
 
 function checkInitialSetUpProgress(){
-    if (!safeConfiguration.applicationIsSetUp){
+    if (!configuration.safeConfiguration.applicationIsSetUp){
         setup.startSetUp(_.cloneDeep(configuration));
     } else {
         initialize();
     }
 }
 
-
-app.set('view engine', 'ejs');
-
-app.get("/", (request, response) => {
-    response.render("pages/index", {configuration: safeConfiguration}); 
+require("fs").readdirSync(require("path").join(__dirname, "routes")).forEach((file) => {
+    app.use(require("./routes/" + file));
 });
 
-app.get("/login", (request, response) => {
-    response.render("pages/login", {configuration: safeConfiguration}); 
-});
 
+<<<<<<< HEAD
 app.get("/signup", (request, response) => {
     response.render("pages/signup", {configuration: safeConfiguration}); 
 });
@@ -96,6 +86,10 @@ app.get("/chatboard-prototype", (request, response) => {
 
 app.listen(configuration.port, () => {
     console.log(`App listening on port ${configuration.port}`);
+=======
+app.listen(configuration.configuration.port, () => {
+    console.log(`App listening on port ${configuration.configuration.port}`);
+>>>>>>> e8752b8035c21bdbd5aedcb34e07a080d201e451
     checkInitialSetUpProgress();
 
 });
