@@ -62,7 +62,7 @@ app.get("/signup", (request, response) => {
     response.render("pages/signup", {configuration: safeConfiguration}); 
 });
 
-app.get("/chatboard", (request, response) => {
+app.get("/chatboard-menu", (request, response) => {
     response.render("pages/chatboard-menu", {configuration: safeConfiguration}); 
 });
 
@@ -90,8 +90,8 @@ app.get("/studymaterial", (request, response) => {
     response.render("pages/studymaterial-menu", {configuration: safeConfiguration}); 
 });
 
-app.get("/chatboardprototype", (request, response) => {
-    response.render("pages/chatboardprototype", {configuration: safeConfiguration}); 
+app.get("/chatboard-prototype", (request, response) => {
+    response.render("pages/chatboard-prototype", {configuration: safeConfiguration}); 
 });
 
 app.listen(configuration.port, () => {
