@@ -47,7 +47,6 @@ require("fs").readdirSync(require("path").join(__dirname, "routes")).forEach((fi
 });
 
 
-<<<<<<< HEAD
 app.get("/signup", (request, response) => {
     response.render("pages/signup", {configuration: safeConfiguration}); 
 });
@@ -86,10 +85,6 @@ app.get("/chatboard-prototype", (request, response) => {
 
 app.listen(configuration.port, () => {
     console.log(`App listening on port ${configuration.port}`);
-=======
-app.listen(configuration.configuration.port, () => {
-    console.log(`App listening on port ${configuration.configuration.port}`);
->>>>>>> e8752b8035c21bdbd5aedcb34e07a080d201e451
     checkInitialSetUpProgress();
 
 });
