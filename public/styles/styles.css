@@ -90,7 +90,8 @@ hr {
 	border-radius: 8px;
 	transition-duration: 0.4s;
 	cursor: pointer;
-	margin:auto
+	margin:auto;
+	font-family: var(--default-font)
 }
 
 .center {
@@ -555,7 +556,7 @@ ul, #ListMenuUL {
   /* Chatboards */
 
   .chatboard-message-container {
-	background-color: #fefefe;
+	background-color: var(--default-background-color);
 	border: 2px solid #182859;
 	border-radius: 8px;
 	width: 60%;
@@ -572,7 +573,7 @@ ul, #ListMenuUL {
 	padding-left: 88px;
   }
 
-  .chatboard-title{
+  .chatboard-message-title{
 	font-size: 28px;
 	text-align: right;
 	font-weight: bold;
@@ -580,7 +581,7 @@ ul, #ListMenuUL {
 	vertical-align:middle;
   }
 
-  .chatboard-author, .chatboard-time {
+  .chatboard-message-author, .chatboard-message-time {
 	font-size: 14px;
 	color:#484848;
 	font-weight: bold;
@@ -601,6 +602,7 @@ ul, #ListMenuUL {
 	align-content: center;
 	display: block;
 	font-size: 20px;
+	font-family: inherit;
 	border-radius: 8px;
 	transition-duration: 0.4s;
 	cursor: pointer;
@@ -612,13 +614,46 @@ ul, #ListMenuUL {
 	border: 1px solid greenyellow;
    }
 
-   .message-input-context {
+   .message-context-input {
 	width:40%;
    }
 
    .message-comment-container {
 	border: 2px solid #182859;
+   }
 
+   .chatboard-comment-container {
+	background-color: inherit;
+	border: 2px solid #182859;
+	border-radius: 8px;
+	width: 95%;
+	display: block;
+	text-align: left;
+	padding: 10px 20px;
+	align-items: left;
+   }
+
+   .chatboard-comment-author, .chatoard-comment-time {
+	font-size: 14px;
+	color:#484848;
+	font-weight: bold;
+   }
+
+   .chatboard-comment {
+	font-size: 16px;
+	background-color: inherit;
+	padding-left: 88px;
+   }
+
+   .comment-container {
+	width: 90%;
+	text-align: left;
+	margin: auto;
+   }
+
+   .comment-context-input {
+	width:70%;
+	height: 80px;
    }
 
   /*Contact*/
@@ -677,6 +712,7 @@ ul, #ListMenuUL {
 	align-content:center;
 	display: block;
 	font-size: 20px;
+	font-family: inherit;
 	border-radius: 8px;
 	transition-duration: 0.4s;
 	cursor: pointer;
@@ -694,7 +730,9 @@ ul, #ListMenuUL {
 	border: 1px solid #182859;
 	width:40%;
 	height:35px;
-	
+	border-radius: 8px;
+	transition-duration: 0.4s;
+	cursor: pointer;
 }
 
   .submit-button:hover {
