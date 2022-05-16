@@ -2,7 +2,7 @@ const fs = require("fs");
 const _ = require("lodash");
 
 let loadedConfiguration = {};
-let configuration = {};
+let unsafeConfiguration = {};
 let safeConfiguration = {};
 
 function initialize() {
@@ -10,7 +10,7 @@ function initialize() {
 		fs.readFileSync("configuration.json", "utf8")
 	);
 	// get configuration and credentials
-	longClone(configuration, _.cloneDeep(loadedConfiguration));
+	longClone(unsafeConfiguration, _.cloneDeep(loadedConfiguration));
 	// derive a safer configuration object
 	let nonFinalSafeConfiguration = stripSensitiveConfigurationData(
 		_.cloneDeep(loadedConfiguration)
@@ -33,7 +33,7 @@ function stripSensitiveConfigurationData(loadedConfiguration) {
 }
 
 module.exports = {
-	configuration: configuration,
+	unsafeConfiguration: unsafeConfiguration,
 	safeConfiguration: safeConfiguration,
 };
 module.exports.initialize = initialize;
