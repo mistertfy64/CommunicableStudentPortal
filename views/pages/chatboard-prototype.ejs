@@ -11,24 +11,44 @@
 		<h1>CHAT BOARD</h1>
 		<br>
 		<center>
-			<button type="button" class="add-message-button" id="modal-button" style="display:flex;justify-content:center;align-items:center;">NEW MESSAGE</button>
+			<button type="button" class="add-message-button" id="modal-button" style="display:flex;justify-content:center;align-items:center;">New message</button>
 			<div id="modal" class="modal">
 				<div class="modal-content"><%- include("../partials/add-message") %></div>
 			</div>
 		</center>
 		<br>
-		<div class="chatboard-container">
+		<div class="chatboard-message-container">
 			<img src="assets\images\Tawei.jpg" class="avatar">
 			<span class="chatboard-title">Anyone want to come to my birthday party?</span>
 			<br>
 			<span class="chatboard-author">John Doe</span>
-			<div class="width:200"></div>
-			<div class="chatboard-message-container">
+			<br>
+			<span class="chatboard-time">Posted on April 19th, 2022 11:59</span>
+			<br><br>
+			<div class="message-container">
 				<span class="chatboard-message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus bibendum orci, eu eleifend risus porttitor sed. Quisque non libero eu mi condimentum vestibulum. Vestibulum gravida tellus in nisl eleifend, sed laoreet lorem convallis. Nulla quis erat leo. Aliquam eu semper diam, ut ullamcorper justo. Morbi aliquet aliquet ipsum condimentum hendrerit. Etiam condimentum, tellus quis aliquet pharetra, ligula ipsum dignissim leo, at placerat urna ex id ante. Nullam tempus scelerisque erat finibus congue. Duis suscipit vulputate sapien, in ultrices elit tempus vitae.</span>
 			</div>
 			<br>
-				<span class="chatboard-time">April 19th, 2022 11:59</span>
-			<br>
+			<button type="button" class="collapsible" style="width:100% ;margin: auto">Comments</button>
+			<div class="collapsible-content" style="width:96% ;margin: auto">
+				<br>
+				<center>
+					<button type="button" class="add-message-button" id="modal-button" style="display:flex;justify-content:center;align-items:center; width:100%">Add comment</button>
+				</center>
+				<br>
+				<div id="modal" class="modal">
+						<div class="modal-content"><%- include("../partials/add-comment") %></div>
+					<br>
+					<div class="chatboard-comment-container">
+						<img src="" class="avatar">
+						<span class="">Jane Doe</span>
+						<br>
+						<span class="chatboard-time">Posted on April 19th, 2022 11:59</span>
+						<br><br>
+					</div>
+					<br>
+				</div>
+			</div>
 		</div>
 		<footer><%- include("../partials/footer") %></footer>
 
@@ -51,6 +71,21 @@
 			  if (event.target == modal) {
 				modal.style.display = "none";
 			  }
+			}
+
+			var coll = document.getElementsByClassName("collapsible");
+			var i;
+			
+			for (i = 0; i < coll.length; i++) {
+				coll[i].addEventListener("click", function() {
+					this.classList.toggle("active");
+					var content = this.nextElementSibling;
+					if (content.style.maxHeight){
+						content.style.maxHeight = null;
+					} else {
+						content.style.maxHeight = content.scrollHeight + "px";
+					} 
+				});
 			}
 		</script>
 	</body>

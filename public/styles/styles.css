@@ -254,6 +254,10 @@ textarea {
 	 border-radius: 8px;
 }
 
+.collapsible-content p {
+	font-size: 20px;
+}
+
 /* Modal */
 
 .modal {
@@ -550,7 +554,7 @@ ul, #ListMenuUL {
 
   /* Chatboards */
 
-  .chatboard-container {
+  .chatboard-message-container {
 	background-color: #fefefe;
 	border: 2px solid #182859;
 	border-radius: 8px;
@@ -568,16 +572,12 @@ ul, #ListMenuUL {
 	padding-left: 88px;
   }
 
-  .chatboard-message-container {
-	  width:90%;
-  }
-
   .chatboard-title{
-	  font-size: 30px;
-	  text-align: right;
-	  font-weight: bold;
-	  padding-left: 30px;
-	  vertical-align:middle;
+	font-size: 28px;
+	text-align: right;
+	font-weight: bold;
+	padding-left: 30px;
+	vertical-align:middle;
   }
 
   .chatboard-author, .chatboard-time {
@@ -586,12 +586,13 @@ ul, #ListMenuUL {
 	font-weight: bold;
   }
 
-  .chatboard-time {
-	text-align: right;
-	float: right;
+  .message-container {
+	width: 90%;
+	text-align: left;
+	margin: auto;
   }
 
-  .add-message-button {
+  .add-message-button, .add-comment-button {
 	background-color: green;
 	color: #fefefe;
 	border: 1px solid green;
@@ -605,18 +606,20 @@ ul, #ListMenuUL {
 	cursor: pointer;
    }
 
-  .add-message-button:hover {
+  .add-message-button:hover, .add-comment-button:hover {
 	background-color: greenyellow;
  	color: #ffffff;
 	border: 1px solid greenyellow;
    }
 
    .message-input-context {
-		width:40%;
+	width:40%;
    }
 
+   .message-comment-container {
+	border: 2px solid #182859;
 
-
+   }
 
   /*Contact*/
 
