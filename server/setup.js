@@ -7,7 +7,7 @@ const bcrypt = require("bcrypt");
 
 const schemas = require("./core/schemas.js");
 
-const UserModel = mongoose.model("UserModel", schemas.userSchema, "users");
+var User = require("../models/User.js");
 
 async function startSetUp(configuration) {
 	let itemsToSetUp = "";
@@ -233,7 +233,7 @@ async function createDefaultSuperAdministratorAccount() {
 		hashedPassword = bcrypt.hashSync(password, salt)
 
 
-	let dataToSave = new UserModel({
+	let dataToSave = new User({
 		name: "Default Super Administrator",
 		username: "sysop",
 		userID: "sysop",
