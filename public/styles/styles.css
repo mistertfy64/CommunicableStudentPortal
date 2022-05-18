@@ -34,8 +34,8 @@ body {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	width: 15%;
-	height:15%;
+	width: 12%;
+	height:12%;
 }
 
 h1 {
@@ -63,7 +63,7 @@ p {
 	padding: 5px 70px 70px 50px;
 	text-align: justify;
 	text-indent:40px;
-	font-size:18px;
+	font-size:16px;
 }
 
 a {
@@ -541,7 +541,7 @@ ul, #ListMenuUL {
 	color:rgb(189, 97, 0);
   }
 
-  /* Columns */
+  /* Columns Old Style */
 
   .chatboard-menu-column1 ,.studymaterial-menu-column1 {
 	column-count: 5;
@@ -551,6 +551,26 @@ ul, #ListMenuUL {
   .chatboard-menu-column2 ,.studymaterial-menu-column2 {
 	column-count: 4;
 	column-rule: 2px solid #182859;
+  }
+
+   /* Columns Current Style */
+
+   .column {
+	float: left;
+	width: 33.33%;
+	padding: 5px;
+  }
+
+  .row:after {
+	content: "";
+	display: table;
+	clear: both;
+  }
+
+  @media screen and (max-width:600px) {
+	.column {
+	  width: 100%;
+	}
   }
 
   /* Chatboards */
@@ -663,17 +683,17 @@ ul, #ListMenuUL {
 	background-color: var(--default-background-color);
 	border: 2px solid #182859;
 	border-radius: 8px;
-	width: 20%;
 	display: inline-block;
-	text-align: left;
+	text-align: center;
 	padding: 10px 20px;
 	margin: auto;
 	align-items: center;
    }
 
    .studymaterial-pic {
-	   width:80%;
-
+	width: 150px;
+	object-fit: contain;
+	border-radius: 8px;
    }
 
   /*Contact*/
