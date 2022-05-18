@@ -656,6 +656,26 @@ ul, #ListMenuUL {
 	height: 80px;
    }
 
+
+   /*Studymaterial*/
+
+   .studymaterial-container {
+	background-color: var(--default-background-color);
+	border: 2px solid #182859;
+	border-radius: 8px;
+	width: 20%;
+	display: inline-block;
+	text-align: left;
+	padding: 10px 20px;
+	margin: auto;
+	align-items: center;
+   }
+
+   .studymaterial-pic {
+	   width:80%;
+
+   }
+
   /*Contact*/
 
   .location-div {
