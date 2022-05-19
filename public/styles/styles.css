@@ -685,15 +685,37 @@ ul, #ListMenuUL {
 	border-radius: 8px;
 	display: inline-block;
 	text-align: center;
-	padding: 10px 20px;
+	padding: 20px 20px;
 	margin: auto;
 	align-items: center;
+	transition-duration: 1.2s;
+   }
+
+   .studymaterial-container:hover {
+	   background-color: #182859;
+	   color:#fefefe;
+	   border: 2px solid #182859;
+   }
+
+   .studymaterial-container hr:hover {
+	   color:#fefefe;
    }
 
    .studymaterial-pic {
 	width: 150px;
 	object-fit: contain;
 	border-radius: 8px;
+   }
+
+   .studymaterial-name {
+	font-size:20px;
+	text-align: center;
+   }
+
+   .studymaterial-description {
+	font-size:14px;
+	text-align: center;
+	width:141px;
    }
 
   /*Contact*/
