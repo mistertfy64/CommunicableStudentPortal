@@ -76,7 +76,7 @@ a:hover {
 }
 
 hr {
-	border:1px solid #182859;
+	border: 1px solid #182859;
 }
 
 .button {
@@ -685,12 +685,11 @@ ul, #ListMenuUL {
 	border-radius: 8px;
 	display: inline-block;
 	text-align: center;
-	padding: 50px 20px;
+	padding: 30px 10px;
 	margin: auto;
-	align-items: center;
 	transition-duration: 1.2s;
-	width: 190px;
-	height: 400px;
+	width: 200px;
+	height: 350px;
 	overflow: hidden;
 	text-overflow: ellipsis;
    }
@@ -709,13 +708,13 @@ ul, #ListMenuUL {
 
    .studymaterial-name {
 	font-size:18px;
-	width: 140px;
 	text-align: center;
+	text-decoration: none;
    }
 
    .studymaterial-description {
+	text-align: center;
 	font-size:14px;
-	width:80%
    }
 
    .add-studymaterial-button {
