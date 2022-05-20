@@ -693,7 +693,6 @@ ul, #ListMenuUL {
 	height: 400px;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	align:center;
    }
 
    .studymaterial-container:hover {
