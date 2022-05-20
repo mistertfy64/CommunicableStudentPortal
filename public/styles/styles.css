@@ -685,20 +685,21 @@ ul, #ListMenuUL {
 	border-radius: 8px;
 	display: inline-block;
 	text-align: center;
-	padding: 20px 20px;
+	padding: 50px 20px;
 	margin: auto;
 	align-items: center;
 	transition-duration: 1.2s;
+	width: 190px;
+	height: 400px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	align:center;
    }
 
    .studymaterial-container:hover {
-	   background-color: #182859;
-	   color:#fefefe;
-	   border: 2px solid #182859;
-   }
-
-   .studymaterial-container hr:hover {
-	   color:#fefefe;
+	background-color: #182859;
+	color:#fefefe;
+	border: 2px solid #182859;
    }
 
    .studymaterial-pic {
@@ -708,14 +709,35 @@ ul, #ListMenuUL {
    }
 
    .studymaterial-name {
-	font-size:20px;
+	font-size:18px;
+	width: 140px;
 	text-align: center;
    }
 
    .studymaterial-description {
 	font-size:14px;
-	text-align: center;
-	width:141px;
+	width:80%
+   }
+
+   .add-studymaterial-button {
+	background-color: #182859;
+	color: #fefefe;
+	border: 1px solid #182859;
+	width: 70%;
+	height: 35px;
+	align-content: center;
+	display: block;
+	font-size: 20px;
+	font-family: inherit;
+	border-radius: 8px;
+	transition-duration: 0.4s;
+	cursor: pointer;
+   }
+
+   .add-studymaterial-button:hover {
+	background-color: #4167dc;
+	color: #fefefe;
+	border: 1px solid #4167dc;
    }
 
   /*Contact*/
