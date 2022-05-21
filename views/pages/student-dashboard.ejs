@@ -7,15 +7,48 @@
 	
 	<body>
 		<header><%- include("../partials/header", {configuration: configuration.topNavigationBarSections}); %></header>
-		<br>
-        
-		<h2>Welcome to the Communicable Student Portal!</h2>
-		<title>Updates</title>
-	</head>
-	<body>
-		<header><%- include("../partials/header", {configuration: configuration.topNavigationBarSections}); %></header>
-			<h1>Student Dashboard</h1>
-			<br>
-		<footer><%- include("../partials/footer") %></footer>
+		
+		<div class="tab">
+			<button class="tablinks" onclick="openDashboard(event, 'Home')" id="defaultOpen">Home</button>
+			<button class="tablinks" onclick="openDashboard(event, 'Profile')">Profile</button>
+			<button class="tablinks" onclick="openDashboard(event, 'Security')">Security</button>
+			<button class="tablinks" onclick="openDashboard(event, 'History')">History</button>
+		</div>
+		<div id="Home" class="tabcontent">
+			<h3>Home</h3>
+			<%- include("../partials/student-dashboard-home") %>
+		</div>
+		<div id="Profile" class="tabcontent">
+			<h3>Profile</h3>
+			<%- include("../partials/student-dashboard-profile") %>
+		</div>
+		<div id="Security" class="tabcontent">
+			<h3>Security</h3>
+			<%- include("../partials/student-dashboard-security") %>
+		</div>
+		<div id="History" class="tabcontent">
+			<h3>History</h3>
+			<%- include("../partials/student-dashboard-history") %>
+		</div>
+		  
+		<script>
+		    function openDashboard(evt, dashboardName) {
+				var i, tabcontent, tablinks;
+				tabcontent = document.getElementsByClassName("tabcontent");
+
+				for (i = 0; i < tabcontent.length; i++) {
+				tabcontent[i].style.display = "none";
+				}
+
+				tablinks = document.getElementsByClassName("tablinks");
+				for (i = 0; i < tablinks.length; i++) {
+				tablinks[i].className = tablinks[i].className.replace(" active", "");
+				}
+
+				document.getElementById(dashboardName).style.display = "block";
+				evt.currentTarget.className += " active";
+		    }
+		 	document.getElementById("defaultOpen").click();
+		</script>
 	</body>
 </html>
