@@ -34,8 +34,8 @@ body {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	width: 15%;
-	height:15%;
+	width: 12%;
+	height:12%;
 }
 
 h1 {
@@ -63,7 +63,7 @@ p {
 	padding: 5px 70px 70px 50px;
 	text-align: justify;
 	text-indent:40px;
-	font-size:18px;
+	font-size:16px;
 }
 
 a {
@@ -76,7 +76,7 @@ a:hover {
 }
 
 hr {
-	border:1px solid #182859;
+	border: 1px solid #182859;
 }
 
 .button {
@@ -90,7 +90,8 @@ hr {
 	border-radius: 8px;
 	transition-duration: 0.4s;
 	cursor: pointer;
-	margin:auto
+	margin:auto;
+	font-family: var(--default-font)
 }
 
 .center {
@@ -252,6 +253,10 @@ textarea {
   	transition: max-height 0.2s ease-out;
  	background-color: #f1f1f1;
 	 border-radius: 8px;
+}
+
+.collapsible-content p {
+	font-size: 20px;
 }
 
 /* Modal */
@@ -536,7 +541,7 @@ ul, #ListMenuUL {
 	color:rgb(189, 97, 0);
   }
 
-  /* Columns */
+  /* Columns Old Style */
 
   .chatboard-menu-column1 ,.studymaterial-menu-column1 {
 	column-count: 5;
@@ -548,10 +553,30 @@ ul, #ListMenuUL {
 	column-rule: 2px solid #182859;
   }
 
+   /* Columns Current Style */
+
+   .column {
+	float: left;
+	width: 33.33%;
+	padding: 5px;
+  }
+
+  .row:after {
+	content: "";
+	display: table;
+	clear: both;
+  }
+
+  @media screen and (max-width:600px) {
+	.column {
+	  width: 100%;
+	}
+  }
+
   /* Chatboards */
 
-  .chatboard-container {
-	background-color: #fefefe;
+  .chatboard-message-container {
+	background-color: var(--default-background-color);
 	border: 2px solid #182859;
 	border-radius: 8px;
 	width: 60%;
@@ -568,30 +593,27 @@ ul, #ListMenuUL {
 	padding-left: 88px;
   }
 
-  .chatboard-message-container {
-	  width:90%;
+  .chatboard-message-title{
+	font-size: 28px;
+	text-align: right;
+	font-weight: bold;
+	padding-left: 30px;
+	vertical-align:middle;
   }
 
-  .chatboard-title{
-	  font-size: 30px;
-	  text-align: right;
-	  font-weight: bold;
-	  padding-left: 30px;
-	  vertical-align:middle;
-  }
-
-  .chatboard-author, .chatboard-time {
+  .chatboard-message-author, .chatboard-message-time {
 	font-size: 14px;
 	color:#484848;
 	font-weight: bold;
   }
 
-  .chatboard-time {
-	text-align: right;
-	float: right;
+  .message-container {
+	width: 90%;
+	text-align: left;
+	margin: auto;
   }
 
-  .add-message-button {
+  .add-message-button, .add-comment-button {
 	background-color: green;
 	color: #fefefe;
 	border: 1px solid green;
@@ -600,23 +622,121 @@ ul, #ListMenuUL {
 	align-content: center;
 	display: block;
 	font-size: 20px;
+	font-family: inherit;
 	border-radius: 8px;
 	transition-duration: 0.4s;
 	cursor: pointer;
    }
 
-  .add-message-button:hover {
+  .add-message-button:hover, .add-comment-button:hover {
 	background-color: greenyellow;
  	color: #ffffff;
 	border: 1px solid greenyellow;
    }
 
-   .message-input-context {
-		width:40%;
+   .message-context-input {
+	width:40%;
+   }
+
+   .message-comment-container {
+	border: 2px solid #182859;
+   }
+
+   .chatboard-comment-container {
+	background-color: inherit;
+	border: 2px solid #182859;
+	border-radius: 8px;
+	width: 95%;
+	display: block;
+	text-align: left;
+	padding: 10px 20px;
+	align-items: left;
+   }
+
+   .chatboard-comment-author, .chatoard-comment-time {
+	font-size: 14px;
+	color:#484848;
+	font-weight: bold;
+   }
+
+   .chatboard-comment {
+	font-size: 16px;
+	background-color: inherit;
+	padding-left: 88px;
+   }
+
+   .comment-container {
+	width: 90%;
+	text-align: left;
+	margin: auto;
+   }
+
+   .comment-context-input {
+	width:70%;
+	height: 80px;
    }
 
 
+   /*Studymaterial*/
 
+   .studymaterial-container {
+	background-color: var(--default-background-color);
+	border: 2px solid #182859;
+	border-radius: 8px;
+	display: inline-block;
+	text-align: center;
+	padding: 30px 10px;
+	margin: auto;
+	transition-duration: 1.2s;
+	width: 200px;
+	height: 350px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+   }
+
+   .studymaterial-container:hover {
+	background-color: #182859;
+	color:#fefefe;
+	border: 2px solid #182859;
+   }
+
+   .studymaterial-pic {
+	width: 150px;
+	object-fit: contain;
+	border-radius: 8px;
+   }
+
+   .studymaterial-name {
+	font-size:18px;
+	text-align: center;
+	text-decoration: none;
+   }
+
+   .studymaterial-description {
+	text-align: center;
+	font-size:14px;
+   }
+
+   .add-studymaterial-button {
+	background-color: #182859;
+	color: #fefefe;
+	border: 1px solid #182859;
+	width: 70%;
+	height: 35px;
+	align-content: center;
+	display: block;
+	font-size: 20px;
+	font-family: inherit;
+	border-radius: 8px;
+	transition-duration: 0.4s;
+	cursor: pointer;
+   }
+
+   .add-studymaterial-button:hover {
+	background-color: #4167dc;
+	color: #fefefe;
+	border: 1px solid #4167dc;
+   }
 
   /*Contact*/
 
@@ -674,6 +794,7 @@ ul, #ListMenuUL {
 	align-content:center;
 	display: block;
 	font-size: 20px;
+	font-family: inherit;
 	border-radius: 8px;
 	transition-duration: 0.4s;
 	cursor: pointer;
@@ -691,7 +812,9 @@ ul, #ListMenuUL {
 	border: 1px solid #182859;
 	width:40%;
 	height:35px;
-	
+	border-radius: 8px;
+	transition-duration: 0.4s;
+	cursor: pointer;
 }
 
   .submit-button:hover {
