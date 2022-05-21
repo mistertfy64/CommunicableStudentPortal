@@ -5,8 +5,6 @@ const path = require("path");
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
 
-const schemas = require("./core/schemas.js");
-
 var User = require("../models/User.js");
 
 async function startSetUp(configuration) {
