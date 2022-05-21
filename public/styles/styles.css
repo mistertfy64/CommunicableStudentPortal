@@ -502,7 +502,7 @@ ul, #ListMenuUL {
   
   .caret {
 	cursor: pointer;
-	user-select: none; /* Prevent text selection */
+	user-select: none;
   }
   
   .caret::before {
@@ -553,7 +553,7 @@ ul, #ListMenuUL {
 	column-rule: 2px solid #182859;
   }
 
-   /* Columns Current Style */
+   /* Columns New Style */
 
    .column {
 	float: left;
@@ -677,7 +677,7 @@ ul, #ListMenuUL {
    }
 
 
-   /*Studymaterial*/
+   /*Studymaterial Select*/
 
    .studymaterial-container {
 	background-color: var(--default-background-color);
@@ -702,8 +702,13 @@ ul, #ListMenuUL {
 
    .studymaterial-pic {
 	width: 150px;
-	object-fit: contain;
 	border-radius: 8px;
+   }
+
+   .studymaterial-pic.studymaterial-content-container {
+	object-fit: contain;
+	box-align: left;
+	display: block;
    }
 
    .studymaterial-name {
@@ -736,6 +741,17 @@ ul, #ListMenuUL {
 	background-color: #4167dc;
 	color: #fefefe;
 	border: 1px solid #4167dc;
+   }
+
+   /**/
+
+   .studymaterial-content-container {
+	background-color: var(--default-background-color);
+	border: 2px solid #182859;
+	border-radius: 8px;
+	margin: auto;
+	padding: 30px 10px;
+	width: 70%;
    }
 
   /*Contact*/

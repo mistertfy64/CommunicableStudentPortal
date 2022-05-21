@@ -1,8 +1,8 @@
 var router = require("express").Router();
 const configuration = require("../configuration.js");
 
-router.get("/studymaterial-content", (request, response) => {
-    response.render("pages/studymaterial-content", {configuration: configuration.safeConfiguration}); 
+router.get("/student-dashboard", (request, response) => {
+    response.render("pages/student-dashboard", {configuration: configuration.safeConfiguration}); 
 });
 
 module.exports = router;
