@@ -514,7 +514,8 @@ textarea {
 
 .tabcontent {
   float: left;
-  padding: 0px 12px;
+  padding-left: 12px;
+  padding-right: 12px;
   border: none;
   width: 85%;
   border-left: none;
@@ -738,8 +739,6 @@ ul, #ListMenuUL {
 	transition-duration: 1.2s;
 	width: 200px;
 	height: 350px;
-	overflow: hidden;
-	text-overflow: ellipsis;
    }
 
    .studymaterial-container:hover {
@@ -768,6 +767,13 @@ ul, #ListMenuUL {
    .studymaterial-description {
 	text-align: center;
 	font-size:14px;
+	text-overflow:ellipsis;
+  	overflow:hidden;
+  	display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
    }
 
    .add-studymaterial-button {
@@ -791,15 +797,67 @@ ul, #ListMenuUL {
 	border: 1px solid #4167dc;
    }
 
-   /**/
+   /* Studymaterial Content */
 
    .studymaterial-content-container {
 	background-color: var(--default-background-color);
 	border: 2px solid #182859;
 	border-radius: 8px;
 	margin: auto;
-	padding: 30px 10px;
-	width: 70%;
+	padding: 20px 20px;
+	width: 80%;
+	overflow: auto;
+   }
+
+   .studymaterial-content-container img {
+	float: left;
+	width: 300px;
+	border-radius: 8px;
+	margin-right: 20px;
+   }
+
+   .studymaterial-content-container hr {
+	width: 73.2%;
+   }
+
+   .studymaterial-content-detail {
+	padding: 20px;
+   }
+
+   .studymaterial-content-name,.studymaterial-content-content {
+	font-size: 25px;
+	font-family: inherit;
+	color: #182859;
+   }
+
+   .studymaterial-content-description {
+	text-align: justify;
+	font-size: 15px;
+	font-family: inherit;
+	color: #182859;
+	text-indent: 20px;
+   }
+
+   .download-studymaterial-button {
+	background-color: #182859;
+	color: #fefefe;
+	font-size: 20px;
+	font-family: inherit;
+	border: #182859 solid 2px;
+	border-radius: 8px;
+	width: 60%;
+	height: 35px;
+	align-content: center;
+	display: block;
+	font-size: 20px;
+	transition-duration: 0.4s;
+	cursor: pointer;
+   }
+
+   .download-studymaterial-button:hover {
+	background-color: #4167dc;
+	color: #fefefe;
+	border: #4167dc solid 2px;
    }
 
   /*Contact*/
