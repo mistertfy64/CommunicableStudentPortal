@@ -825,9 +825,10 @@ ul, #ListMenuUL {
    }
 
    .studymaterial-content-name,.studymaterial-content-content {
-	font-size: 25px;
+	font-size: 20px;
 	font-family: inherit;
 	color: #182859;
+	font-weight: bold;
    }
 
    .studymaterial-content-description {
