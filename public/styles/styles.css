@@ -169,6 +169,39 @@ textarea {
 	vertical-align: middle;
 }
 
+/* Buttons */
+
+.button-rounded {
+	border-color: var(--color-black);
+	border-style: solid;
+	border-radius: 3px;
+}
+
+.button-large {
+	width: 50%;
+	height: 15%;
+}
+
+.button-color-positive {
+	background-color:var(--color-positive);
+	color: var(--default-text-color);
+}
+
+.button-color-neutral {
+	background-color:var(--color-neutral);
+	color: var(--default-text-color);
+}
+
+.button-color-negative {
+	background-color:var(--color-negative);
+	color: var(--default-text-color);
+}
+
+button {
+	cursor: pointer;
+	margin: 3px;
+}
+
 /* Slideshow */
 
 .slideshow-container {
@@ -522,14 +555,14 @@ textarea {
 	border: none;
 	background-color: #182859;
 	width: 15%;
-	height: 300px;
+	height: 100%;
 }
 
 .tab button {
 	display: block;
 	background-color: inherit;
 	color: rgb(255, 255, 255);
-	padding: 22px 16px;
+	padding: 22px 14px;
 	width: 100%;
 	border: none;
 	font-size: 16px;
@@ -547,7 +580,6 @@ textarea {
 .tab button.active {
 	background-color: #9bb4ff;
 	color: #182859;
-	transition-duration: 0.4s;
 }
 
 .tabcontent {
@@ -662,7 +694,7 @@ ul,
 	}
 }
 
-/* Chatboards */
+/* Chatboard Content */
 
 .chatboard-message-container {
 	background-color: var(--default-background-color);
@@ -995,6 +1027,8 @@ ul,
 	width: 40%;
 }
 
+/* Admin Dashboard */
+
 div.administrator-dashboard-box {
 	border-color: var(--color-black);
 	border-style: solid;
@@ -1003,35 +1037,4 @@ div.administrator-dashboard-box {
 	width: min-content;
 	margin: 1vw 1.5vw;
 	overflow: auto;
-}
-
-.button-rounded {
-	border-color: var(--color-black);
-	border-style: solid;
-	border-radius: 3px;
-}
-
-.button-large {
-	width: 50%;
-	height: 15%;
-}
-
-.button-color-positive {
-	background-color:var(--color-positive);
-	color: var(--default-text-color);
-}
-
-.button-color-neutral {
-	background-color:var(--color-neutral);
-	color: var(--default-text-color);
-}
-
-.button-color-negative {
-	background-color:var(--color-negative);
-	color: var(--default-text-color);
-}
-
-button {
-	cursor: pointer;
-	margin: 3px;
 }
