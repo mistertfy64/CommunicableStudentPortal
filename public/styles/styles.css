@@ -10,8 +10,16 @@
 	/* This is the default font to be used for the program. */
 	--default-font: monospace;
 
+	/* Colors */
+	--color-red-light: #df0000;
+	--color-green-light: #00df00;
+	--color-blue-light: #4167dc;
+	--color-blue-dark:  #182859;
+	--color-white: #ffffff;
+
+
 	/* This is the background color to be used for the top navigation bar. */
-	--default-top-navigation-bar-background-color: #182859;
+	--default-top-navigation-bar-background-color: var(--color-blue-dark);
 	/* This is the text color to be used for the top navigation bar. */
 	--default-top-navigation-bar-text-color: #ffffff;
 	/* This is the font size to be used for the top navigation bar. */
@@ -70,7 +78,7 @@ p {
 }
 
 a {
-	color: #182859;
+	color: var(--color-blue-dark);
 	text-decoration: none;
 }
 
@@ -79,11 +87,11 @@ a:hover {
 }
 
 hr {
-	border: 1px solid #182859;
+	border: 1px solid var(--color-blue-dark);
 }
 
 .button {
-	background-color: #182859;
+	background-color: var(--color-blue-dark);
 	border: none;
 	color: #fefefe;
 	text-decoration: none;
@@ -204,7 +212,7 @@ textarea {
  	background-color: #bbb;
 	border-radius: 50%;
  	display: inline-block;
- 	transition: #182859 0.6s ease;
+ 	transition: var(--color-blue-dark) 0.6s ease;
   }
   
   .active, .slideshow-dot:hover {
@@ -228,7 +236,7 @@ textarea {
 /* Collapsible */
 
 .collapsible{
-  	background-color: #182859;
+  	background-color: var(--color-blue-dark);
  	color: white;
  	cursor: pointer;
 	padding: 18px;
@@ -321,7 +329,7 @@ textarea {
 
   .modal-header {
 	padding: 2px 16px;
-	background-color: #182859;
+	background-color: var(--color-blue-dark);
 	color: white;
 	border-radius: 8px;
   }
@@ -339,18 +347,18 @@ textarea {
 /* Login */
 
 .login-button {
-	background-color:#182859;
+	background-color:var(--color-blue-dark);
 	color:#fefefe;
-	border: 1px solid #182859;
+	border: 1px solid var(--color-blue-dark);
 	width:40%;
 	height:35px;
 	
 }
 
 .login-button:hover {
-	background-color: #4167dc;
+	background-color: var(--color-blue-light);
  	 color: #ffffff;
-	border: 1px solid #4167dc;
+	border: 1px solid var(--color-blue-light);
 }
 
 
@@ -382,7 +390,7 @@ textarea {
 	outline: none;
 	color:  #fefefe;
 	padding: 14px 16px;
-	background-color: #182859;
+	background-color: var(--color-blue-dark);
 	font-family: inherit;
 	margin: 0;
 }
@@ -390,14 +398,14 @@ textarea {
 .navbar a:hover,
 .top-navigation-bar-dropdown:hover .drop-down-button {
 	background-color: white;
-	color: #182859;
+	color: var(--color-blue-dark);
 }
 
 .top-navigation-bar-dropdown-content {
 	display: none;
 	position: absolute;
 	background-color: #fefefe;
-	color:#182859;
+	color:var(--color-blue-dark);
 	min-width: 160px;
 	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 	z-index: 1;
@@ -405,7 +413,7 @@ textarea {
 
 .top-navigation-bar-dropdown-content a {
 	float: none;
-	color: #182859;
+	color: var(--color-blue-dark);
 	padding: 14px 16px;
 	text-decoration: none;
 	display: block;
@@ -594,12 +602,12 @@ ul, #ListMenuUL {
 
   .chatboard-menu-column1 ,.studymaterial-menu-column1 {
 	column-count: 5;
-	column-rule: 2px solid #182859;
+	column-rule: 2px solid var(--color-blue-dark);
   }
 
   .chatboard-menu-column2 ,.studymaterial-menu-column2 {
 	column-count: 4;
-	column-rule: 2px solid #182859;
+	column-rule: 2px solid var(--color-blue-dark);
   }
 
    /* Columns New Style */
@@ -626,7 +634,7 @@ ul, #ListMenuUL {
 
   .chatboard-message-container {
 	background-color: var(--default-background-color);
-	border: 2px solid #182859;
+	border: 2px solid var(--color-blue-dark);
 	border-radius: 8px;
 	width: 60%;
 	display: block;
@@ -688,12 +696,12 @@ ul, #ListMenuUL {
    }
 
    .message-comment-container {
-	border: 2px solid #182859;
+	border: 2px solid var(--color-blue-dark);
    }
 
    .chatboard-comment-container {
 	background-color: inherit;
-	border: 2px solid #182859;
+	border: 2px solid var(--color-blue-dark);
 	border-radius: 8px;
 	width: 95%;
 	display: block;
@@ -730,7 +738,7 @@ ul, #ListMenuUL {
 
    .studymaterial-container {
 	background-color: var(--default-background-color);
-	border: 2px solid #182859;
+	border: 2px solid var(--color-blue-dark);
 	border-radius: 8px;
 	display: inline-block;
 	text-align: center;
@@ -742,9 +750,9 @@ ul, #ListMenuUL {
    }
 
    .studymaterial-container:hover {
-	background-color: #182859;
+	background-color: var(--color-blue-dark);
 	color:#fefefe;
-	border: 2px solid #182859;
+	border: 2px solid var(--color-blue-dark);
    }
 
    .studymaterial-pic {
@@ -777,9 +785,9 @@ ul, #ListMenuUL {
    }
 
    .add-studymaterial-button {
-	background-color: #182859;
+	background-color: var(--color-blue-dark);
 	color: #fefefe;
-	border: 1px solid #182859;
+	border: 1px solid var(--color-blue-dark);
 	width: 70%;
 	height: 35px;
 	align-content: center;
@@ -792,9 +800,9 @@ ul, #ListMenuUL {
    }
 
    .add-studymaterial-button:hover {
-	background-color: #4167dc;
+	background-color: var(--color-blue-light);
 	color: #fefefe;
-	border: 1px solid #4167dc;
+	border: 1px solid var(--color-blue-light);
    }
 
    /* Studymaterial Content */
@@ -901,7 +909,7 @@ ul, #ListMenuUL {
   #leaderboard th {
 	padding-top: 12px;
 	padding-bottom: 12px;
-	background-color: #182859;
+	background-color: var(--color-blue-dark);
 	color: white;
 	text-align:center;
   }
@@ -930,9 +938,9 @@ ul, #ListMenuUL {
    }
 
   .submit-button {
-	background-color:#182859;
+	background-color:var(--color-blue-dark);
 	color:#fefefe;
-	border: 1px solid #182859;
+	border: 1px solid var(--color-blue-dark);
 	width:40%;
 	height:35px;
 	border-radius: 8px;
@@ -941,9 +949,9 @@ ul, #ListMenuUL {
 }
 
   .submit-button:hover {
-	background-color: #4167dc;
+	background-color: var(--color-blue-light);
  	color: #ffffff;
-	border: 1px solid #4167dc;
+	border: 1px solid var(--color-blue-light);
 	}
 
   .event-input-description {
