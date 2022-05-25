@@ -11,7 +11,12 @@ const UserSchema = new mongoose.Schema({
         isSuperAdministrator: Boolean,
         isAdministrator: Boolean,
         isNormalUser: Boolean,
-    }
+    },
+    sessionTokens: [String],
 });
+
+UserSchema.static.safeFindUserByUsername = function(username){
+    return "TODO: Implement me!";
+}
 
 module.exports = mongoose.model("User", UserSchema, "users");

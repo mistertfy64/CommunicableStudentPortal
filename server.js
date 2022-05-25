@@ -4,6 +4,8 @@ const { request } = require("http");
 const path = require("path");
 const _ = require("lodash");
 const mongoose = require("mongoose");
+const csurf = require('csurf');
+
 
 const configuration = require("./server/configuration.js");
 
@@ -19,6 +21,7 @@ require('dotenv').config({path: path.join(__dirname, configuration.unsafeConfigu
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, './server/views'))
+// app.use(cookieParser())
 
 function initialize(){
     
