@@ -7,7 +7,7 @@ let safeConfiguration = {};
 
 function initialize() {
 	let loadedConfiguration = JSON.parse(
-		fs.readFileSync("configuration.json", "utf8")
+		fs.readFileSync(__dirname + "/configuration.json", "utf8")
 	);
 	// get configuration and credentials
 	longClone(unsafeConfiguration, _.cloneDeep(loadedConfiguration));
