@@ -5,7 +5,7 @@ const path = require("path");
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
 
-var User = require("../models/User.js");
+var User = require("./models/User.js");
 
 async function startSetUp(configuration) {
 	let itemsToSetUp = "";
