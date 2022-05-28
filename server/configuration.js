@@ -9,6 +9,8 @@ function initialize() {
 	let loadedConfiguration = JSON.parse(
 		fs.readFileSync(__dirname + "/configuration.json", "utf8")
 	);
+	let loadedText = JSON.parse(fs.readFileSync(__dirname + "/text.json", "utf8"));
+	_.merge(loadedConfiguration, loadedText);
 	// get configuration and credentials
 	longClone(unsafeConfiguration, _.cloneDeep(loadedConfiguration));
 	// derive a safer configuration object
@@ -16,7 +18,7 @@ function initialize() {
 		_.cloneDeep(loadedConfiguration)
 	);
 	longClone(safeConfiguration, nonFinalSafeConfiguration);
-
+	
 	console.log("Initialized Configuration!");
 }
 
