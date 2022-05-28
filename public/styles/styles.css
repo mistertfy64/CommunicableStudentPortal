@@ -24,7 +24,7 @@
 
 	/* This is the background color to be used for the top navigation bar. */
 	--default-top-navigation-bar-background-color: var(--color-blue-dark);
-	/* This is thext color to be used for the top navigation bar. */
+	/* This is text color to be used for the top navigation bar. */
 	--default-top-navigation-bar-text-color: #ffffff;
 	/* This is the font size to be used for the top navigation bar. */
 	--default-top-navigation-bar-font-size: 16px;
