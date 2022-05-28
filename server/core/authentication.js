@@ -1,7 +1,9 @@
 const bcrypt = require("bcrypt");
+const crypto = require("crypto");
+
 const User = require("../models/User.js");
 
-async function authenticate(username, givenPassword){
+async function authenticate(username, givenPassword, options){
     console.log(username);
     let user = await User.findOne({username: username})
     console.log(user);
@@ -12,4 +14,10 @@ async function authenticate(username, givenPassword){
     return {successful: passwordResult};
 }
 
-module.exports = { authenticate };
+async function generateSessionToken(){
+    let d = Date.now();
+    let r = crypto.randomBytes(32).toString();
+    return d.toString() + r.toString();
+}
+
+module.exports = { authenticate, generateSessionToken };
