@@ -4,8 +4,10 @@ const { request } = require("http");
 const path = require("path");
 const _ = require("lodash");
 const mongoose = require("mongoose");
+const csurf = require('csurf');
 
-const configuration = require("./configuration.js");
+
+const configuration = require("./server/configuration.js");
 
 const setup = require(path.join(__dirname, "server", "setup.js"));
 
@@ -18,6 +20,8 @@ configuration.initialize();
 require('dotenv').config({path: path.join(__dirname, configuration.unsafeConfiguration.environmentVariablesFileLocation)});
 
 app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, './server/views'))
+// app.use(cookieParser())
 
 function initialize(){
     
@@ -42,8 +46,8 @@ function checkInitialSetUpProgress(){
     }
 }
 
-require("fs").readdirSync(require("path").join(__dirname, "routes")).forEach((file) => {
-    app.use(require("./routes/" + file));
+require("fs").readdirSync(require("path").join(__dirname, "/server/routes")).forEach((file) => {
+    app.use(require("./server/routes/" + file));
 });
 
 app.listen(configuration.unsafeConfiguration.port, () => {

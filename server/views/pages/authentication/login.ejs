@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<%- include("../../partials/head") %>
+		<title>CSP - Login</title>
+	</head>
+
+	<body>
+		<header>
+			<%- include("../../partials/header", {configuration:
+			configuration.topNavigationBarSections}); %>
+		</header>
+		<h1>Login</h1>
+		<div
+			style="display: flex; justify-content: center; align-items: center"
+		>
+			<form action="/login" method="post">
+				<label for="username"><b>Username</b></label
+				><br />
+				<input
+					type="text"
+					placeholder="Username"
+					name="username"
+					required
+				/>
+				<br /><br />
+				<label for="password"><b>Password</b></label
+				><br />
+				<input
+					type="password"
+					placeholder="Password"
+					name="password"
+					required
+				/>
+				<br /><br /><input type="checkbox" name="options" value="persistent"> Remember me (if successful).
+				<br>
+				<input type="checkbox" name="options" value="destroy-other-sessions"> Log me out of all other sessions (if successful).
+				<br>
+				<button
+					type="submit"
+					class="button login-button"
+					value="submit"
+				>
+				
+					Login
+				
+				</button>
+			</form>
+		</div>
+		<br />
+
+		<footer><%- include("../../partials/footer") %></footer>
+	</body>
+</html>

@@ -1,6 +1,6 @@
 {
     "applicationIsSetUp": true,
-    "environmentVariablesFileLocation": "credentials.env",
+    "environmentVariablesFileLocation": "./server/credentials.env",
     "port": "22222",
     "name": "hi",
     "topNavigationBarSections": {

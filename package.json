@@ -17,9 +17,11 @@
   },
   "homepage": "https://github.com/mistertfy64/CommunicableStudentPortal#readme",
   "dependencies": {
+    "axios": "^0.27.2",
     "bcrypt": "^5.0.1",
     "chalk": "4.x",
     "cheerio": "^1.0.0-rc.10",
+    "csurf": "^1.11.0",
     "dotenv": "^16.0.0",
     "ejs": "^3.0.2",
     "express": "^4.17.3",

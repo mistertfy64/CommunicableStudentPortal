@@ -5,7 +5,7 @@ const path = require("path");
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
 
-var User = require("../models/User.js");
+var User = require("./models/User.js");
 
 async function startSetUp(configuration) {
 	let itemsToSetUp = "";
@@ -80,7 +80,7 @@ async function startSetUp(configuration) {
 		})
 		.then(async (answers) => {
 			fs.writeFileSync(
-				path.join("./", "/credentials.env"),
+				path.join("./server", "/credentials.env"),
 				`DATABASE_URI=${answers.databaseConnectionString}`
 			);
 
@@ -93,7 +93,7 @@ async function startSetUp(configuration) {
 
 	// save settings
 	fs.writeFileSync(
-		path.join("./", "/configuration.json"),
+		path.join("./server", "/configuration.json"),
 		JSON.stringify(configuration, null, 4)
 	);
 
