@@ -4,8 +4,8 @@
     "port": "22222",
     "name": "hi",
     "topNavigationBarSections": {
-        "gaioo": {
-            "text": "Gaioo Worshiping Palace",
+        "index": {
+            "text": "Home",
             "link": "/",
             "position": 1
         }

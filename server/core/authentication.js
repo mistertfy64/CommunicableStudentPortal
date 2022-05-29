@@ -22,6 +22,9 @@ async function generateSessionToken(){
 }
 
 async function getIfSessionTokenIsValid(sessionToken){
+    if (!sessionToken){
+        return false;
+    }
     let hash = new SHA3(512);
 	hash.update(sessionToken.toString());
 	let hashDigest = hash.digest("hex");

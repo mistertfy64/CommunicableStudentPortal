@@ -4,11 +4,24 @@
             "index": {
                 "titleText": "CommunicableStudentPortal 0.1.0-alpha"
             },
-            "chatboardMenu" : {
-                "titleText" : "Chat Board Menu"
+            "administrator": {
+                "administratorDashboard": {
+                    "titleText": "Administrator Dashboard",
+                    "userManagementTitleText": "User Management",
+                    "createUserText": "Create User",
+                    "modifyUserText": "Modify User",
+                    "deleteUserText": "Delete User"
+                },
+                "createUser": {
+                    "titleText": "User Creation Tool",
+                    "": ""
+                }
             },
-            "chatboardContent" : {
-                "titleText" : "Chat Board Content"
+            "chatboardMenu": {
+                "titleText": "Chat Board Menu"
+            },
+            "chatboardContent": {
+                "titleText": "Chat Board Content"
             }
         },
         "global": {

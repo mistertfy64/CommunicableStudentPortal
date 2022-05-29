@@ -11,13 +11,13 @@
 			configuration}); %>
 		</header>
 		<br />
-		<h1>Administrator Dashboard</h1>
+		<h1><%= configuration.text.pages.administrator.administratorDashboard.titleText %></h1>
 		<br />
 		<div
 			style="display: flex;flex-wrap: wrap;flex-direction: row;justify-content: center;"
 		>
 			<div class="administrator-dashboard-box">
-				<span style="font-size: large">User Management</span>
+				<span style="font-size: large"><%= configuration.text.pages.administrator.administratorDashboard.userManagementTitleText %></span>
 				<br />
 				<div
 					style="
@@ -26,92 +26,20 @@
 						align-items: center;
 					"
 				>
-					<button class="button-color-positive button-rounded">
-						Create User
+					<button href="create-user" class="button-color-positive button-rounded">
+						<%= configuration.text.pages.administrator.administratorDashboard.createUserText %>
 					</button>
 					<br />
 					<button class="button-color-neutral button-rounded">
-						Modify User
+						<%= configuration.text.pages.administrator.administratorDashboard.modifyUserText %>
 					</button>
 					<br />
 					<button class="button-color-negative button-rounded">
-						Delete User
+						<%= configuration.text.pages.administrator.administratorDashboard.deleteUserText %>
 					</button>
 				</div>
 			</div>
-			<br />
-			<div class="administrator-dashboard-box">
-				<span style="font-size: large">User Management</span>
-				<br />
-				<div
-					style="
-						display: flex;
-						justify-content: flex-end;
-						align-items: center;
-					"
-				>
-					<button class="button-color-positive button-rounded">
-						Create User
-					</button>
-					<br />
-					<button class="button-color-neutral button-rounded">
-						Modify User
-					</button>
-					<br />
-					<button class="button-color-negative button-rounded">
-						Delete User
-					</button>
-				</div>
-			</div>
-			<br />
-			<div class="administrator-dashboard-box">
-				<span style="font-size: large">User Management</span>
-				<br />
-				<div
-					style="
-						display: flex;
-						justify-content: flex-end;
-						align-items: center;
-					"
-				>
-					<button class="button-color-positive button-rounded">
-						Create User
-					</button>
-					<br />
-					<button class="button-color-neutral button-rounded">
-						Modify User
-					</button>
-					<br />
-					<button class="button-color-negative button-rounded">
-						Delete User
-					</button>
-				</div>
-			</div>
-			<br />
-			<div class="administrator-dashboard-box">
-				<span style="font-size: large">User Management</span>
-				<br />
-				<div
-					style="
-						display: flex;
-						justify-content: flex-end;
-						align-items: center;
-					"
-				>
-					<button class="button-color-positive button-rounded">
-						Create User
-					</button>
-					<br />
-					<button class="button-color-neutral button-rounded">
-						Modify User
-					</button>
-					<br />
-					<button class="button-color-negative button-rounded">
-						Delete User
-					</button>
-				</div>
-			</div>
-			<br />
+			
 		</div>
 
 		<footer><%- include("../../partials/footer", {configuration:

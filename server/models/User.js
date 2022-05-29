@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const _ = require("lodash");
-
+const { SHA3 }= require("sha3");
 
 const UserSchema = new mongoose.Schema({
 	name: String,
@@ -50,8 +50,19 @@ UserSchema.statics.addSessionTokenForUserID = function (userID, token) {
 	}));
 };
 
-UserSchema.statics.findUserWithSessionID = function(userID, token){
-	this.findOne()
+UserSchema.statics.safeFindUserBySessionToken = function(token){
+	let hash = new SHA3(512);
+	hash.update(token.toString())
+	let hashDigest = hash.digest("hex");
+	return this.findOne({sessionTokens: {$all:[hashDigest]}}).select({sessionTokens: 0, sessionTokensWithExpiryTime: 0, password: 0});
+}
+
+
+UserSchema.statics.findUserBySessionToken = function(token){
+	let hash = new SHA3(512);
+	hash.update(token.toString())
+	let hashDigest = hash.digest("hex");
+	return this.findOne({sessionTokens:{$all:[hashDigest]}});
 }
 
 module.exports = mongoose.model("User", UserSchema, "users");

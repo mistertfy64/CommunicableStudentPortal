@@ -17,12 +17,10 @@ let urlencodedParser = bodyParser.urlencoded({ extended: true });
 router.use(cookieParser());
 
 router.get("/login", async (request, response) => {
-	console.log(request.cookies);
 	let userHasValidSessionToken =
 		await authentication.getIfSessionTokenIsValid(
 			request.cookies.sessionToken
 		);
-		console.log(userHasValidSessionToken, request.cookies.sessionToken);
 		if (!userHasValidSessionToken) {
 		response.render("pages/authentication/login", {
 			configuration: configuration.safeConfiguration,
@@ -33,6 +31,8 @@ router.get("/login", async (request, response) => {
 		);
 	}
 });
+
+
 
 router.post("/login", urlencodedParser, async (request, response) => {
 	let credentials = request.body;
