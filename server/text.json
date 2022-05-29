@@ -3,6 +3,12 @@
         "pages": {
             "index": {
                 "titleText": "CommunicableStudentPortal 0.1.0-alpha"
+            },
+            "chatboardMenu" : {
+                "titleText" : "Chat Board Menu"
+            },
+            "chatboardContent" : {
+                "titleText" : "Chat Board Content"
             }
         },
         "global": {
