@@ -8,9 +8,10 @@
 	<body>
 		<header>
 			<%- include("../../partials/header", {configuration:
-			configuration.topNavigationBarSections}); %>
+			configuration}); %>
 		</header>
 		
-		<footer><%- include("../../partials/footer") %></footer>
+		<footer><%- include("../../partials/footer", {configuration:
+			configuration}); %></footer>
 	</body>
 </html>

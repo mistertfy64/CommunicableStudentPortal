@@ -6,11 +6,11 @@
 	</head>
 	
 	<body>
-		<header><%- include("../partials/header", {configuration: configuration.topNavigationBarSections}); %></header>
+		<header><%- include("../partials/header", {configuration: configuration}); %></header>
 		<br>
 		<%- include("../partials/index-slideshow") %>
 		<br>
 		<h2><%= configuration.text.pages.index.titleText %></h2>
-		<footer><%- include("../partials/footer") %></footer>
+		<footer><%- include("../partials/footer", {configuration: configuration}); %></footer>
 	</body>
 </html>
