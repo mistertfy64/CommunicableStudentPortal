@@ -22,6 +22,10 @@ UserSchema.statics.safeFindUserByUsername = function (username) {
 	return this.findOne({ username: username }).select({sessionTokens: 0, sessionTokensWithExpiryTime: 0, password: 0});
 };
 
+UserSchema.statics.safeFindUserByUserID = function (userID) {
+	return this.findOne({ userID: userID }).select({sessionTokens: 0, sessionTokensWithExpiryTime: 0, password: 0});
+};
+
 UserSchema.statics.destroyAllSessionTokensForUserID = function (userID) {
 	this.findOneAndUpdate(
 		{ userID: userID },
@@ -45,5 +49,9 @@ UserSchema.statics.addSessionTokenForUserID = function (userID, token) {
 		}
 	}));
 };
+
+UserSchema.statics.findUserWithSessionID = function(userID, token){
+	this.findOne()
+}
 
 module.exports = mongoose.model("User", UserSchema, "users");

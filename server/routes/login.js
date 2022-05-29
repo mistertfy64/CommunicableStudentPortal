@@ -1,5 +1,7 @@
 var router = require("express").Router();
 const bodyParser = require("body-parser");
+const cookieParser = require("cookie-parser");
+const { SHA3 } = require('sha3');
 
 const configuration = require("../configuration.js");
 
@@ -12,10 +14,24 @@ const bcrypt = require("bcrypt");
 let jsonParser = bodyParser.json();
 let urlencodedParser = bodyParser.urlencoded({ extended: true });
 
-router.get("/login", (request, response) => {
-	response.render("pages/authentication/login", {
-		configuration: configuration.safeConfiguration,
-	});
+router.use(cookieParser());
+
+router.get("/login", async (request, response) => {
+	console.log(request.cookies);
+	let userHasValidSessionToken =
+		await authentication.getIfSessionTokenIsValid(
+			request.cookies.sessionToken
+		);
+		console.log(userHasValidSessionToken, request.cookies.sessionToken);
+		if (!userHasValidSessionToken) {
+		response.render("pages/authentication/login", {
+			configuration: configuration.safeConfiguration,
+		});
+	} else {
+		response.send(
+			`You're already logged in as ${userHasValidSessionToken.username}!`
+		);
+	}
 });
 
 router.post("/login", urlencodedParser, async (request, response) => {
@@ -40,20 +56,27 @@ router.post("/login", urlencodedParser, async (request, response) => {
 		return;
 	}
 	// success
-	let sessionToken = authentication.generateSessionToken().toString();
+	let sessionToken = await authentication.generateSessionToken();
+	sessionToken = sessionToken.toString();
 	let sessionTokenOptions = {
 		maxAge: options.persistent
 			? 1000 * 60 * 60 * 24 * 28
 			: 1000 * 60 * 60 * 2,
 	};
-	if (options.destroyOtherSessions) { await User.destroyAllSessionTokensForUserID(user.userID);}
+	if (options.destroyOtherSessions) {
+		await User.destroyAllSessionTokensForUserID(user.userID);
+	}
 	response.cookie(
 		"sessionToken",
 		sessionToken.toString(),
 		sessionTokenOptions
 	);
-	let hashedSessionToken = await bcrypt.hash(sessionToken, 12);
-	await User.addSessionTokenForUserID(user.userID, hashedSessionToken);
+	// let hashedSessionToken = await bcrypt.hash(sessionToken, 12);
+	let hash = new SHA3(512);
+	hash.update(sessionToken.toString())
+	let hashDigest = hash.digest("hex");
+	await User.addSessionTokenForUserID(user.userID, hashDigest);
+	response.redirect("/");
 });
 
 module.exports = router;

@@ -8,7 +8,7 @@
 	<body>
 		<header>
 			<%- include("../../partials/header", {configuration:
-			configuration.topNavigationBarSections}); %>
+			configuration}); %>
 		</header>
 		<br />
 		<h1>Administrator Dashboard</h1>
@@ -114,6 +114,7 @@
 			<br />
 		</div>
 
-		<footer><%- include("../../partials/footer") %></footer>
+		<footer><%- include("../../partials/footer", {configuration:
+			configuration}); %></footer>
 	</body>
 </html>
