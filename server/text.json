@@ -14,7 +14,13 @@
                 },
                 "createUser": {
                     "titleText": "User Creation Tool",
-                    "": ""
+                    "bodyText1": "Create",
+                    "bodyText2": "users, with",
+                    "bodyText3": "usernames,",
+                    "bodyText4": " and with",
+                    "bodyText5": "user IDs",
+                    "hiddenBodyText1": "starting from",
+                    "hiddenBodyText2": "starting from"
                 }
             },
             "chatboardMenu": {

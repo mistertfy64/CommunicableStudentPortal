@@ -1,5 +1,6 @@
 {
     "applicationIsSetUp": false,
     "environmentVariablesFileLocation": "credentials.env",
-    "port": "8888"
+    "port": "8888",
+    "maximumNumberOfUsersThatCanBeCreatedEachTime": 100
 }

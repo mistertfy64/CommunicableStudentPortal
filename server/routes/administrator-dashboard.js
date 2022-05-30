@@ -27,7 +27,7 @@ router.get("/administrator-dashboard/:action", async (request, response) => {
     if (!(currentUser.membership.isSuperAdministrator || currentUser.membership.isAdministrator)){
         response.redirect("/");
     }
-    response.render(`pages/administrator/administrator-dashboard/${request.params.action}`, {configuration: configuration.safeConfiguration}); 
+    response.render(`pages/administrator/${request.params.action}`, {configuration: configuration.safeConfiguration}); 
 });
 
 
