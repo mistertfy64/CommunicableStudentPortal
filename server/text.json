@@ -13,12 +13,12 @@
                     "deleteUserText": "Delete User"
                 },
                 "createUser": {
-                    "titleText": "User Creation Tool",
-                    "": ""
+                    "titleText": "User Creation Tool"
                 }
             },
             "chatboardMenu": {
-                "titleText": "Chat Board Menu"
+                "titleText": "Chat Board Menu",
+                "describtionText" : "a"
             },
             "chatboardContent": {
                 "titleText": "Chat Board Content"
