@@ -6,7 +6,7 @@
 	</head>
 	
 	<body>
-		<header><%- include("../partials/header", {configuration: configuration.topNavigationBarSections}); %></header>
+		<header><%- include("../partials/header", {configuration: configuration}); %></header>
 		<center>
     	<h1>Events</h1>
 		<br>
@@ -20,7 +20,7 @@
 		<%- include("../partials/event-bar") %>
 		</center>
 		<br><br><br><br><br><br><br><br><br><br>
-		<footer><%- include("../partials/footer", {configuration: configuration.text}); %></footer>
+		<footer><%- include("../partials/footer", {configuration: configuration}); %></footer>
 
 		<script>
 			var modal = document.getElementById("modal");

@@ -6,8 +6,8 @@
 	</head>
 	
 	<body>
-		<header><%- include("../partials/header", {configuration: configuration.topNavigationBarSections}) %></header>
-		<h1><%= configuration.text.pages.chatboard-menu.titleText %></h1>
+		<header><%- include("../partials/header", {configuration: configuration}) %></header>
+		<h1><%= configuration.text.pages.chatboardMenu.titleText %></h1>
 		<p>
 			This is the chat board menu, where links to dedicated chat boards for each subject and grade are listed.
 		</p>
@@ -317,7 +317,7 @@
 			<br>
 			<button type="button" class="collapsible" onclick="document.location='chatboard-content'">University Life</button>
 			<br>
-			<footer><%- include("../partials/footer", {configuration: configuration.text}); %></footer>
+			<footer><%- include("../partials/footer", {configuration: configuration}); %></footer>
 		</center>
 
 		<script>
