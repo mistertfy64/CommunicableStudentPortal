@@ -11,7 +11,6 @@ const User = require("../models/User.js");
 
 const bcrypt = require("bcrypt");
 
-let jsonParser = bodyParser.json();
 let urlencodedParser = bodyParser.urlencoded({ extended: true });
 
 router.use(cookieParser());

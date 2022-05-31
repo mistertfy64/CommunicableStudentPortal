@@ -20,7 +20,9 @@
                     "bodyText4": " and with",
                     "bodyText5": "user IDs",
                     "hiddenBodyText1": "starting from",
-                    "hiddenBodyText2": "starting from"
+                    "hiddenBodyText2": "starting from",
+                    "createUserText": "Create user(s)",
+                    "cancelText": "Cancel"
                 }
             },
             "chatboardMenu": {
