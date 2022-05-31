@@ -1,13 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<%- include("../partials/head") %>
+		<%- include("../../partials/head") %>
 		<title>CSP</title>
 	</head>
-	
+
 	<body>
-		<header><%- include("../partials/header", {configuration: configuration}); %></header>
-        
-		<footer><%- include("../partials/footer", {configuration: configuration}); %></footer>
+		<header>
+			<%- include("../../partials/header", {configuration:
+			configuration}); %>
+		</header>
+		<h1>
+			<%= configuration.text.pages.administrator.createUser.titleText %>
+		</h1>
+		<div class="administrator-dashboard-box">
+			<form action="/administrator-dashboard/create-user" , method="post">
+				<div
+					style="
+						flex-direction: row;
+						align-items: center;
+						vertical-align: bottom;
+					"
+				>
+					<%=configuration.text.pages.administrator.createUser.bodyText1%>&nbsp;<input
+						type="number" name="number-of-users"
+					/>&nbsp;<%=
+					configuration.text.pages.administrator.createUser.bodyText2%>&nbsp;
+					<select
+						onchange="handleUsernameOptionSelectBoxValueChange(event)"
+						name="username-option"
+						id="username-option-select-box"
+					>
+						<option value="random">random</option>
+						<option value="ascending">ascending</option>
+						<option value="changeable">
+							random, user-changeable
+						</option></select
+					>&nbsp;<%=
+					configuration.text.pages.administrator.createUser.bodyText3%>&nbsp;<span
+						style="display: none"
+						id="username-start-value"
+						><%=configuration.text.pages.administrator.createUser.hiddenBodyText1%>&nbsp;<input
+							type="number"
+						/>&nbsp;</span
+					><%=
+					configuration.text.pages.administrator.createUser.bodyText4%>&nbsp;
+					<select
+						onchange="handleUserIDOptionSelectBoxValueChange(event)"
+						name="user-id-option"
+						id="user-id-option-select-box"
+					>
+						<option value="random">random</option>
+						<option value="ascending">ascending</option>
+						<option value="changeable">
+							random, user-changeable
+						</option></select
+					>&nbsp;<%=
+					configuration.text.pages.administrator.createUser.bodyText5%><span
+						style="display: none"
+						id="user-id-start-value"
+						>&nbsp;<%=configuration.text.pages.administrator.createUser.hiddenBodyText1%>&nbsp;<input
+							type="number"
+					/></span>
+					<div
+						style="
+							display: flex;
+							justify-content: flex-end;
+							align-items: center;
+						"
+					>
+						<button
+							type="submit"
+							class="button-color-positive button-rounded"
+						>
+							<%=
+							configuration.text.pages.administrator.createUser.createUserText
+							%>
+						</button>
+					</div>
+				</div>
+			</form>
+			<div
+				style="
+					display: flex;
+					justify-content: flex-end;
+					align-items: center;
+				"
+			>
+				<br />
+				<button
+					onclick="location.href='/administrator-dashboard'"
+					class="button-color-negative button-rounded"
+				>
+					<%=
+					configuration.text.pages.administrator.createUser.cancelText
+					%>
+				</button>
+			</div>
+		</div>
+		<footer>
+			<%- include("../../partials/footer", {configuration:
+			configuration}); %>
+		</footer>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script>
+			function handleUsernameOptionSelectBoxValueChange(event) {
+				let value = event.target.value;
+				if (value === "ascending") {
+					$("#username-start-value").show(0);
+				} else {
+					$("#username-start-value").hide(0);
+				}
+			}
+
+			function handleUserIDOptionSelectBoxValueChange(event) {
+				let value = event.target.value;
+				if (value === "ascending") {
+					$("#user-id-start-value").show(0);
+				} else {
+					$("#user-id-start-value").hide(0);
+				}
+			}
+		</script>
 	</body>
 </html>

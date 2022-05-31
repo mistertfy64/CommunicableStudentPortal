@@ -9,5 +9,7 @@
             "link": "/",
             "position": 1
         }
-    }
+    },
+    "maximumNumberOfUsersThatCanBeCreatedEachTime": 100
+    
 }
