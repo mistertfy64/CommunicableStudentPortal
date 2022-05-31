@@ -6,7 +6,7 @@
 	</head>
 	
 	<body>
-		<header><%- include("../partials/header", {configuration: configuration.topNavigationBarSections}); %></header>
+		<header><%- include("../partials/header", {configuration: configuration}); %></header>
         <br>
 		<h1><%= configuration.text.pages.chatboardContent.titleText %></h1>
 		<br>
@@ -52,7 +52,7 @@
 				<br>
 			</div>
 		</div>
-		<footer><%- include("../partials/footer", {configuration: configuration.text}); %></footer>
+		<footer><%- include("../partials/footer", {configuration: configuration}); %></footer>
 
 		<script>
 			var modal = document.getElementById("modal");
