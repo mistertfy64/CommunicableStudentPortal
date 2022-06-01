@@ -11,6 +11,7 @@ const configuration = require("./server/configuration.js");
 
 const setup = require(path.join(__dirname, "server", "setup.js"));
 
+const log = require("./server/core/log.js");
 
 
 const app = express();
@@ -33,7 +34,7 @@ mongoose.connect(process.env.DATABASE_URI, {
 }
 
 mongoose.connection.on("connected", () => {
-    console.log("Successfully connected to database.");
+    console.log(log.addMetadata("Successfully connected to database.", "info"));
 });
 
 
@@ -51,7 +52,7 @@ require("fs").readdirSync(require("path").join(__dirname, "/server/routes")).for
 });
 
 app.listen(configuration.unsafeConfiguration.port, () => {
-    console.log(`App listening on port ${configuration.unsafeConfiguration.port}`);
+    console.log(log.addMetadata(`App listening on port ${configuration.unsafeConfiguration.port}`, "info"));
     checkInitialSetUpProgress();
 
 });

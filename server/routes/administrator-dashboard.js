@@ -5,6 +5,7 @@ const cookieParser = require("cookie-parser");
 
 const User = require("../models/User.js");
 const users = require("../core/users.js");
+const log = require("../core/log.js");
 
 router.use(cookieParser());
 let urlencodedParser = bodyParser.urlencoded({ extended: true });
@@ -78,7 +79,7 @@ router.post(
 			startingUserID: body[`user-id-start-value`],
 		};
 
-		console.log("Creating users...");
+		console.log(log.addMetadata("Creating users...", "info"));
 		console.log(options)
 
         users.createUsers(options);

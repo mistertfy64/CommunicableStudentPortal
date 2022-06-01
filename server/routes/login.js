@@ -10,6 +10,7 @@ const authentication = require("../core/authentication.js");
 const User = require("../models/User.js");
 
 const bcrypt = require("bcrypt");
+const log = require("../core/log.js");
 
 let urlencodedParser = bodyParser.urlencoded({ extended: true });
 
@@ -51,7 +52,7 @@ router.post("/login", urlencodedParser, async (request, response) => {
 	);
 	if (!result.successful) {
 		// failed
-		console.log("Failed.");
+		console.log(log.addMetadata("Failed.", "info"));
 		return;
 	}
 	// success
