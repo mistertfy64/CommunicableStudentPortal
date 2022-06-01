@@ -1,5 +1,6 @@
 const fs = require("fs");
 const _ = require("lodash");
+const log = require("./core/log.js");
 
 let loadedConfiguration = {};
 let unsafeConfiguration = {};
@@ -19,7 +20,7 @@ function initialize() {
 	);
 	longClone(safeConfiguration, nonFinalSafeConfiguration);
 	
-	console.log("Initialized Configuration!");
+	console.log(log.addMetadata("Initialized Configuration!", "info"));
 }
 
 function longClone(objectToCloneTo, objectToCloneFrom) {

@@ -3,6 +3,8 @@ const crypto = require("crypto");
 const bcrypt = require("bcrypt");
 const fs = require("fs");
 
+const log = require("./log.js");
+
 async function createUsers(options) {
 	let amount = options.amount;
 	let usernameType = options.usernameType;
@@ -33,7 +35,7 @@ async function createUsers(options) {
 	}
 
 	for (let i = 0; i < amount; i++) {
-		console.log(`Creating user ${i + 1} of ${amount}`);
+		console.log(log.addMetadata(`Creating user ${i + 1} of ${amount}`, "info"));
 
 		let username = "";
 		let userID = "";
@@ -90,7 +92,7 @@ async function createUsers(options) {
 			}
 		}
 	);
-	console.log("User creation process complete.");
+	console.log(log.addMetadata("User creation process complete.", "info"));
 }
 
 module.exports = { createUsers };

@@ -4,10 +4,12 @@ const { SHA3 } = require('sha3');
 
 const User = require("../models/User.js");
 
+const log = require("./log.js");
+
 async function authenticate(username, givenPassword, options){
-    console.log(username);
+    console.log(log.addMetadata(username));
     let user = await User.findOne({username: username})
-    console.log(user);
+    console.log(log.addMetadata(user));
     if (!user){
         return {successful: false};
     }
