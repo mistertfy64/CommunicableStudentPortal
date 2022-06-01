@@ -2,28 +2,22 @@
 <html lang="en">
 	<head>
 		<%- include("../partials/head") %>
-		<title>CSP - About</title>
+		<title>About</title>
 	</head>
 	
 	<body>
 		<header><%- include("../partials/header", {configuration: configuration}); %></header>
-        <h1>About Us</h1><br>
-        <h3>What is the Communicative Student Portal?</h3>
-        <p>
-            The Communicative Student Portal, also known as CSP, is an open-source "social media" portal which 
-            is designed for students, teachers, and staff members of an university. 
-        </p><br>
-        <h3>Who are we?</h3>
-        <p style="text-align:center">
-            We are the three founders of the website, mistertfy64, Taweikung09, and Enchantingplayz.
-        </p><br>
-        <h3>Our goal?</h3>
-        <p>
-            Our goal is to make communication between memebers of the university secure and simple, allowing teachers
-            to host educational content without fear of their content removed due to the social media's terms of service, 
-            and promote learning for students.
-        </p><br>
-		<br>
+        <h1><%= configuration.text.pages.user.about.titleText %></h1>
+        <p style="text-align:center"><%= configuration.text.pages.user.about.descriptionText %></p>
+        <h3><%= configuration.text.pages.user.about.question.Q1 %></h3>
+        <p><%= configuration.text.pages.user.about.answer.A1 %></p>
+        <br>
+        <h3><%= configuration.text.pages.user.about.question.Q2 %></h3>
+        <p style="text-align:center"><%= configuration.text.pages.user.about.answer.A2 %></p>
+        <br>
+        <h3><%= configuration.text.pages.user.about.question.Q3 %></h3>
+        <p><%= configuration.text.pages.user.about.answer.A3 %></p>
+        <br*2>
 		<footer><%- include("../partials/footer", {configuration: configuration}); %></footer>
 	</body>
 </html>

@@ -6,11 +6,9 @@
 	</head>
 	<body>
 		<header><%- include("../partials/header", {configuration: configuration}); %></header>
-			<h1>Announcements</h1>
-			<p>
-				The announcement page will list all of the announcements posted by the administerators.
-			</p>
-			<br>
+		<h1><%= configuration.text.pages.user.announcements.textTitle %></h1>
+		<p><%= configuration.text.pages.user.announcements.descriptionText %></p>
+		<br>
 		<footer><%- include("../partials/footer", {configuration: configuration}); %></footer>
 	</body>
 </html>

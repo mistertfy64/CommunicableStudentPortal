@@ -25,12 +25,82 @@
                     "cancelText": "Cancel"
                 }
             },
-            "chatboardMenu": {
-                "titleText": "Chat Board Menu",
-                "describtionText" : "a"
+            "user": {
+                "chatboardMenu": {
+                    "titleText": "Chat Board Menu",
+                    "descriptionText" : "This is the chat board menu where links to dedicated chat boards for each subject and grade are listed."
+                },
+                "chatboardContent": {
+                    "titleText": "Chat Board Content",
+                    "descriptionText": "Chat boards are where members of the school can communicate publicly. The chat allows moderators and computer algorithm to filter the message boards."
+                },
+                "blogContent": {
+                    "titleText":"Blog Content"
+                
+                },
+                "blogMenu": {
+                    "titleText": "Blog Menu",
+                    "descriptionText": "The blog page will show all of the blogs which teachers or authroized seniors posted. Most of the contents of the page will be about self-help, careers, and advices."
+                },
+                "announcements": {
+                    "titleText": "Announcements",
+                    "descriptionText": "The announcements page wil display important messages from the faculty or administerators."
+                },
+                "about": {
+                    "titleText": "About",
+                    "descriptionText": "In this page, we will display our motives of the project.",
+                    "question": {
+                        "Q1": "What is the Communicative Student Portal?",
+                        "Q2": "Who are we?",
+                        "Q3": "What is our goal?"
+                    },
+                    "answer": {
+                        "A1": "The Communicative Student Portal, also known as CSP, is an open-source 'social media' portal which is designed for students, teachers, and staff members of an university.",
+                        "A2": "We are the three founders of the website, mistertfy64, Taweikung09, and Enchantingplayz.",
+                        "A3": "Our goal is to make communication between memebers of the university secure and simple, allowing teachers to host educational content without fear of their content removed due to the social media's terms of service, and promote learning for students."
+                    }
+                },
+                "contact": {
+                    "titleText": "Contact",
+                    "descriptionText": "The contact page will help users if they have issues with using the website."
+                },
+                "event": {
+                    "titleText": "Events",
+                    "descriptionText": "This page will list futures events of the members of the school and its details."
+                },
+                "leaderboard": {
+                    "titleText": "Leaderboard",
+                    "descriptionText": "The leaderboard pages will collect students' scores from tests, homework, projects and rank them by order. This will hopefully encourage students to study."
+                },
+                "studymaterialMenu": {
+                    "titleText": "Study Material Menu",
+                    "descriptionText": "This is the study material menu, where links to dedicated pages for each subject and grade are listed."
+                },
+                "studymaterialSelect": {
+                    "titleText": "Study Material Selection Page",
+                    "descriptionText": "The study material page where teachers and the school faculty can provide students with nescessary documents, videos, and other forms of media."
+                },
+                "studymaterialContent": {
+                    "titleText": "Study Material Content",
+                    "descriptionText": "Study material content pages will show students information of the stdudy material. They can also download the material as well by clicking the download button.",
+                    "studymaterialName": "Gray's Anatomy",
+                    "studymaterialDescription": "Gray's anatomy is a famous medical book due to how it revolutinized the medical industry. It is often cited as the doctors' bible. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam congue purus urna, sed cursus massa tincidunt at. Etiam pellentesque vulputate nisl quis aliquam. Nam magna justo, tincidunt vel augue vel, sodales lacinia odio. Mauris purus neque, sodales et pharetra ac, auctor eget tortor. Nam semper lorem et sollicitudin molestie. Ut purus lacus, eleifend at mauris a, vulputate malesuada dolor. Fusce eget nibh convallis, accumsan urna vitae, fringilla sapien. Ut ullamcorper dapibus rhoncus.",
+                    "contentsText": "Contents"
+                }
             },
-            "chatboardContent": {
-                "titleText": "Chat Board Content"
+            "partials": {
+                "addComment": {
+                    "titleText": "Add a comment"
+                },
+                "addEvent": {
+                    "titleText": "Add an event"
+                },
+                "addMessage": {
+                    "titleText": "Add a message"
+                },
+                "eventBar": {
+                    "titleText": ""
+                }
             }
         },
         "global": {

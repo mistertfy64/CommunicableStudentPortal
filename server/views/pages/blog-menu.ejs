@@ -6,10 +6,8 @@
 	</head>
 	<body>
 		<header><%- include("../partials/header", {configuration: configuration}); %></header>
-			<h1>Blog</h1>
-			<p>
-				The blog page will show all of the blogs which teachers or authroized seniors posted. Most of the contents of the page will be about 
-			</p>
+			<h1><%= configuration.text.pages.user.blogMenu.titleText %></h1>
+			<p><%= configuration.text.pages.user.blogMenu.descriptionText %></p>
 			<br>
 		<footer><%- include("../partials/footer", {configuration: configuration}); %></footer>
 	</body>

@@ -7,10 +7,8 @@
 	
 	<body>
 		<header><%- include("../partials/header", {configuration: configuration}) %></header>
-		<h1><%= configuration.text.pages.chatboard-Menu.titleText %></h1>
-		<p>
-			This is the chat board menu, where links to dedicated chat boards for each subject and grade are listed.
-		</p>
+		<h1><%= configuration.text.pages.user.chatboardMenu.titleText %></h1>
+		<p><%= configuration.text.pages.user.chatboardMenu.descriptionText %></p>
 		<center>
 			<button type="button" class="collapsible">Year 1</button>
     		<div class="collapsible-content">
