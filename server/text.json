@@ -13,7 +13,6 @@
                     "deleteUserText": "Delete User"
                 },
                 "createUser": {
-
                     "titleText": "User Creation Tool",
                     "bodyText1": "Create",
                     "bodyText2": "users, with",
@@ -24,7 +23,6 @@
                     "hiddenBodyText2": "starting from",
                     "createUserText": "Create user(s)",
                     "cancelText": "Cancel"
-
                 }
             },
             "chatboardMenu": {
