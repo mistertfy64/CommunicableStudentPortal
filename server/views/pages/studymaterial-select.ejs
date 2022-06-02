@@ -10,7 +10,10 @@
             <br>
 			<p style="text-align:center"><%= configuration.text.pages.user.studymaterialSelect.descriptionText %></p>
             <center>
-				<button type="button" class="add-studymaterial-button" id="modal-button" style="display:flex;justify-content:center;align-items:center;">New material</button>
+				<button type="button" class="add-message-button" id="modal-button" style="display:flex;justify-content:center;align-items:center;"><%= configuration.text.pages.user.studymaterialSelect.addstudymaterialButton %></button>
+				<div id="modal" class="modal">
+					<div class="modal-content"><%- include("../partials/add-studymaterial") %></div>
+				</div>
 				<br>
 				<a href="/studymaterial-content"><div class="studymaterial-container">
 					<img class="studymaterial-pic" src="assets\images\Random book 1.jpg">
@@ -36,5 +39,27 @@
             </center>
 		<br>
 		<footer><%- include("../partials/footer", {configuration: configuration}); %></footer>
+
+		<script>
+			var modal = document.getElementById("modal");
+			
+			var btn = document.getElementById("modal-button");
+			
+			var span = document.getElementsByClassName("close")[0];
+			
+			btn.onclick = function() {
+			  modal.style.display = "block";
+			}
+			
+			span.onclick = function() {
+			  modal.style.display = "none";
+			}
+			
+			window.onclick = function(event) {
+			  if (event.target == modal) {
+				modal.style.display = "none";
+			  }
+			}
+		</script>
 	</body>
 </html>

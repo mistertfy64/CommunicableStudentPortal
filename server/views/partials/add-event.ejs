@@ -1,18 +1,18 @@
 <div class="modal-header">
     <span class="close">&times;</span>
-    <h2>New event</h2>
+    <h2><%= configuration.text.partials.addEvent.titleText %></h2>
 </div>
 <br>
 <form action="?action=createevent" method="post">
-    <label for="event-title"><b>Title</b></label><br>
+    <label for="event-title"><b><%= configuration.text.partials.addEvent.titleInputText %></b></label><br>
 	<input type="text" placeholder="TITLE" name="event-title" required>
     <br><br>
-    <label for="event-description"><b>Description</b></label><br>
+    <label for="event-description"><b><%= configuration.text.partials.addEvent.descriptionInputText %></b></label><br>
 	<textarea placeholder="DESCRIPTION" name="event-description" class="event-input-description"></textarea>
     <br><br>
     <input type="hidden" name="username">
-    <div style="display:flex;justify-content:center;align-items:center;"><br*5>
-        <button type="submit" class="button submit-button" value="submit">Add event</button>
+    <div><br*5>
+        <button type="submit" class="submit-button" value="submit"><%= configuration.text.partials.addEvent.titleText %></button>
     </div>
     <br><br>
 </form>

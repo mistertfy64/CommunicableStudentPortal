@@ -9,10 +9,10 @@
 		<header><%- include("../../partials/header", {configuration: configuration}); %></header>
 		
 		<div class="tab">
-			<button class="tablinks" onclick="openDashboard(event, 'Home')" id="defaultOpen">Home</button>
-			<button class="tablinks" onclick="openDashboard(event, 'Profile')">Profile</button>
-			<button class="tablinks" onclick="openDashboard(event, 'Security')">Security</button>
-			<button class="tablinks" onclick="openDashboard(event, 'History')">History</button>
+			<button class="tablinks" onclick="openDashboard(event, 'Home')" id="defaultOpen"><%= configuration.text.pages.user.studentDashboard.tabText.home %></button>
+			<button class="tablinks" onclick="openDashboard(event, 'Profile')"><%= configuration.text.pages.user.studentDashboard.tabText.profile %></button>
+			<button class="tablinks" onclick="openDashboard(event, 'Security')"><%= configuration.text.pages.user.studentDashboard.tabText.security %></button>
+			<button class="tablinks" onclick="openDashboard(event, 'History')"><%= configuration.text.pages.user.studentDashboard.tabText.history %></button>
 		</div>
 		<div id="Home" class="tabcontent">
 			<%- include("../../partials/student-dashboard-home") %>

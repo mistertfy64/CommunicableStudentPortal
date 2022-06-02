@@ -1009,15 +1009,20 @@ ul,
 	border: 1px solid greenyellow;
 }
 
-.submit-button {
+.submit-button,.interested-button {
 	background-color: var(--color-blue-dark);
 	color: #fefefe;
 	border: 1px solid var(--color-blue-dark);
-	width: 40%;
+	font-family: var(--default-font);
+	width: 60%;
 	height: 35px;
 	border-radius: 8px;
 	transition-duration: 0.4s;
 	cursor: pointer;
+	margin:auto;
+	text-decoration: none;
+	display: block;
+	font-size: 20px;
 }
 
 .submit-button:hover {

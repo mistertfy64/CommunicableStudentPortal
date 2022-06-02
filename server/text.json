@@ -89,9 +89,19 @@
                             "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus bibendum orci, eu eleifend risus porttitor sed. Quisque non libero eu mi condimentum vestibulum. Vestibulum gravida tellus in nisl eleifend, sed laoreet lorem convallis. Nulla quis erat leo. Aliquam eu semper diam, ut ullamcorper justo. Morbi aliquet aliquet ipsum condimentum hendrerit. Etiam condimentum, tellus quis aliquet pharetra, ligula ipsum dignissim leo, at placerat urna ex id ante. Nullam tempus scelerisque erat finibus congue. Duis suscipit vulputate sapien, in ultrices elit tempus vitae."
                         }
                     },
-                    "newmessageText": "New message",
-                    "newcommentText": "New comment",
                     "commentsTitleText": "Comments"
+                },
+                "studentDashboard": {
+                    "tabText": {
+                        "home": "Home",
+                        "profile": "Profile",
+                        "history": "History",
+                        "security": "Security"
+                    },
+                    "homeTab": {
+                        "informationText": "Information",
+                        "": ""
+                    }
                 },
                 "blogContent": {
                     "titleText":"Blog Content"
@@ -150,7 +160,8 @@
                     "material3": {
                         "name": "BM 1",
                         "description": "In buisiness, mathematics play an important role in determining various types of data which can potentially jeopardise your management if done incorrectly. "
-                    }
+                    },
+                    "addstudymaterialButton": "Add material"
                 },
                 "studymaterialContent": {
                     "titleText": "Study Material Content",
@@ -162,16 +173,30 @@
             },
             "partials": {
                 "addComment": {
-                    "titleText": "Add a comment"
+                    "commentText": "Comment",
+                    "addcommentButton": "Add comment"
                 },
                 "addEvent": {
-                    "titleText": "Add an event"
+                    "titleText": "Add an event",
+                    "titleInputText": "Title",
+                    "descriptionInputText": "Description (optional)"
                 },
                 "addMessage": {
-                    "titleText": "Add a message"
+                    "titleText": "Add a message",
+                    "titleInputText": "Title (optional)",
+                    "describtionInputText": "Describtion"
+                },
+                "addStudymaterial": {
+                    "titleText": "Add study material",
+                    "nameInputText": "Name",
+                    "descriptionInputText": "Description",
+                    "contentsInputText": "Contents",
+                    "fileInputText": "File(s)"
                 },
                 "eventBar": {
-                    "titleText": ""
+                    "titleText": "Technology Lecture on June 14th, 2022 (13:00)",
+                    "description": "Dear students,<br>there will be an online lecture hosted by Professor Davis about the future of AI. If you are interested, you may join by this link. <br> Videotelephony service link: https://us02web.zoom.us/",
+                    "interestedButton": "Interested"
                 }
             }
         },
