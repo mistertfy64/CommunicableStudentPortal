@@ -8,11 +8,11 @@
 	<body>
 		<header><%- include("../partials/header", {configuration: configuration}); %></header>
 		<center>
-    	<h1>Events</h1>
+    	<h1><%= configuration.text.pages.user.events.titleText %></h1>
 		<br>
-		<p></p>
+		<p><%= configuration.text.pages.user.events.descriptionText %></p>
 		
-		<button type="button" class="add-event-button" id="modal-button" style="display:flex;justify-content:center;align-items:center;width:60%;">New event</button>
+		<button type="button" class="add-event-button" id="modal-button" style="display:flex;justify-content:center;align-items:center;width:60%;"><%= configuration.text.pages.user.events.neweventText %></button>
 		<div id="modal" class="modal">
 			<div class="modal-content"><%- include("../partials/add-event") %></div>
 		</div>

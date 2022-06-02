@@ -1,0 +1,17 @@
+<div class="modal-header">
+    <span class="close">&times;</span>
+    <h2>New material</h2>
+</div>
+<br>
+<form action="?action=createmessage" method="post">
+    <label for="message-title"><b>Name</b></label><br>
+	<input type="text" placeholder="NAME" name="message-title" required>
+    <br><br>
+    <label for="message-context"><b>Describtion</b></label><br>
+	<textarea placeholder="DESCRIPTION" name="message-context" class="message-context-input" required></textarea>
+    <br>
+    <div style="display:flex;justify-content:center;align-items:center;"><br><br><br><br><br>
+        <button type="submit" class="button submit-button" value="submit">Add material</button>
+    </div>
+    <br><br>
+</form>

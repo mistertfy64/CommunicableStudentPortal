@@ -6,40 +6,32 @@
 	</head>
 	<body>
 		<header><%- include("../partials/header", {configuration: configuration}); %></header>
-			<h1>Study Material Protoype </h1>
+			<h1><%= configuration.text.pages.user.studymaterialSelect.titleText %></h1>
             <br>
-			<p style="text-align:center">
-			
-			</p>
+			<p style="text-align:center"><%= configuration.text.pages.user.studymaterialSelect.descriptionText %></p>
             <center>
 				<button type="button" class="add-studymaterial-button" id="modal-button" style="display:flex;justify-content:center;align-items:center;">New material</button>
 				<br>
 				<a href="/studymaterial-content"><div class="studymaterial-container">
 					<img class="studymaterial-pic" src="assets\images\Random book 1.jpg">
 					<br>
-					<div class="studymaterial-name">Gray's Anatomy</div>
+					<div class="studymaterial-name"><%= configuration.text.pages.user.studymaterialSelect.material1.name %></div>
 					<hr>
-					<div class="studymaterial-description">
-						Gray's anatomy is a famous medical book due to how it revolutinized the medical industry. It is often cited as the doctors' bible.
-					</div>
+					<div class="studymaterial-description"><%= configuration.text.pages.user.studymaterialSelect.material1.description %></div>
 				</div></a>
 				<a href=""><div class="studymaterial-container">
 					<img class="studymaterial-pic" src="assets\images\Random book 2.jpg">
 					<br>
-					<div class="studymaterial-name">Cambridge IGCSE</div>
+					<div class="studymaterial-name"><%= configuration.text.pages.user.studymaterialSelect.material2.name %></div>
 					<hr>
-					<div class="studymaterial-description">
-						Main mathematics book for Year 1 students since students are required to have a IGCSE test for workig overseas.
-					</div>
+					<div class="studymaterial-description"><%= configuration.text.pages.user.studymaterialSelect.material2.description %></div>
 				</div></a>
 				<a href=""><div class="studymaterial-container">
 					<img class="studymaterial-pic" src="assets\images\Random book 3.jpg">
 					<br>
-					<div class="studymaterial-name">BM 1</div>
+					<div class="studymaterial-name"><%= configuration.text.pages.user.studymaterialSelect.material3.name %></div>
 					<hr>
-					<div class="studymaterial-description">
-						In buisiness, mathematics play an important role in determining various types of data which can potentially jeopardise your management if done incorrectly. 
-					</div>
+					<div class="studymaterial-description"><%= configuration.text.pages.user.studymaterialSelect.material3.description %></div>
 				</div></a>
             </center>
 		<br>
