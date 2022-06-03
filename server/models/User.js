@@ -80,4 +80,18 @@ UserSchema.statics.createAPIKeyForUserID = function(userID, key){
 	}));
 }
 
+UserSchema.statics.safeFindUserByAPIKey = function(apiKey){
+	let hash = new SHA3(512);
+	hash.update(apiKey.toString())
+	let hashDigest = hash.digest("hex");
+	return this.findOne({apiKey: hashDigest}).select({sessionTokens: 0, sessionTokensWithExpiryTime: 0, password: 0});
+}
+
+UserSchema.statics.findUserByAPIKey = function(apiKey){
+	let hash = new SHA3(512);
+	hash.update(apiKey.toString())
+	let hashDigest = hash.digest("hex");
+	return this.findOne({apiKey: hashDigest});
+}
+
 module.exports = mongoose.model("User", UserSchema, "users");
