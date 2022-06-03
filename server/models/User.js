@@ -1,6 +1,8 @@
 const mongoose = require("mongoose");
 const _ = require("lodash");
 const { SHA3 }= require("sha3");
+const log = require("../core/log.js");
+
 
 const UserSchema = new mongoose.Schema({
 	name: String,
@@ -20,11 +22,11 @@ const UserSchema = new mongoose.Schema({
 });
 
 UserSchema.statics.safeFindUserByUsername = function (username) {
-	return this.findOne({ username: username }).select({sessionTokens: 0, sessionTokensWithExpiryTime: 0, password: 0});
+	return this.findOne({ username: username }).select({sessionTokens: 0, sessionTokensWithExpiryTime: 0, password: 0, apiKey: 0});
 };
 
 UserSchema.statics.safeFindUserByUserID = function (userID) {
-	return this.findOne({ userID: userID }).select({sessionTokens: 0, sessionTokensWithExpiryTime: 0, password: 0});
+	return this.findOne({ userID: userID }).select({sessionTokens: 0, sessionTokensWithExpiryTime: 0, password: 0, apiKey: 0});
 };
 
 UserSchema.statics.destroyAllSessionTokensForUserID = function (userID) {
@@ -52,14 +54,26 @@ UserSchema.statics.addSessionTokenForUserID = function (userID, token) {
 };
 
 UserSchema.statics.safeFindUserBySessionToken = function(token){
+
+	if (!token){
+		console.error(log.addMetadata(`Token is undefined`, "error"));
+		return;
+	}
+
 	let hash = new SHA3(512);
 	hash.update(token.toString())
 	let hashDigest = hash.digest("hex");
-	return this.findOne({sessionTokens: {$all:[hashDigest]}}).select({sessionTokens: 0, sessionTokensWithExpiryTime: 0, password: 0});
+	return this.findOne({sessionTokens: {$all:[hashDigest]}}).select({sessionTokens: 0, sessionTokensWithExpiryTime: 0, password: 0, apiKey: 0});
 }
 
 
 UserSchema.statics.findUserBySessionToken = function(token){
+	if (!token){
+		console.error(log.addMetadata(`Token is undefined`, "error"));
+		return;
+	}
+	
+
 	let hash = new SHA3(512);
 	hash.update(token.toString())
 	let hashDigest = hash.digest("hex");
@@ -81,13 +95,26 @@ UserSchema.statics.createAPIKeyForUserID = function(userID, key){
 }
 
 UserSchema.statics.safeFindUserByAPIKey = function(apiKey){
+
+	if (!apiKey){
+		console.error(log.addMetadata(`API key is undefined.`, "error"));
+		return;
+	}
+	
 	let hash = new SHA3(512);
 	hash.update(apiKey.toString())
 	let hashDigest = hash.digest("hex");
-	return this.findOne({apiKey: hashDigest}).select({sessionTokens: 0, sessionTokensWithExpiryTime: 0, password: 0});
+	return this.findOne({apiKey: hashDigest}).select({sessionTokens: 0, sessionTokensWithExpiryTime: 0, password: 0, apiKey: 0});
 }
 
 UserSchema.statics.findUserByAPIKey = function(apiKey){
+	
+	if (!apiKey){
+		console.error(log.addMetadata(`API key is undefined.`, "error"));
+		return;
+	}
+	
+	
 	let hash = new SHA3(512);
 	hash.update(apiKey.toString())
 	let hashDigest = hash.digest("hex");
