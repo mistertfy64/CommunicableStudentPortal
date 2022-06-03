@@ -43,8 +43,8 @@
                         "creativetechText": "Creative technology",
                         "commsdesigntext": "Communication Design",
                         "comengineeringText": "Computer Engineering",
-                        "intercultstudiesText": "Intercultural Studies <br> and Languages",
-                        "interrelationsText": "International Relations <br> and Global Afairs",
+                        "intercultstudiesText": "Intercultural Studies and Languages",
+                        "interrelationsText": "International Relations and Global Afairs",
                         "mediaandcommsText": "Media and Communication",
                         "appliedmathText": "Applied Mathematics",
                         "bioscienceText": "Biological Science",
@@ -53,7 +53,7 @@
                         "foodsciText": "Food Science & Technology",
                         "environscienceText": "Environmental Science",
                         "physicsText": "Physics",
-                        "traveltext": "Travel and Service <br> Buisiness Entrepreneurship"
+                        "traveltext": "Travel and Service Buisiness Entrepreneurship"
                     },
                     "menuListTitleText": {
                         "buisinessTitleText": "Buisiness",
@@ -140,7 +140,27 @@
                 },
                 "leaderboard": {
                     "titleText": "Leaderboard",
-                    "descriptionText": "The leaderboard pages will collect students' scores from tests, homework, projects and rank them by order. This will hopefully encourage students to study."
+                    "descriptionText": "The leaderboard pages will collect students' scores from tests, homework, projects and rank them by order. This will hopefully encourage students to study.",
+                    "leaderboardTable": {
+                        "rankText": "Rank",
+                        "usernameText": "Username",
+                        "scoreText": "Score"
+                    },
+                    "1Place": {
+                        "rankText": "1",
+                        "usernameText": "John Doe",
+                        "scoreText": "Score"
+                    },
+                    "2Place": {
+                        "rankText": "2",
+                        "usernameText": "Jane Doe",
+                        "scoreText": "Score"
+                    },
+                    "3Place": {
+                        "rankText": "3",
+                        "usernameText": "Chad Moore",
+                        "scoreText": "Score"
+                    }
                 },
                 "studymaterialMenu": {
                     "titleText": "Study Material Menu",
