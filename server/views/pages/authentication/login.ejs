@@ -11,35 +11,41 @@
 			configuration}); %>
 		</header>
 		<h1>Login</h1>
-		<div
-			style="display: flex; justify-content: center; align-items: center"
-		>
+		<hr><br>
+		<div class="login-form-container">
 			<form action="/login" method="post">
-				<label for="username"><b>Username</b></label
-				><br />
-				<input
-					type="text"
-					placeholder="Username"
-					name="username"
-					required
-				/>
+				<div class="username-container">
+					<label for="username" class="login-label" style="text-align:left;"><b>Username</b></label
+					><br />
+					<input
+						type="text"
+						placeholder="Username"
+						name="username"
+						class="username-input"
+						required
+					/>
+				</div>
 				<br /><br />
-				<label for="password"><b>Password</b></label
-				><br />
-				<input
-					type="password"
-					placeholder="Password"
-					name="password"
-					required
-				/>
+				<div class="password-container">
+					<label for="password" class="login-label"><b>Password</b></label
+					><br />
+					<input
+						type="password"
+						placeholder="Password"
+						name="password"
+						class="password-input"
+						required
+					/>
+				</div>
 				<br /><br /><input type="checkbox" name="options" value="persistent"> Remember me (if successful).
 				<br>
 				<input type="checkbox" name="options" value="destroy-other-sessions"> Log me out of all other sessions (if successful).
-				<br>
+				<br*3>
 				<button
 					type="submit"
 					class="button login-button"
 					value="submit"
+					class="login-button"
 				>
 				
 					Login
@@ -48,6 +54,7 @@
 			</form>
 		</div>
 		<br />
+		<br*5>
 
 		<footer><%- include("../../partials/footer", {configuration:
 			configuration}); %></footer>

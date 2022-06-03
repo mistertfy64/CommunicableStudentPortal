@@ -8,50 +8,46 @@
 	<body>
 		<header><%- include("../partials/header", {configuration: configuration}); %></header>
 			<h1>Study Material Menu</h1>
-			<p>
-				
-			</p>
+			<p style="text-align:center"><%= configuration.text.pages.user.chatboardMenu.descriptionText %></p>
 			<br>
 			<center>
 				<button type="button" class="collapsible">Year 1</button>
 				<div class="collapsible-content">
 					<br>
 					<div class="chatboard-menu-column1">
-						<h4>Buisiness</h4>
-						<a href="/studymaterial-select">Buisiness Economics</a><br>
-						<a href="/studymaterial-select">Finance</a><br>
-						<a href="/studymaterial-select">International Buisiness</a><br>
-						<a href="/studymaterial-select">Marketting</a><br>
+						<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.buisinessTitleText %></h4>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.buisinesseconomicsText %></a><br>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.financeText %></a><br>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.interbuisinessText %></a><br>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.markettingText %></a><br>
 	
-						<h4>Creative Technology</h4>
-						<a href="">Creative technology</a><br>
-						<br>
-						<br>
-	
-						<h4>Design</h4><br>
-						<a href="">Communication Design</a><br>
-						<br>
+						<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.commsdesignTitleText %></h4>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.creativetechText %></a><br>
 						<br>
 						<br>
 	
-						<h4>Engineering</h4><br>
-						<a href="">Computer Engineering</a><br>
+						<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.designTitleText %></h4><br>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.commsdesigntext %></a><br>
 						<br>
 						<br>
 						<br>
 	
-						<h4>Humanities & Languages</h4>
-						<a href="">Intercultural Studies<br>
-						and Languages</a>
+						<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.engineeringTitleText %></h4><br>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.comengineeringText %></a><br>
+						<br>
+						<br>
+						<br>
+	
+						<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.humanityTitleText %></h4>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.intercultstudiesText %></a>
 						<br>
 					</div>
 					<br>
 					<br>
 					<br>
 					<div class="chatboard-menu-column2">
-						<h4>International Relations</h4>
-						<a href="">International Relations<br>
-						and Global Afairs</a><br>
+						<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.interrelationsTitleText %></h4>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.interrelationsText %></a><br>
 						<br>
 						<br>
 						<br>
@@ -59,8 +55,8 @@
 						<br>
 						
 	
-						<h4>Media</h4>
-						<a href="">Media & Communication</a><br>
+						<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.mediaTitleText %></h4>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.mediaandcommsText %></a><br>
 						<br>
 						<br>
 						<br>
@@ -69,18 +65,17 @@
 						<br>
 						<br>
 	
-						<h4>Science</h4>
-						<a href="">Applied Mathematics</a><br>
-						<a href="">Biological Science</a><br>
-						<a href="">Chemistry</a><br>
-						<a href="">Computer Science<br>
-						<a href="">Food Science & Technology</a><br>
-						<a href="">Environmental Science</a><br>
-						<a href="">Physics</a><br>
+						<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.scienceTitleText %></h4>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.appliedmathText %></a><br>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.bioscienceText %></a><br>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.chemistryText %></a><br>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.comscienceText %></a><br>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.foodsciText %></a><br>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.environscienceText %></a><br>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.physicsText %></a><br>
 	
-						<h4>Travel and Service Buisinesses</h4>
-						<a href="">Travel and Service <br>
-						Buisiness Entrepreneurship</a><br>
+						<h4>><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.travelTitleText %></h4>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.traveltext %></a><br>
 						<br>
 						<br>
 						<br>
@@ -93,41 +88,39 @@
 				<div class="collapsible-content">
 					<br>
 					<div class="chatboard-menu-column1">
-						<h4>Buisiness</h4>
-						<a href="">Buisiness Economics</a><br>
-						<a href="">Finance</a><br>
-						<a href="">International Buisiness</a><br>
-						<a href="">Marketting</a><br>
+						<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.buisinessTitleText %></h4>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.buisinesseconomicsText %></a><br>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.financeText %></a><br>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.interbuisinessText %></a><br>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.markettingText %></a><br>
 	
-						<h4>Creative Technology</h4>
-						<a href="">Creative technology</a><br>
-						<br>
-						<br>
-	
-						<h4>Design</h4><br>
-						<a href="">Communication Design</a><br>
-						<br>
+						<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.commsdesignTitleText %></h4>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.creativetechText %></a><br>
 						<br>
 						<br>
 	
-						<h4>Engineering</h4><br>
-						<a href="">Computer Engineering</a><br>
+						<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.designTitleText %></h4><br>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.commsdesigntext %></a><br>
 						<br>
 						<br>
 						<br>
 	
-						<h4>Humanities & Languages</h4>
-						<a href="">Intercultural Studies<br>
-						and Languages</a>
+						<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.engineeringTitleText %></h4><br>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.comengineeringText %></a><br>
+						<br>
+						<br>
+						<br>
+	
+						<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.humanityTitleText %></h4>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.intercultstudiesText %></a>
 						<br>
 					</div>
 					<br>
 					<br>
 					<br>
 					<div class="chatboard-menu-column2">
-						<h4>International Relations</h4>
-						<a href="">International Relations<br>
-						and Global Afairs</a><br>
+						<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.interrelationsTitleText %></h4>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.interrelationsText %></a><br>
 						<br>
 						<br>
 						<br>
@@ -135,8 +128,8 @@
 						<br>
 						
 	
-						<h4>Media</h4>
-						<a href="">Media & Communication</a><br>
+						<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.mediaTitleText %></h4>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.mediaandcommsText %></a><br>
 						<br>
 						<br>
 						<br>
@@ -145,18 +138,17 @@
 						<br>
 						<br>
 	
-						<h4>Science</h4>
-						<a href="">Applied Mathematics</a><br>
-						<a href="">Biological Science</a><br>
-						<a href="">Chemistry</a><br>
-						<a href="">Computer Science<br>
-						<a href="">Food Science & Technology</a><br>
-						<a href="">Environmental Science</a><br>
-						<a href="">Physics</a><br>
+						<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.scienceTitleText %></h4>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.appliedmathText %></a><br>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.bioscienceText %></a><br>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.chemistryText %></a><br>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.comscienceText %></a><br>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.foodsciText %></a><br>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.environscienceText %></a><br>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.physicsText %></a><br>
 	
-						<h4>Travel and Service Buisinesses</h4>
-						<a href="">Travel and Service <br>
-						Buisiness Entrepreneurship</a><br>
+						<h4>><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.travelTitleText %></h4>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.traveltext %></a><br>
 						<br>
 						<br>
 						<br>
@@ -169,41 +161,39 @@
 				<div class="collapsible-content">
 					<br>
 					<div class="chatboard-menu-column1">
-						<h4>Buisiness</h4>
-						<a href="">Buisiness Economics</a><br>
-						<a href="">Finance</a><br>
-						<a href="">International Buisiness</a><br>
-						<a href="">Marketting</a><br>
+						<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.buisinessTitleText %></h4>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.buisinesseconomicsText %></a><br>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.financeText %></a><br>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.interbuisinessText %></a><br>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.markettingText %></a><br>
 	
-						<h4>Creative Technology</h4>
-						<a href="">Creative technology</a><br>
-						<br>
-						<br>
-	
-						<h4>Design</h4><br>
-						<a href="">Communication Design</a><br>
-						<br>
+						<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.commsdesignTitleText %></h4>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.creativetechText %></a><br>
 						<br>
 						<br>
 	
-						<h4>Engineering</h4><br>
-						<a href="">Computer Engineering</a><br>
+						<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.designTitleText %></h4><br>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.commsdesigntext %></a><br>
 						<br>
 						<br>
 						<br>
 	
-						<h4>Humanities & Languages</h4>
-						<a href="">Intercultural Studies<br>
-						and Languages</a>
+						<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.engineeringTitleText %></h4><br>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.comengineeringText %></a><br>
+						<br>
+						<br>
+						<br>
+	
+						<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.humanityTitleText %></h4>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.intercultstudiesText %></a>
 						<br>
 					</div>
 					<br>
 					<br>
 					<br>
 					<div class="chatboard-menu-column2">
-						<h4>International Relations</h4>
-						<a href="">International Relations<br>
-						and Global Afairs</a><br>
+						<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.interrelationsTitleText %></h4>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.interrelationsText %></a><br>
 						<br>
 						<br>
 						<br>
@@ -211,8 +201,8 @@
 						<br>
 						
 	
-						<h4>Media</h4>
-						<a href="">Media & Communication</a><br>
+						<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.mediaTitleText %></h4>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.mediaandcommsText %></a><br>
 						<br>
 						<br>
 						<br>
@@ -221,18 +211,17 @@
 						<br>
 						<br>
 	
-						<h4>Science</h4>
-						<a href="">Applied Mathematics</a><br>
-						<a href="">Biological Science</a><br>
-						<a href="">Chemistry</a><br>
-						<a href="">Computer Science<br>
-						<a href="">Food Science & Technology</a><br>
-						<a href="">Environmental Science</a><br>
-						<a href="">Physics</a><br>
+						<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.scienceTitleText %></h4>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.appliedmathText %></a><br>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.bioscienceText %></a><br>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.chemistryText %></a><br>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.comscienceText %></a><br>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.foodsciText %></a><br>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.environscienceText %></a><br>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.physicsText %></a><br>
 	
-						<h4>Travel and Service Buisinesses</h4>
-						<a href="">Travel and Service <br>
-						Buisiness Entrepreneurship</a><br>
+						<h4>><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.travelTitleText %></h4>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.traveltext %></a><br>
 						<br>
 						<br>
 						<br>
@@ -245,41 +234,39 @@
 				<div class="collapsible-content">
 					<br>
 					<div class="chatboard-menu-column1">
-						<h4>Buisiness</h4>
-						<a href="">Buisiness Economics</a><br>
-						<a href="">Finance</a><br>
-						<a href="">International Buisiness</a><br>
-						<a href="">Marketting</a><br>
+						<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.buisinessTitleText %></h4>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.buisinesseconomicsText %></a><br>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.financeText %></a><br>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.interbuisinessText %></a><br>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.markettingText %></a><br>
 	
-						<h4>Creative Technology</h4>
-						<a href="">Creative technology</a><br>
-						<br>
-						<br>
-	
-						<h4>Design</h4><br>
-						<a href="">Communication Design</a><br>
-						<br>
+						<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.commsdesignTitleText %></h4>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.creativetechText %></a><br>
 						<br>
 						<br>
 	
-						<h4>Engineering</h4><br>
-						<a href="">Computer Engineering</a><br>
+						<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.designTitleText %></h4><br>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.commsdesigntext %></a><br>
 						<br>
 						<br>
 						<br>
 	
-						<h4>Humanities & Languages</h4>
-						<a href="">Intercultural Studies<br>
-						and Languages</a>
+						<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.engineeringTitleText %></h4><br>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.comengineeringText %></a><br>
+						<br>
+						<br>
+						<br>
+	
+						<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.humanityTitleText %></h4>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.intercultstudiesText %></a>
 						<br>
 					</div>
 					<br>
 					<br>
 					<br>
 					<div class="chatboard-menu-column2">
-						<h4>International Relations</h4>
-						<a href="">International Relations<br>
-						and Global Afairs</a><br>
+						<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.interrelationsTitleText %></h4>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.interrelationsText %></a><br>
 						<br>
 						<br>
 						<br>
@@ -287,8 +274,8 @@
 						<br>
 						
 	
-						<h4>Media</h4>
-						<a href="">Media & Communication</a><br>
+						<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.mediaTitleText %></h4>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.mediaandcommsText %></a><br>
 						<br>
 						<br>
 						<br>
@@ -297,18 +284,17 @@
 						<br>
 						<br>
 	
-						<h4>Science</h4>
-						<a href="">Applied Mathematics</a><br>
-						<a href="">Biological Science</a><br>
-						<a href="">Chemistry</a><br>
-						<a href="">Computer Science<br>
-						<a href="">Food Science & Technology</a><br>
-						<a href="">Environmental Science</a><br>
-						<a href="">Physics</a><br>
+						<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.scienceTitleText %></h4>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.appliedmathText %></a><br>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.bioscienceText %></a><br>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.chemistryText %></a><br>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.comscienceText %></a><br>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.foodsciText %></a><br>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.environscienceText %></a><br>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.physicsText %></a><br>
 	
-						<h4>Travel and Service Buisinesses</h4>
-						<a href="">Travel and Service <br>
-						Buisiness Entrepreneurship</a><br>
+						<h4>><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.travelTitleText %></h4>
+						<a href="/studymaterial-select"><%= configuration.text.pages.user.chatboardMenu.menuList.traveltext %></a><br>
 						<br>
 						<br>
 						<br>

@@ -7,8 +7,8 @@
 	
 	<body>
 		<header><%- include("../partials/header", {configuration: configuration}); %></header>
-		<h1>Leaderboard</h1>
-		
+		<h1><%= configuration.text.pages.user.leaderboard.titleText %></h1>
+		<p style="text-align:center"><%= configuration.text.pages.user.leaderboard.descriptionText %></p>
 		<%- include("../partials/leaderboard-table") %>
 		<footer><%- include("../partials/footer", {configuration: configuration}); %></footer>
 	</body>

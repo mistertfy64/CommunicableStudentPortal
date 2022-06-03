@@ -42,11 +42,80 @@
             "user": {
                 "chatboardMenu": {
                     "titleText": "Chat Board Menu",
-                    "descriptionText" : "This is the chat board menu where links to dedicated chat boards for each subject and grade are listed."
+                    "descriptionText" : "This is the chat board menu where links to dedicated chat boards for each subject and grade are listed.",
+                    "yearText": {
+                        "1": "Year 1",
+                        "2": "Year 2",
+                        "3": "Year 3",
+                        "4": "Year 4"
+                    },
+                    "menuList": {
+                        "buisinesseconomicsText": "Buisiness Economics",
+                        "financeText": "Finance",
+                        "interbuisinessText": "International Buisiness",
+                        "markettingText": "Marketting",
+                        "creativetechText": "Creative technology",
+                        "commsdesigntext": "Communication Design",
+                        "comengineeringText": "Computer Engineering",
+                        "intercultstudiesText": "Intercultural Studies and Languages",
+                        "interrelationsText": "International Relations and Global Afairs",
+                        "mediaandcommsText": "Media and Communication",
+                        "appliedmathText": "Applied Mathematics",
+                        "bioscienceText": "Biological Science",
+                        "chemistryText": "Chemistry",
+                        "comscienceText": "Computer Science",
+                        "foodsciText": "Food Science & Technology",
+                        "environscienceText": "Environmental Science",
+                        "physicsText": "Physics",
+                        "traveltext": "Travel and Service Buisiness Entrepreneurship"
+                    },
+                    "menuListTitleText": {
+                        "buisinessTitleText": "Buisiness",
+                        "creativetechTitleText": "Creative Technology",
+                        "commsdesignTitleText": "Communication Design",
+                        "designTitleText": "Design",
+                        "engineeringTitleText": "Engineering",
+                        "humanityTitleText": "Humanities & Languages",
+                        "interrelationsTitleText": "Internatioal Relations",
+                        "mediaTitleText": "Media",
+                        "scienceTitleText": "Sciene",
+                        "travelTitleText": "Travel and Service Buisiness"
+                    },
+                    "unilifeText": "University Life"
                 },
                 "chatboardContent": {
                     "titleText": "Chat Board Content",
-                    "descriptionText": "Chat boards are where members of the school can communicate publicly. The chat allows moderators and computer algorithm to filter the message boards."
+                    "descriptionText": "Chat boards are where members of the school can communicate publicly. The chat allows moderators and computer algorithm to filter the message boards.",
+                    "messages": {
+                        "1": {
+                            "topic": "Anyone know how to solve this problem?",
+                            "username": "John Doe",
+                            "profile": "Random guy.jpg",
+                            "datetime": "Posted on April 19th,<br> 2022 21:57",
+                            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus bibendum orci, eu eleifend risus porttitor sed. Quisque non libero eu mi condimentum vestibulum. Vestibulum gravida tellus in nisl eleifend, sed laoreet lorem convallis. Nulla quis erat leo. Aliquam eu semper diam, ut ullamcorper justo. Morbi aliquet aliquet ipsum condimentum hendrerit. Etiam condimentum, tellus quis aliquet pharetra, ligula ipsum dignissim leo, at placerat urna ex id ante. Nullam tempus scelerisque erat finibus congue. Duis suscipit vulputate sapien, in ultrices elit tempus vitae."
+                        }
+                    },
+                    "comments": {
+                        "1": {
+                            "username": "Jane Doe",
+                            "profile": "Random girl.jpg",
+                            "datetime": "Posted on April 19th,<br> 2022 21:59",
+                            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus bibendum orci, eu eleifend risus porttitor sed. Quisque non libero eu mi condimentum vestibulum. Vestibulum gravida tellus in nisl eleifend, sed laoreet lorem convallis. Nulla quis erat leo. Aliquam eu semper diam, ut ullamcorper justo. Morbi aliquet aliquet ipsum condimentum hendrerit. Etiam condimentum, tellus quis aliquet pharetra, ligula ipsum dignissim leo, at placerat urna ex id ante. Nullam tempus scelerisque erat finibus congue. Duis suscipit vulputate sapien, in ultrices elit tempus vitae."
+                        }
+                    },
+                    "commentsTitleText": "Comments"
+                },
+                "studentDashboard": {
+                    "tabText": {
+                        "home": "Home",
+                        "profile": "Profile",
+                        "history": "History",
+                        "security": "Security"
+                    },
+                    "homeTab": {
+                        "informationText": "Information",
+                        "": ""
+                    }
                 },
                 "blogContent": {
                     "titleText":"Blog Content"
@@ -78,13 +147,34 @@
                     "titleText": "Contact",
                     "descriptionText": "The contact page will help users if they have issues with using the website."
                 },
-                "event": {
+                "events": {
                     "titleText": "Events",
-                    "descriptionText": "This page will list futures events of the members of the school and its details."
+                    "descriptionText": "This page will list futures events of the members of the school and its details.",
+                    "neweventText": "New event"
                 },
                 "leaderboard": {
                     "titleText": "Leaderboard",
-                    "descriptionText": "The leaderboard pages will collect students' scores from tests, homework, projects and rank them by order. This will hopefully encourage students to study."
+                    "descriptionText": "The leaderboard pages will collect students' scores from tests, homework, projects and rank them by order. This will hopefully encourage students to study.",
+                    "leaderboardTable": {
+                        "rankText": "Rank",
+                        "usernameText": "Username",
+                        "scoreText": "Score"
+                    },
+                    "1Place": {
+                        "rankText": "1",
+                        "usernameText": "John Doe",
+                        "scoreText": "Score"
+                    },
+                    "2Place": {
+                        "rankText": "2",
+                        "usernameText": "Jane Doe",
+                        "scoreText": "Score"
+                    },
+                    "3Place": {
+                        "rankText": "3",
+                        "usernameText": "Chad Moore",
+                        "scoreText": "Score"
+                    }
                 },
                 "studymaterialMenu": {
                     "titleText": "Study Material Menu",
@@ -92,7 +182,20 @@
                 },
                 "studymaterialSelect": {
                     "titleText": "Study Material Selection Page",
-                    "descriptionText": "The study material page where teachers and the school faculty can provide students with nescessary documents, videos, and other forms of media."
+                    "descriptionText": "The study material page where teachers and the school faculty can provide students with nescessary documents, videos, and other forms of media.",
+                    "material1": {
+                        "name": "Gray's Anatomy",
+                        "description": "Gray's anatomy is a famous medical book due to how it revolutinized the medical industry. It is often cited as the doctors' bible."
+                    },
+                    "material2": {
+                        "name": "Cambridge IGCSE",
+                        "description": "Main mathematics book for Year 1 students since students are required to have a IGCSE test for workig overseas."
+                    },
+                    "material3": {
+                        "name": "BM 1",
+                        "description": "In buisiness, mathematics play an important role in determining various types of data which can potentially jeopardise your management if done incorrectly. "
+                    },
+                    "addstudymaterialButton": "Add material"
                 },
                 "studymaterialContent": {
                     "titleText": "Study Material Content",
@@ -104,16 +207,30 @@
             },
             "partials": {
                 "addComment": {
-                    "titleText": "Add a comment"
+                    "commentText": "Comment",
+                    "addcommentButton": "Add comment"
                 },
                 "addEvent": {
-                    "titleText": "Add an event"
+                    "titleText": "Add an event",
+                    "titleInputText": "Title",
+                    "descriptionInputText": "Description (optional)"
                 },
                 "addMessage": {
-                    "titleText": "Add a message"
+                    "titleText": "Add a message",
+                    "titleInputText": "Title (optional)",
+                    "describtionInputText": "Describtion"
+                },
+                "addStudymaterial": {
+                    "titleText": "Add study material",
+                    "nameInputText": "Name",
+                    "descriptionInputText": "Description",
+                    "contentsInputText": "Contents",
+                    "fileInputText": "File(s)"
                 },
                 "eventBar": {
-                    "titleText": ""
+                    "titleText": "Technology Lecture on June 14th, 2022 (13:00)",
+                    "description": "Dear students,<br>there will be an online lecture hosted by Professor Davis about the future of AI. If you are interested, you may join by this link. <br> Videotelephony service link: https://us02web.zoom.us/",
+                    "interestedButton": "Interested"
                 }
             }
         },
