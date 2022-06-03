@@ -89,6 +89,33 @@ router.post(
 );
 
 router.post(
+	"/administrator-dashboard/find-user",
+	urlencodedParser,
+	async (request, response) => {
+		let sessionToken = request.cookies.sessionToken;
+		let currentUser = await User.safeFindUserBySessionToken(sessionToken);
+		if (!currentUser) {
+			response.redirect("/");
+			return;
+		}
+		if (
+			!(
+				currentUser.membership.isSuperAdministrator ||
+				currentUser.membership.isAdministrator
+			)
+		) {
+			response.redirect("/");
+			return;
+		}
+		//TODO: Add find by username.
+		let user = await User.safeFindUserByUserID(body["user-id-to-find"].toString());
+		console.log(user);
+	}
+);
+
+
+
+router.post(
 	"/administrator-dashboard/view-api-key",
 	async (request, response) => {
 		let sessionToken = request.cookies.sessionToken;
