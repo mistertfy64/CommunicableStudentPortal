@@ -1,9 +1,9 @@
 <form action="?action=createcomment" method="post">
     <div class="chatboard-comment-input-container">
-        <center>
+        <div style="text-align:center;">
         <textarea placeholder="COMMENT" name="comment-context" class="comment-context-input" required><%= configuration.text.partials.addComment.commentText %></textarea>
         <br><br>
         <button type="submit" class="interested-button" value="submit"><%= configuration.partials.pages.addcommentButton %></button>
-        </center>
+        <div>
     </div>
 </form>

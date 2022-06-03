@@ -7,7 +7,7 @@
 	
 	<body>
 		<header><%- include("../partials/header", {configuration: configuration}); %></header>
-		<center>
+		<div style="text-align:center;">
     	<h1><%= configuration.text.pages.user.events.titleText %></h1>
 		<br>
 		<p><%= configuration.text.pages.user.events.descriptionText %></p>
@@ -18,7 +18,7 @@
 		</div>
 		<br><br>
 		<%- include("../partials/event-bar") %>
-		</center>
+		<div>
 		<br><br><br><br><br><br><br><br><br><br>
 		<footer><%- include("../partials/footer", {configuration: configuration}); %></footer>
 
