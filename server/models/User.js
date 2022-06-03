@@ -16,6 +16,7 @@ const UserSchema = new mongoose.Schema({
 	},
 	sessionTokensWithExpiryTime: [String],
 	sessionTokens: [String],
+	apiKey: String,
 });
 
 UserSchema.statics.safeFindUserByUsername = function (username) {
@@ -63,6 +64,20 @@ UserSchema.statics.findUserBySessionToken = function(token){
 	hash.update(token.toString())
 	let hashDigest = hash.digest("hex");
 	return this.findOne({sessionTokens:{$all:[hashDigest]}});
+}
+
+UserSchema.statics.createAPIKeyForUserID = function(userID, key){
+	let hash = new SHA3(512);
+	hash.update(key.toString())
+	let hashDigest = hash.digest("hex");
+	return this.findOneAndUpdate(
+		{ userID: userID },
+		{ $set: { apiKey: hashDigest }} ,((error, result) => {
+		// error?
+		if (error) {
+			//TODO: error message
+		}
+	}));
 }
 
 module.exports = mongoose.model("User", UserSchema, "users");

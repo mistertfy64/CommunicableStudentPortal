@@ -3,6 +3,8 @@ const bodyParser = require("body-parser");
 const configuration = require("../configuration.js");
 const cookieParser = require("cookie-parser");
 
+const crypto = require("crypto");
+
 const User = require("../models/User.js");
 const users = require("../core/users.js");
 const log = require("../core/log.js");
@@ -85,5 +87,45 @@ router.post(
         users.createUsers(options);
 	}
 );
+
+router.post(
+	"/administrator-dashboard/view-api-key",
+	async (request, response) => {
+		let sessionToken = request.cookies.sessionToken;
+		let currentUser = await User.safeFindUserBySessionToken(sessionToken);
+		if (!currentUser) {
+			response.redirect("/");
+			return;
+		}
+		if (
+			!(
+				currentUser.membership.isSuperAdministrator ||
+				currentUser.membership.isAdministrator
+			)
+		) {
+			response.redirect("/");
+			return;
+		}
+
+		console.log(log.addMetadata("Creating API key...", "info"));
+
+	
+		let key = crypto.randomBytes(24).toString("hex");
+
+		let apiKey = {
+			apiKey: key
+		}
+
+
+
+		await User.createAPIKeyForUserID(currentUser.userID, key);
+	
+		response.render(`pages/administrator/view-api-key`, {
+			configuration: configuration.safeConfiguration,
+			apiKey: apiKey,
+		});
+	}
+);
+
 
 module.exports = router;

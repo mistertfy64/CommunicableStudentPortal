@@ -1079,3 +1079,7 @@ div.administrator-dashboard-box {
 	margin: 1vw 1.5vw;
 	overflow: auto;
 }
+
+.hidden-text {
+	opacity: 0.2;
+}

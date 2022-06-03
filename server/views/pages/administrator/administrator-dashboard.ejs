@@ -13,6 +13,7 @@
 		<br />
 		<h1><%= configuration.text.pages.administrator.administratorDashboard.titleText %></h1>
 		<br />
+		<div>
 		<div
 			style="display: flex;flex-wrap: wrap;flex-direction: row;justify-content: center;"
 		>
@@ -30,7 +31,7 @@
 						<%= configuration.text.pages.administrator.administratorDashboard.createUserText %>
 					</button>
 					<br />
-					<button class="button-color-neutral button-rounded">
+					<button onclick="location.href='/administrator-dashboard/modify-user'" class="button-color-neutral button-rounded">
 						<%= configuration.text.pages.administrator.administratorDashboard.modifyUserText %>
 					</button>
 					<br />
@@ -39,9 +40,11 @@
 					</button>
 				</div>
 			</div>
-			
 		</div>
-
+		<a href="/administrator-dashboard/api-keys" style="text-align:center;" class="hidden-text"><%= configuration.text.pages.administrator.administratorDashboard.apiKeysText %></a>
+</div>
+		<br>
+		
 		<footer><%- include("../../partials/footer", {configuration:
 			configuration}); %></footer>
 	</body>
