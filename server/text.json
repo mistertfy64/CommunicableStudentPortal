@@ -44,10 +44,10 @@
                     "titleText": "Chat Board Menu",
                     "descriptionText" : "This is the chat board menu where links to dedicated chat boards for each subject and grade are listed.",
                     "yearText": {
-                        "1": "Year 1",
-                        "2": "Year 2",
-                        "3": "Year 3",
-                        "4": "Year 4"
+                        "year1": "Year 1",
+                        "year2": "Year 2",
+                        "year3": "Year 3",
+                        "year4": "Year 4"
                     },
                     "menuList": {
                         "buisinesseconomicsText": "Buisiness Economics",
@@ -205,8 +205,9 @@
                     "studymaterialDescription": "Gray's anatomy is a famous medical book due to how it revolutinized the medical industry. It is often cited as the doctors' bible. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam congue purus urna, sed cursus massa tincidunt at. Etiam pellentesque vulputate nisl quis aliquam. Nam magna justo, tincidunt vel augue vel, sodales lacinia odio. Mauris purus neque, sodales et pharetra ac, auctor eget tortor. Nam semper lorem et sollicitudin molestie. Ut purus lacus, eleifend at mauris a, vulputate malesuada dolor. Fusce eget nibh convallis, accumsan urna vitae, fringilla sapien. Ut ullamcorper dapibus rhoncus.",
                     "contentsText": "Contents"
                 }
-            },
-            "partials": {
+            }
+            
+        },"partials": {
                 "addComment": {
                     "commentText": "Comment",
                     "addcommentButton": "Add comment"
@@ -233,8 +234,8 @@
                     "description": "Dear students,<br>there will be an online lecture hosted by Professor Davis about the future of AI. If you are interested, you may join by this link. <br> Videotelephony service link: https://us02web.zoom.us/",
                     "interestedButton": "Interested"
                 }
-            }
-        },
+            },
+        
         "global": {
             "copyrightText": "CommunicableStudentPortal 0.1.0-alpha (Proof of Concept) by mistertfy64, Taweikung09 and Enchantingplayz"
         }

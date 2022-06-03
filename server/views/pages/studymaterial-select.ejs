@@ -5,61 +5,126 @@
 		<title>CSP - Study Material</title>
 	</head>
 	<body>
-		<header><%- include("../partials/header", {configuration: configuration}); %></header>
-			<h1><%= configuration.text.pages.user.studymaterialSelect.titleText %></h1>
-            <br>
-			<p style="text-align:center"><%= configuration.text.pages.user.studymaterialSelect.descriptionText %></p>
-            <center>
-				<button type="button" class="add-message-button" id="modal-button" style="display:flex;justify-content:center;align-items:center;"><%= configuration.text.pages.user.studymaterialSelect.addstudymaterialButton %></button>
-				<div id="modal" class="modal">
-					<div class="modal-content"><%- include("../../partials/add-studymaterial"); %></div>
+		<header>
+			<%- include("../partials/header", {configuration: configuration});
+			%>
+		</header>
+		<h1>
+			<%= configuration.text.pages.user.studymaterialSelect.titleText %>
+		</h1>
+		<br />
+		<p style="text-align: center">
+			<%=
+			configuration.text.pages.user.studymaterialSelect.descriptionText %>
+		</p>
+		<center>
+			<button
+				type="button"
+				class="add-message-button"
+				id="modal-button"
+				style="
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				"
+			>
+				<%=
+				configuration.text.pages.user.studymaterialSelect.addstudymaterialButton
+				%>
+			</button>
+			<div id="modal" class="modal">
+				<div class="modal-content">
+					<%- include("../partials/add-studymaterial", {configuration: configuration}); %>
 				</div>
-				<br>
-				<a href="/studymaterial-content"><div class="studymaterial-container">
-					<img class="studymaterial-pic" src="assets\images\Random book 1.jpg">
-					<br>
-					<div class="studymaterial-name"><%= configuration.text.pages.user.studymaterialSelect.material1.name %></div>
-					<hr>
-					<div class="studymaterial-description"><%= configuration.text.pages.user.studymaterialSelect.material1.description %></div>
-				</div></a>
-				<a href=""><div class="studymaterial-container">
-					<img class="studymaterial-pic" src="assets\images\Random book 2.jpg">
-					<br>
-					<div class="studymaterial-name"><%= configuration.text.pages.user.studymaterialSelect.material2.name %></div>
-					<hr>
-					<div class="studymaterial-description"><%= configuration.text.pages.user.studymaterialSelect.material2.description %></div>
-				</div></a>
-				<a href=""><div class="studymaterial-container">
-					<img class="studymaterial-pic" src="assets\images\Random book 3.jpg">
-					<br>
-					<div class="studymaterial-name"><%= configuration.text.pages.user.studymaterialSelect.material3.name %></div>
-					<hr>
-					<div class="studymaterial-description"><%= configuration.text.pages.user.studymaterialSelect.material3.description %></div>
-				</div></a>
-            </center>
-		<br>
-		<footer><%- include("../partials/footer", {configuration: configuration}); %></footer>
+			</div>
+			<br />
+			<a href="/studymaterial-content"
+				><div class="studymaterial-container">
+					<img
+						class="studymaterial-pic"
+						src="assets\images\Random book 1.jpg"
+					/>
+					<br />
+					<div class="studymaterial-name">
+						<%=
+						configuration.text.pages.user.studymaterialSelect.material1.name
+						%>
+					</div>
+					<hr />
+					<div class="studymaterial-description">
+						<%=
+						configuration.text.pages.user.studymaterialSelect.material1.description
+						%>
+					</div>
+				</div></a
+			>
+			<a href=""
+				><div class="studymaterial-container">
+					<img
+						class="studymaterial-pic"
+						src="assets\images\Random book 2.jpg"
+					/>
+					<br />
+					<div class="studymaterial-name">
+						<%=
+						configuration.text.pages.user.studymaterialSelect.material2.name
+						%>
+					</div>
+					<hr />
+					<div class="studymaterial-description">
+						<%=
+						configuration.text.pages.user.studymaterialSelect.material2.description
+						%>
+					</div>
+				</div></a
+			>
+			<a href=""
+				><div class="studymaterial-container">
+					<img
+						class="studymaterial-pic"
+						src="assets\images\Random book 3.jpg"
+					/>
+					<br />
+					<div class="studymaterial-name">
+						<%=
+						configuration.text.pages.user.studymaterialSelect.material3.name
+						%>
+					</div>
+					<hr />
+					<div class="studymaterial-description">
+						<%=
+						configuration.text.pages.user.studymaterialSelect.material3.description
+						%>
+					</div>
+				</div></a
+			>
+		</center>
+		<br />
+		<footer>
+			<%- include("../partials/footer", {configuration: configuration});
+			%>
+		</footer>
 
 		<script>
 			var modal = document.getElementById("modal");
-			
+
 			var btn = document.getElementById("modal-button");
-			
+
 			var span = document.getElementsByClassName("close")[0];
-			
-			btn.onclick = function() {
-			  modal.style.display = "block";
-			}
-			
-			span.onclick = function() {
-			  modal.style.display = "none";
-			}
-			
-			window.onclick = function(event) {
-			  if (event.target == modal) {
+
+			btn.onclick = function () {
+				modal.style.display = "block";
+			};
+
+			span.onclick = function () {
 				modal.style.display = "none";
-			  }
-			}
+			};
+
+			window.onclick = function (event) {
+				if (event.target == modal) {
+					modal.style.display = "none";
+				}
+			};
 		</script>
 	</body>
 </html>

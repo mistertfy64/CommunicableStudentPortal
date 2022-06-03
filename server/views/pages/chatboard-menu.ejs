@@ -4,323 +4,780 @@
 		<%- include("../partials/head") %>
 		<title>CSP - Chatboard</title>
 	</head>
-	
+
 	<body>
-		<header><%- include("../partials/header", {configuration: configuration}) %></header>
+		<header>
+			<%- include("../partials/header", {configuration: configuration}) %>
+		</header>
 		<h1><%= configuration.text.pages.user.chatboardMenu.titleText %></h1>
-		<p><%= configuration.text.pages.user.chatboardMenu.descriptionText %></p>
+		<p>
+			<%= configuration.text.pages.user.chatboardMenu.descriptionText %>
+		</p>
 		<center>
-			<button type="button" class="collapsible"><%= configuration.text.pages.user.chatboardMenu.yearText.1 %></button>
-    		<div class="collapsible-content">
-				<br>
+			<button type="button" class="collapsible">
+				<%= configuration.text.pages.user.chatboardMenu.yearText.year1 %>
+			</button>
+			<div class="collapsible-content">
+				<br />
 				<div class="chatboard-menu-column1">
-					<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.buisinessTitleText %></h4>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.buisinesseconomicsText %></a><br>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.financeText %></a><br>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.interbuisinessText %></a><br>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.markettingText %></a><br>
+					<h4>
+						<%=
+						configuration.text.pages.user.chatboardMenu.menuListTitleText.buisinessTitleText
+						%>
+					</h4>
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.buisinesseconomicsText
+						%></a
+					><br />
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.financeText
+						%></a
+					><br />
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.interbuisinessText
+						%></a
+					><br />
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.markettingText
+						%></a
+					><br />
 
-					<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.commsdesignTitleText %></h4>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.creativetechText %></a><br>
-					<br>
-					<br>
+					<h4>
+						<%=
+						configuration.text.pages.user.chatboardMenu.menuListTitleText.commsdesignTitleText
+						%>
+					</h4>
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.creativetechText
+						%></a
+					><br />
+					<br />
+					<br />
 
-					<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.designTitleText %></h4><br>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.commsdesigntext %></a><br>
-					<br>
-					<br>
-					<br>
+					<h4>
+						<%=
+						configuration.text.pages.user.chatboardMenu.menuListTitleText.designTitleText
+						%>
+					</h4>
+					<br />
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.commsdesigntext
+						%></a
+					><br />
+					<br />
+					<br />
+					<br />
 
-					<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.engineeringTitleText %></h4><br>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.comengineeringText %></a><br>
-					<br>
-					<br>
-					<br>
+					<h4>
+						<%=
+						configuration.text.pages.user.chatboardMenu.menuListTitleText.engineeringTitleText
+						%>
+					</h4>
+					<br />
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.comengineeringText
+						%></a
+					><br />
+					<br />
+					<br />
+					<br />
 
-					<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.humanityTitleText %></h4>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.intercultstudiesText %></a>
-					<br>
+					<h4>
+						<%=
+						configuration.text.pages.user.chatboardMenu.menuListTitleText.humanityTitleText
+						%>
+					</h4>
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.intercultstudiesText
+						%></a
+					>
+					<br />
 				</div>
-				<br>
-				<br>
-				<br>
+				<br />
+				<br />
+				<br />
 				<div class="chatboard-menu-column2">
-					<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.interrelationsTitleText %></h4>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.interrelationsText %></a><br>
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
-					
+					<h4>
+						<%=
+						configuration.text.pages.user.chatboardMenu.menuListTitleText.interrelationsTitleText
+						%>
+					</h4>
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.interrelationsText
+						%></a
+					><br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
 
-					<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.mediaTitleText %></h4>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.mediaandcommsText %></a><br>
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
+					<h4>
+						<%=
+						configuration.text.pages.user.chatboardMenu.menuListTitleText.mediaTitleText
+						%>
+					</h4>
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.mediaandcommsText
+						%></a
+					><br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
 
-					<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.scienceTitleText %></h4>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.appliedmathText %></a><br>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.bioscienceText %></a><br>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.chemistryText %></a><br>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.comscienceText %></a><br>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.foodsciText %></a><br>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.environscienceText %></a><br>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.physicsText %></a><br>
+					<h4>
+						<%=
+						configuration.text.pages.user.chatboardMenu.menuListTitleText.scienceTitleText
+						%>
+					</h4>
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.appliedmathText
+						%></a
+					><br />
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.bioscienceText
+						%></a
+					><br />
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.chemistryText
+						%></a
+					><br />
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.comscienceText
+						%></a
+					><br />
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.foodsciText
+						%></a
+					><br />
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.environscienceText
+						%></a
+					><br />
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.physicsText
+						%></a
+					><br />
 
-					<h4>><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.travelTitleText %></h4>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.traveltext %></a><br>
-					<br>
-					<br>
-					<br>
+					<h4>
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuListTitleText.travelTitleText
+						%>
+					</h4>
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.traveltext
+						%></a
+					><br />
+					<br />
+					<br />
+					<br />
 				</div>
-				<br>
+				<br />
 			</div>
-			<br>
+			<br />
 
-			<button type="button" class="collapsible"><%= configuration.text.pages.user.chatboardMenu.yearText.2 %></button>
-    		<div class="collapsible-content">
-				<br>
+			<button type="button" class="collapsible">
+				<%= configuration.text.pages.user.chatboardMenu.yearText.year2 %>
+			</button>
+			<div class="collapsible-content">
+				<br />
 				<div class="chatboard-menu-column1">
-					<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.buisinessTitleText %></h4>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.buisinesseconomicsText %></a><br>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.financeText %></a><br>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.interbuisinessText %></a><br>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.markettingText %></a><br>
+					<h4>
+						<%=
+						configuration.text.pages.user.chatboardMenu.menuListTitleText.buisinessTitleText
+						%>
+					</h4>
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.buisinesseconomicsText
+						%></a
+					><br />
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.financeText
+						%></a
+					><br />
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.interbuisinessText
+						%></a
+					><br />
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.markettingText
+						%></a
+					><br />
 
-					<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.commsdesignTitleText %></h4>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.creativetechText %></a><br>
-					<br>
-					<br>
+					<h4>
+						<%=
+						configuration.text.pages.user.chatboardMenu.menuListTitleText.commsdesignTitleText
+						%>
+					</h4>
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.creativetechText
+						%></a
+					><br />
+					<br />
+					<br />
 
-					<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.designTitleText %></h4><br>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.commsdesigntext %></a><br>
-					<br>
-					<br>
-					<br>
+					<h4>
+						<%=
+						configuration.text.pages.user.chatboardMenu.menuListTitleText.designTitleText
+						%>
+					</h4>
+					<br />
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.commsdesigntext
+						%></a
+					><br />
+					<br />
+					<br />
+					<br />
 
-					<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.engineeringTitleText %></h4><br>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.comengineeringText %></a><br>
-					<br>
-					<br>
-					<br>
+					<h4>
+						<%=
+						configuration.text.pages.user.chatboardMenu.menuListTitleText.engineeringTitleText
+						%>
+					</h4>
+					<br />
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.comengineeringText
+						%></a
+					><br />
+					<br />
+					<br />
+					<br />
 
-					<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.humanityTitleText %></h4>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.intercultstudiesText %></a>
-					<br>
+					<h4>
+						<%=
+						configuration.text.pages.user.chatboardMenu.menuListTitleText.humanityTitleText
+						%>
+					</h4>
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.intercultstudiesText
+						%></a
+					>
+					<br />
 				</div>
-				<br>
-				<br>
-				<br>
+				<br />
+				<br />
+				<br />
 				<div class="chatboard-menu-column2">
-					<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.interrelationsTitleText %></h4>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.interrelationsText %></a><br>
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
-					
+					<h4>
+						<%=
+						configuration.text.pages.user.chatboardMenu.menuListTitleText.interrelationsTitleText
+						%>
+					</h4>
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.interrelationsText
+						%></a
+					><br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
 
-					<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.mediaTitleText %></h4>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.mediaandcommsText %></a><br>
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
+					<h4>
+						<%=
+						configuration.text.pages.user.chatboardMenu.menuListTitleText.mediaTitleText
+						%>
+					</h4>
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.mediaandcommsText
+						%></a
+					><br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
 
-					<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.scienceTitleText %></h4>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.appliedmathText %></a><br>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.bioscienceText %></a><br>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.chemistryText %></a><br>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.comscienceText %></a><br>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.foodsciText %></a><br>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.environscienceText %></a><br>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.physicsText %></a><br>
+					<h4>
+						<%=
+						configuration.text.pages.user.chatboardMenu.menuListTitleText.scienceTitleText
+						%>
+					</h4>
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.appliedmathText
+						%></a
+					><br />
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.bioscienceText
+						%></a
+					><br />
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.chemistryText
+						%></a
+					><br />
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.comscienceText
+						%></a
+					><br />
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.foodsciText
+						%></a
+					><br />
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.environscienceText
+						%></a
+					><br />
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.physicsText
+						%></a
+					><br />
 
-					<h4>><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.travelTitleText %></h4>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.traveltext %></a><br>
-					<br>
-					<br>
-					<br>
+					<h4>
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuListTitleText.travelTitleText
+						%>
+					</h4>
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.traveltext
+						%></a
+					><br />
+					<br />
+					<br />
+					<br />
 				</div>
-				<br>
+				<br />
 			</div>
-			<br>
+			<br />
 
-			<button type="button" class="collapsible"><%= configuration.text.pages.user.chatboardMenu.yearText.3 %></button>
-    		<div class="collapsible-content">
-				<br>
+			<button type="button" class="collapsible">
+				<%= configuration.text.pages.user.chatboardMenu.yearText.year3 %>
+			</button>
+			<div class="collapsible-content">
+				<br />
 				<div class="chatboard-menu-column1">
-					<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.buisinessTitleText %></h4>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.buisinesseconomicsText %></a><br>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.financeText %></a><br>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.interbuisinessText %></a><br>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.markettingText %></a><br>
+					<h4>
+						<%=
+						configuration.text.pages.user.chatboardMenu.menuListTitleText.buisinessTitleText
+						%>
+					</h4>
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.buisinesseconomicsText
+						%></a
+					><br />
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.financeText
+						%></a
+					><br />
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.interbuisinessText
+						%></a
+					><br />
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.markettingText
+						%></a
+					><br />
 
-					<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.commsdesignTitleText %></h4>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.creativetechText %></a><br>
-					<br>
-					<br>
+					<h4>
+						<%=
+						configuration.text.pages.user.chatboardMenu.menuListTitleText.commsdesignTitleText
+						%>
+					</h4>
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.creativetechText
+						%></a
+					><br />
+					<br />
+					<br />
 
-					<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.designTitleText %></h4><br>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.commsdesigntext %></a><br>
-					<br>
-					<br>
-					<br>
+					<h4>
+						<%=
+						configuration.text.pages.user.chatboardMenu.menuListTitleText.designTitleText
+						%>
+					</h4>
+					<br />
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.commsdesigntext
+						%></a
+					><br />
+					<br />
+					<br />
+					<br />
 
-					<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.engineeringTitleText %></h4><br>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.comengineeringText %></a><br>
-					<br>
-					<br>
-					<br>
+					<h4>
+						<%=
+						configuration.text.pages.user.chatboardMenu.menuListTitleText.engineeringTitleText
+						%>
+					</h4>
+					<br />
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.comengineeringText
+						%></a
+					><br />
+					<br />
+					<br />
+					<br />
 
-					<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.humanityTitleText %></h4>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.intercultstudiesText %></a>
-					<br>
+					<h4>
+						<%=
+						configuration.text.pages.user.chatboardMenu.menuListTitleText.humanityTitleText
+						%>
+					</h4>
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.intercultstudiesText
+						%></a
+					>
+					<br />
 				</div>
-				<br>
-				<br>
-				<br>
+				<br />
+				<br />
+				<br />
 				<div class="chatboard-menu-column2">
-					<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.interrelationsTitleText %></h4>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.interrelationsText %></a><br>
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
-					
+					<h4>
+						<%=
+						configuration.text.pages.user.chatboardMenu.menuListTitleText.interrelationsTitleText
+						%>
+					</h4>
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.interrelationsText
+						%></a
+					><br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
 
-					<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.mediaTitleText %></h4>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.mediaandcommsText %></a><br>
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
+					<h4>
+						<%=
+						configuration.text.pages.user.chatboardMenu.menuListTitleText.mediaTitleText
+						%>
+					</h4>
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.mediaandcommsText
+						%></a
+					><br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
 
-					<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.scienceTitleText %></h4>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.appliedmathText %></a><br>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.bioscienceText %></a><br>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.chemistryText %></a><br>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.comscienceText %></a><br>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.foodsciText %></a><br>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.environscienceText %></a><br>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.physicsText %></a><br>
+					<h4>
+						<%=
+						configuration.text.pages.user.chatboardMenu.menuListTitleText.scienceTitleText
+						%>
+					</h4>
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.appliedmathText
+						%></a
+					><br />
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.bioscienceText
+						%></a
+					><br />
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.chemistryText
+						%></a
+					><br />
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.comscienceText
+						%></a
+					><br />
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.foodsciText
+						%></a
+					><br />
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.environscienceText
+						%></a
+					><br />
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.physicsText
+						%></a
+					><br />
 
-					<h4>><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.travelTitleText %></h4>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.traveltext %></a><br>
-					<br>
-					<br>
-					<br>
+					<h4>
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuListTitleText.travelTitleText
+						%>
+					</h4>
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.traveltext
+						%></a
+					><br />
+					<br />
+					<br />
+					<br />
 				</div>
-				<br>
+				<br />
 			</div>
-			<br>
+			<br />
 
-			<button type="button" class="collapsible"><%= configuration.text.pages.user.chatboardMenu.yearText.4 %></button>
-    		<div class="collapsible-content">
-				<br>
+			<button type="button" class="collapsible">
+				<%= configuration.text.pages.user.chatboardMenu.yearText.year4 %>
+			</button>
+			<div class="collapsible-content">
+				<br />
 				<div class="chatboard-menu-column1">
-					<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.buisinessTitleText %></h4>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.buisinesseconomicsText %></a><br>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.financeText %></a><br>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.interbuisinessText %></a><br>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.markettingText %></a><br>
+					<h4>
+						<%=
+						configuration.text.pages.user.chatboardMenu.menuListTitleText.buisinessTitleText
+						%>
+					</h4>
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.buisinesseconomicsText
+						%></a
+					><br />
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.financeText
+						%></a
+					><br />
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.interbuisinessText
+						%></a
+					><br />
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.markettingText
+						%></a
+					><br />
 
-					<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.commsdesignTitleText %></h4>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.creativetechText %></a><br>
-					<br>
-					<br>
+					<h4>
+						<%=
+						configuration.text.pages.user.chatboardMenu.menuListTitleText.commsdesignTitleText
+						%>
+					</h4>
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.creativetechText
+						%></a
+					><br />
+					<br />
+					<br />
 
-					<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.designTitleText %></h4><br>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.commsdesigntext %></a><br>
-					<br>
-					<br>
-					<br>
+					<h4>
+						<%=
+						configuration.text.pages.user.chatboardMenu.menuListTitleText.designTitleText
+						%>
+					</h4>
+					<br />
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.commsdesigntext
+						%></a
+					><br />
+					<br />
+					<br />
+					<br />
 
-					<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.engineeringTitleText %></h4><br>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.comengineeringText %></a><br>
-					<br>
-					<br>
-					<br>
+					<h4>
+						<%=
+						configuration.text.pages.user.chatboardMenu.menuListTitleText.engineeringTitleText
+						%>
+					</h4>
+					<br />
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.comengineeringText
+						%></a
+					><br />
+					<br />
+					<br />
+					<br />
 
-					<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.humanityTitleText %></h4>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.intercultstudiesText %></a>
-					<br>
+					<h4>
+						<%=
+						configuration.text.pages.user.chatboardMenu.menuListTitleText.humanityTitleText
+						%>
+					</h4>
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.intercultstudiesText
+						%></a
+					>
+					<br />
 				</div>
-				<br>
-				<br>
-				<br>
+				<br />
+				<br />
+				<br />
 				<div class="chatboard-menu-column2">
-					<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.interrelationsTitleText %></h4>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.interrelationsText %></a><br>
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
-					
+					<h4>
+						<%=
+						configuration.text.pages.user.chatboardMenu.menuListTitleText.interrelationsTitleText
+						%>
+					</h4>
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.interrelationsText
+						%></a
+					><br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
 
-					<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.mediaTitleText %></h4>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.mediaandcommsText %></a><br>
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
+					<h4>
+						<%=
+						configuration.text.pages.user.chatboardMenu.menuListTitleText.mediaTitleText
+						%>
+					</h4>
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.mediaandcommsText
+						%></a
+					><br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
 
-					<h4><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.scienceTitleText %></h4>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.appliedmathText %></a><br>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.bioscienceText %></a><br>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.chemistryText %></a><br>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.comscienceText %></a><br>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.foodsciText %></a><br>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.environscienceText %></a><br>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.physicsText %></a><br>
+					<h4>
+						<%=
+						configuration.text.pages.user.chatboardMenu.menuListTitleText.scienceTitleText
+						%>
+					</h4>
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.appliedmathText
+						%></a
+					><br />
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.bioscienceText
+						%></a
+					><br />
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.chemistryText
+						%></a
+					><br />
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.comscienceText
+						%></a
+					><br />
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.foodsciText
+						%></a
+					><br />
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.environscienceText
+						%></a
+					><br />
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.physicsText
+						%></a
+					><br />
 
-					<h4>><%= configuration.text.pages.user.chatboardMenu.menuListTitleText.travelTitleText %></h4>
-					<a href="/chatboard-content"><%= configuration.text.pages.user.chatboardMenu.menuList.traveltext %></a><br>
-					<br>
-					<br>
-					<br>
+					<h4>
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuListTitleText.travelTitleText
+						%>
+					</h4>
+					<a href="/chatboard-content"
+						><%=
+						configuration.text.pages.user.chatboardMenu.menuList.traveltext
+						%></a
+					><br />
+					<br />
+					<br />
+					<br />
 				</div>
-				<br>
+				<br />
 			</div>
-			<br>
-			<button type="button" class="collapsible" onclick="document.location='chatboard-content'"><%= configuration.text.pages.user.chatboardMenu.unilifeText %></button>
-			<br>
-			<footer><%- include("../partials/footer", {configuration: configuration}); %></footer>
+			<br />
+			<button
+				type="button"
+				class="collapsible"
+				onclick="document.location='chatboard-content'"
+			>
+				<%= configuration.text.pages.user.chatboardMenu.unilifeText %>
+			</button>
+			<br />
+			<footer>
+				<%- include("../partials/footer", {configuration:
+				configuration}); %>
+			</footer>
 		</center>
 
 		<script>
 			var coll = document.getElementsByClassName("collapsible");
 			var i;
-			
+
 			for (i = 0; i < coll.length; i++) {
-				coll[i].addEventListener("click", function() {
-				this.classList.toggle("active");
-				var content = this.nextElementSibling;
-				if (content.style.maxHeight){
-					content.style.maxHeight = null;
-				} else {
-					content.style.maxHeight = content.scrollHeight + "px";
-				} 
-			});
-		}
+				coll[i].addEventListener("click", function () {
+					this.classList.toggle("active");
+					var content = this.nextElementSibling;
+					if (content.style.maxHeight) {
+						content.style.maxHeight = null;
+					} else {
+						content.style.maxHeight = content.scrollHeight + "px";
+					}
+				});
+			}
 		</script>
 	</body>
 </html>
