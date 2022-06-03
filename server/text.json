@@ -110,7 +110,8 @@
                         "home": "Home",
                         "profile": "Profile",
                         "history": "History",
-                        "security": "Security"
+                        "security": "Security",
+                        "friends": "Friends"
                     },
                     "homeTab": {
                         "informationText": "Information",
