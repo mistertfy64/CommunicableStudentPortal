@@ -91,7 +91,7 @@
                             "topic": "Anyone know how to solve this problem?",
                             "username": "John Doe",
                             "profile": "Random guy.jpg",
-                            "datetime": "Posted on April 19th,<br> 2022 21:57",
+                            "datetime": "Posted on April 19th, 2022 21:57",
                             "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus bibendum orci, eu eleifend risus porttitor sed. Quisque non libero eu mi condimentum vestibulum. Vestibulum gravida tellus in nisl eleifend, sed laoreet lorem convallis. Nulla quis erat leo. Aliquam eu semper diam, ut ullamcorper justo. Morbi aliquet aliquet ipsum condimentum hendrerit. Etiam condimentum, tellus quis aliquet pharetra, ligula ipsum dignissim leo, at placerat urna ex id ante. Nullam tempus scelerisque erat finibus congue. Duis suscipit vulputate sapien, in ultrices elit tempus vitae."
                         }
                     },
@@ -99,7 +99,7 @@
                         "1": {
                             "username": "Jane Doe",
                             "profile": "Random girl.jpg",
-                            "datetime": "Posted on April 19th,<br> 2022 21:59",
+                            "datetime": "Posted on April 19th, 2022 21:59",
                             "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus bibendum orci, eu eleifend risus porttitor sed. Quisque non libero eu mi condimentum vestibulum. Vestibulum gravida tellus in nisl eleifend, sed laoreet lorem convallis. Nulla quis erat leo. Aliquam eu semper diam, ut ullamcorper justo. Morbi aliquet aliquet ipsum condimentum hendrerit. Etiam condimentum, tellus quis aliquet pharetra, ligula ipsum dignissim leo, at placerat urna ex id ante. Nullam tempus scelerisque erat finibus congue. Duis suscipit vulputate sapien, in ultrices elit tempus vitae."
                         }
                     },
@@ -206,35 +206,35 @@
                     "contentsText": "Contents"
                 }
             }
-            
-        },"partials": {
-                "addComment": {
-                    "commentText": "Comment",
-                    "addcommentButton": "Add comment"
-                },
-                "addEvent": {
-                    "titleText": "Add an event",
-                    "titleInputText": "Title",
-                    "descriptionInputText": "Description (optional)"
-                },
-                "addMessage": {
-                    "titleText": "Add a message",
-                    "titleInputText": "Title (optional)",
-                    "describtionInputText": "Describtion"
-                },
-                "addStudymaterial": {
-                    "titleText": "Add study material",
-                    "nameInputText": "Name",
-                    "descriptionInputText": "Description",
-                    "contentsInputText": "Contents",
-                    "fileInputText": "File(s)"
-                },
-                "eventBar": {
-                    "titleText": "Technology Lecture on June 14th, 2022 (13:00)",
-                    "description": "Dear students,<br>there will be an online lecture hosted by Professor Davis about the future of AI. If you are interested, you may join by this link. <br> Videotelephony service link: https://us02web.zoom.us/",
-                    "interestedButton": "Interested"
-                }
+        },
+        "partials": {
+            "addComment": {
+                "commentTextarea": "Comment",
+                "addcommentButton": "Add comment"
             },
+            "addEvent": {
+                "titleText": "Add an event",
+                "titleInputText": "Title",
+                "descriptionInputText": "Description (optional)"
+            },
+            "addMessage": {
+                "titleText": "Add a message",
+                "titleInputText": "Title",
+                "descriptionInputText": "Description"
+            },
+            "addStudymaterial": {
+                "titleText": "Add study material",
+                "nameInputText": "Name",
+                "descriptionInputText": "Description",
+                "contentsInputText": "Contents",
+                "fileInputText": "File(s)"
+            },
+            "eventBar": {
+                "titleText": "Technology Lecture on June 14th, 2022 (13:00)",
+                "description": "Dear students,there will be an online lecture hosted by Professor Davis about the future of AI. If you are interested, you may join by this link.  Videotelephony service link: https://us02web.zoom.us/",
+                "interestedButton": "Interested"
+            }
+        },
         
         "global": {
             "copyrightText": "CommunicableStudentPortal 0.1.0-alpha (Proof of Concept) by mistertfy64, Taweikung09 and Enchantingplayz"

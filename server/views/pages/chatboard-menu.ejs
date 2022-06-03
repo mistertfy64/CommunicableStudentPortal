@@ -13,7 +13,7 @@
 		<p>
 			<%= configuration.text.pages.user.chatboardMenu.descriptionText %>
 		</p>
-		<div style="text-align:center;">
+		<div class="chatboard-menu-list">
 			<button type="button" class="collapsible">
 				<%= configuration.text.pages.user.chatboardMenu.yearText.year1 %>
 			</button>
@@ -181,7 +181,7 @@
 					><br />
 
 					<h4>
-						><%=
+						<%=
 						configuration.text.pages.user.chatboardMenu.menuListTitleText.travelTitleText
 						%>
 					</h4>
@@ -761,7 +761,7 @@
 				<%- include("../partials/footer", {configuration:
 				configuration}); %>
 			</footer>
-		<div>
+		</div>
 
 		<script>
 			var coll = document.getElementsByClassName("collapsible");

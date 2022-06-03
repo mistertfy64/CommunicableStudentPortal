@@ -306,7 +306,7 @@ button {
 	color: white;
 	cursor: pointer;
 	padding: 18px;
-	width: 60%;
+	width: 100%;
 	text-decoration: none;
 	border: none;
 	text-align: center;
@@ -316,6 +316,7 @@ button {
 	display: block;
 	font-family: var(--default-font);
 	transition-duration: 0.4s;
+	margin: auto;
 }
 
 .active,
@@ -324,13 +325,14 @@ button {
 }
 
 .collapsible-content {
-	width: 58%;
+	width: 100%;
 	padding: 0 18px;
 	max-height: 0;
 	overflow: hidden;
 	transition: max-height 0.2s ease-out;
 	background-color: #f1f1f1;
 	border-radius: 8px;
+	text-align: center;
 }
 
 .collapsible-content p {
@@ -436,6 +438,7 @@ button {
 	text-align: center;
 	font-size: 16px;
 	font-family: inherit;
+	cursor: pointer;
 }
 
 .login-button:hover {
@@ -744,18 +747,28 @@ ul,
 	}
 }
 
+/* Chatboard Menu */
+
+.chatboard-menu-list {
+	margin: auto;
+	width:60%;
+	justify-content: center;
+	align-items: center;
+}
+
 /* Chatboard Content */
 
 .chatboard-message-container {
 	background-color: var(--default-background-color);
 	border: 2px solid var(--color-blue-dark);
 	border-radius: 8px;
-	width: 60%;
+	width: 70%;
 	display: block;
 	text-align: left;
 	padding: 10px 20px;
 	margin: auto;
 	align-items: left;
+	position: relative;
 }
 
 .chatboard-message {
@@ -785,12 +798,69 @@ ul,
 	margin: auto;
 }
 
+.voting-container {
+	position: absolute;
+	top: 2px;
+	right: 10px;
+	text-align: center;
+	font-size: 30px;
+	user-select: none;
+}
+.voting-upvote {
+	color:green;
+	opacity: 0.4;
+	transition-duration: 0.3s;
+}
+.voting-downvote {
+	color: var(--color-red-light);
+	opacity: 0.4;
+	transition-duration: 0.3s;
+}
+.voting-score {
+	color: #182859;
+	font-size: 20px;
+}
+
+.voting-upvote:hover,.voting-downvote:hover {
+	opacity: 0.7;
+}
+
+.voting-container br {
+	display: block;
+    margin-bottom: 0px;
+}
+
+/* Add message/comment */
+
+.message-form-container {
+	margin: auto;
+	width:70%;
+	left:50%;
+	right: 50%;
+	justify-content: center;
+	align-items: center;
+}
+
+.message-form-container .title-input {
+	width: 100%;
+	height: 35px;
+}
+
+.message-form-container label {
+	text-align: left;
+	font-weight: bold;
+}
+
+.message-form-container .description-input {
+	width: 100%;
+}
+
 .add-message-button,
 .add-comment-button {
 	background-color: green;
 	color: #fefefe;
 	border: 1px solid green;
-	width: 62%;
+	width: 100%;
 	height: 35px;
 	align-content: center;
 	display: block;
@@ -851,6 +921,15 @@ ul,
 	height: 80px;
 }
 
+/* Studymaterial Menu */
+
+.studymaterial-menu-list {
+	margin: auto;
+	width:60%;
+	justify-content: center;
+	align-items: center;
+}
+
 /*Studymaterial Select*/
 
 .studymaterial-container {
@@ -903,20 +982,19 @@ ul,
 	background-color: var(--color-blue-dark);
 	color: #fefefe;
 	border: 1px solid var(--color-blue-dark);
-	width: 70%;
+	width: 100%;
 	height: 35px;
-	align-content: center;
-	display: block;
-	font-size: 20px;
-	font-family: inherit;
 	border-radius: 8px;
 	transition-duration: 0.4s;
+	text-align: center;
+	font-size: 16px;
+	font-family: inherit;
 	cursor: pointer;
 }
 
 .add-studymaterial-button:hover {
 	background-color: var(--color-blue-light);
-	color: #fefefe;
+	color: #ffffff;
 	border: 1px solid var(--color-blue-light);
 }
 

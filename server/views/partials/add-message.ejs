@@ -3,16 +3,28 @@
     <h2><%= configuration.text.partials.addMessage.titleText %></h2>
 </div>
 <br>
-<form action="?action=createmessage" method="post">
-    <label for="message-title"><b><%= configuration.text.partials.addEvent.titleInputText %></b></label><br>
-	<input type="text" placeholder="TITLE" name="message-title">
-    <br><br>
-    <label for="message-context"><b><%= configuration.text.partials.addEvent.descriptionInputText %></b></label><br>
-	<textarea placeholder="DESCRIPTION" name="message-context" class="message-context-input" required></textarea>
-    <br>
-    <input type="hidden" name="username">
-    <div style="display:flex;justify-content:center;align-items:center;"><br><br><br><br><br>
-        <button type="submit" class="button submit-button" value="submit"><%= configuration.text.partials.addMessage.titleText %></button>
-    </div>
-    <br><br>
+<form action="/addmessage" method="post">
+    <div class="message-form-container">
+        <label for="message-title"><%= configuration.text.partials.addMessage.titleInputText %></label>
+        </br>
+        <input 
+            type="text" 
+            placeholder="Title" 
+            name="message-title"
+            class="title-input" 
+            required
+        />
+        <br />
+        <br>
+        <label for="message-description"><%= configuration.text.partials.addMessage.descriptionInputText %></label>
+        </br>
+        <textarea
+            placeholder="Description"
+            name="message-description"
+            class="description-input"
+            required
+        ></textarea>
+        <button class="add-message-button"><%= configuration.text.partials.addMessage.titleText %></button>
+        </div>
+    <br*2>
 </form>
