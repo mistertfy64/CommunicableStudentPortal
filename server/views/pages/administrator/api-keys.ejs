@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<%- include("../../partials/head") %>
+		<title>CSP - API Keys</title>
+	</head>
+
+	<body>
+		<header>
+			<%- include("../../partials/header", {configuration:
+			configuration}); %>
+		</header>
+		<div
+			style="
+				display: flex;
+				flex-wrap: wrap;
+				flex-direction: row;
+				justify-content: center;
+			"
+		>
+			<div class="administrator-dashboard-box">
+				<span style="font-size: large"
+					><%=
+					configuration.text.pages.administrator.apiKeys.titleText
+					%></span
+				>
+				<br />
+				<div
+					style="
+						display: flex;
+						justify-content: flex-end;
+						align-items: center;
+						width: min-content;
+					"
+				>
+				<form method="post" action="/administrator-dashboard/view-api-key">
+					<button
+						class="button-color-positive button-rounded"
+					>
+						<%=
+						configuration.text.pages.administrator.apiKeys.createAPIKeyText
+						%>
+					</button></form>
+					<br />
+					<button class="button-color-negative button-rounded">
+						<%=
+						configuration.text.pages.administrator.apiKeys.deleteAPIKeyText
+						%>
+					</button>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<%- include("../../partials/footer", {configuration:
+			configuration}); %>
+		</footer>
+	</body>
+</html>

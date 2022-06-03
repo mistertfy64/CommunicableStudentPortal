@@ -10,7 +10,8 @@
                     "userManagementTitleText": "User Management",
                     "createUserText": "Create User",
                     "modifyUserText": "Modify User",
-                    "deleteUserText": "Delete User"
+                    "deleteUserText": "Delete User",
+                    "apiKeysText": "API Keys"
                 },
                 "createUser": {
                     "titleText": "User Creation Tool",
@@ -23,6 +24,19 @@
                     "hiddenBodyText2": "starting from",
                     "createUserText": "Create user(s)",
                     "cancelText": "Cancel"
+                },
+                "modifyUser": {
+                    "titleText": "User Modification Tool"
+
+                },
+                "apiKeys": {
+                    "titleText": "API Key Modification Tool",
+                    "createAPIKeyText": "Create API Key",
+                    "deleteAPIKeyText": "Delete API Key"
+                },
+                "viewAPIKey": {
+                    "informationText": "This is your private API key. It will only be shown once (now). THIS KEY IS ONLY FOR USE BY ADMINISTRATORS.",
+                    "warningText": "KEEP IT SECRET, EXPOSURE OF THIS KEY MAY LEAD TO UNDESIRABLE RESULTS!"
                 }
             },
             "user": {

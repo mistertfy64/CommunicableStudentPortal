@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<%- include("../../partials/head") %>
+		<title>CSP - Login</title>
+	</head>
+
+	<body>
+		<header>
+			<%- include("../../partials/header", {configuration:
+			configuration}); %>
+		</header>
+           <p style="text-align: center;">
+				<%= configuration.text.pages.administrator.viewAPIKey.informationText %>
+				<br>
+				<strong><%= configuration.text.pages.administrator.viewAPIKey.warningText %></strong>
+				<br>
+				<p style="text-align: center;font-size:36px"><%= apiKey.apiKey %></p>
+			</p> 
+		<footer><%- include("../../partials/footer", {configuration:
+			configuration}); %></footer>
+	</body>
+</html>

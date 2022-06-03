@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<%- include("../../partials/head") %>
+		<title>CSP</title>
+	</head>
+	
+	<body>
+		<header><%- include("../../partials/header", {configuration: configuration}); %></header>
+        <h1>
+			<%= configuration.text.pages.administrator.modifyUser.titleText %>
+		</h1>
+        <div class="administrator-dashboard-box">
+			<form action="/administrator-dashboard/create-user" , method="post">
+				<div
+					style="
+						flex-direction: row;
+						align-items: center;
+						vertical-align: bottom;
+					"
+				>
+                Modify user with User ID <input type="text">
+                <button class="button-color-neutral">Search</button>
+			</div>
+		</div>
+		<footer><%- include("../../partials/footer", {configuration: configuration}); %></footer>
+	</body>
+</html>
