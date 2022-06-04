@@ -4,14 +4,33 @@
 </div>
 <br>
 <form action="?action=createevent" method="post">
-    <label for="event-title"><b><%= configuration.text.partials.addEvent.titleInputText %></b></label><br>
-	<input type="text" placeholder="TITLE" name="event-title" required>
-    <br><br>
-    <label for="event-description"><b><%= configuration.text.partials.addEvent.descriptionInputText %></b></label><br>
-	<textarea placeholder="DESCRIPTION" name="event-description" class="event-input-description"></textarea>
-    <br><br>
-    <input type="hidden" name="username">
-    <div><br*5>
+    <div class="event-form-container">
+        <label for="event-name"><%= configuration.text.partials.addEvent.nameInputText %></label><br>
+        <input 
+        type="text" 
+        placeholder="Name" 
+        name="event-name" 
+        class="event-input-name"
+        required>
+        <br />
+        <br>
+        <label for="event-description"><%= configuration.text.partials.addEvent.descriptionInputText %></label><br>
+        <textarea 
+        placeholder="Description" 
+        name="event-description" 
+        class="event-input-description"></textarea>
+        <br />
+        <br>
+        <div style="text-align:center">
+            <label for="event-datetime"><%= configuration.text.partials.addEvent.datetimeInputText %></label>
+            <input 
+            type="datetime-local"
+            name="event-datetime"
+            required>
+        </div>
+        <input type="hidden" name="username">
+        <br />
+        <br>
         <button type="submit" class="submit-button" value="submit"><%= configuration.text.partials.addEvent.titleText %></button>
     </div>
     <br><br>

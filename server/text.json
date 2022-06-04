@@ -95,14 +95,6 @@
                             "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus bibendum orci, eu eleifend risus porttitor sed. Quisque non libero eu mi condimentum vestibulum. Vestibulum gravida tellus in nisl eleifend, sed laoreet lorem convallis. Nulla quis erat leo. Aliquam eu semper diam, ut ullamcorper justo. Morbi aliquet aliquet ipsum condimentum hendrerit. Etiam condimentum, tellus quis aliquet pharetra, ligula ipsum dignissim leo, at placerat urna ex id ante. Nullam tempus scelerisque erat finibus congue. Duis suscipit vulputate sapien, in ultrices elit tempus vitae."
                         }
                     },
-                    "comments": {
-                        "1": {
-                            "username": "Jane Doe",
-                            "profile": "Random girl.jpg",
-                            "datetime": "Posted on April 19th, 2022 21:59",
-                            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus bibendum orci, eu eleifend risus porttitor sed. Quisque non libero eu mi condimentum vestibulum. Vestibulum gravida tellus in nisl eleifend, sed laoreet lorem convallis. Nulla quis erat leo. Aliquam eu semper diam, ut ullamcorper justo. Morbi aliquet aliquet ipsum condimentum hendrerit. Etiam condimentum, tellus quis aliquet pharetra, ligula ipsum dignissim leo, at placerat urna ex id ante. Nullam tempus scelerisque erat finibus congue. Duis suscipit vulputate sapien, in ultrices elit tempus vitae."
-                        }
-                    },
                     "commentsTitleText": "Comments"
                 },
                 "studentDashboard": {
@@ -214,8 +206,9 @@
             },
             "addEvent": {
                 "titleText": "Add an event",
-                "titleInputText": "Title",
-                "descriptionInputText": "Description (optional)"
+                "nameInputText": "Name",
+                "descriptionInputText": "Description (Optional)",
+                "datetimeInputText": "Local time and date of the event"
             },
             "addMessage": {
                 "titleText": "Add a message",
@@ -231,9 +224,18 @@
             },
             "eventBar": {
                 "titleText": "Technology Lecture on June 14th, 2022 (13:00)",
-                "description": "Dear students,there will be an online lecture hosted by Professor Davis about the future of AI. If you are interested, you may join by this link.  Videotelephony service link: https://us02web.zoom.us/",
-                "interestedButton": "Interested",
-                "interestedNum": "4"
+                "descriptionText": "Dear students,there will be an online lecture hosted by Professor Davis about the future of AI. If you are interested, you may join by this link.",
+                "interestedText": "Interested",
+                "interestedNum":  "4",
+                "commentsTitleText": "Comments"
+            },
+            "comments": {
+                "1": {
+                    "username": "Jane Doe",
+                    "profile": "Random girl.jpg",
+                    "datetime": "Posted on April 19th, 2022 21:59",
+                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus bibendum orci, eu eleifend risus porttitor sed. Quisque non libero eu mi condimentum vestibulum. Vestibulum gravida tellus in nisl eleifend, sed laoreet lorem convallis. Nulla quis erat leo. Aliquam eu semper diam, ut ullamcorper justo. Morbi aliquet aliquet ipsum condimentum hendrerit. Etiam condimentum, tellus quis aliquet pharetra, ligula ipsum dignissim leo, at placerat urna ex id ante. Nullam tempus scelerisque erat finibus congue. Duis suscipit vulputate sapien, in ultrices elit tempus vitae."
+                }
             }
         },
         

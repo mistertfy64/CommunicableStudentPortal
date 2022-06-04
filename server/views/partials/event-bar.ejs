@@ -1,12 +1,22 @@
-<div style="text-align:center;">
-    <button type="button" class="collapsible"><%= configuration.text.partials.eventbar.titleText %></button>
+<button type="button" class="collapsible"><%= configuration.text.partials.eventBar.titleText %></button>
+<div class="collapsible-content">
+    <br>
+    <div class="collapsible-reaction" style="position: relative">
+        <%- include("reaction.ejs") %>
+    </div>
+    <p><%= configuration.text.partials.eventBar.descriptionText %></p>
+    <button type="post" class="interested-button"><%= configuration.text.partials.eventBar.interestedText %> (<%= configuration.text.partials.eventBar.interestedNum %>)</button>
+    </br>
+    <button type="button" class="collapsible"><%= configuration.text.partials.eventBar.commentsTitleText %></button>
     <div class="collapsible-content">
         <br>
-        <p><%= configuration.text.partials.eventbar.descriptionText %></p>
-    <button type="post" class=""><%= configuration.text.partials.eventBar.interstedText %> (<%= configuration.text.partials.eventbar.interestedNum %>)</button>
+        <%- include("add-comment.ejs") %>
+        <br><br>
+        <%- include("comments.ejs") %>
+        </br>
+        <br>
     </div>
-<div>
-
+</div>
 <script>
     var coll = document.getElementsByClassName("collapsible");
     var i;

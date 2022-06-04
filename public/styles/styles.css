@@ -139,7 +139,8 @@ hr {
 }
 
 input[type="text"],
-input[type="password"] {
+input[type="password"],
+input[type="datetime-local"] {
 	height: 35px;
 	padding: 12px 16px;
 	margin: 0;
@@ -151,10 +152,14 @@ input[type="password"] {
 	transition-duration: 0.5s;
 }
 
+
+
 input[type="text"]:hover,
 input[type="password"]:hover,
+input[type="datetime-local"]:hover,
 input[type="text"]:active,
-input[type="password"]:active {
+input[type="password"]:active
+input[type="datetime-local"]:active {
 	border: 1px solid #182859;
 }
 
@@ -317,6 +322,7 @@ button {
 	font-family: var(--default-font);
 	transition-duration: 0.4s;
 	margin: auto;
+	position: relative;
 }
 
 .active,
@@ -1162,7 +1168,7 @@ ul,
 	background-color: green;
 	color: #fefefe;
 	border: 1px solid green;
-	width: 60%;
+	width: 100%;
 	height: 35px;
 	align-content: center;
 	display: block;
@@ -1184,7 +1190,7 @@ ul,
 	color: #fefefe;
 	border: 1px solid var(--color-blue-dark);
 	font-family: var(--default-font);
-	width: 60%;
+	width: 100%;
 	height: 35px;
 	border-radius: 8px;
 	transition-duration: 0.4s;
@@ -1195,14 +1201,30 @@ ul,
 	font-size: 20px;
 }
 
-.submit-button:hover {
+.event-form-container {
+	margin: auto;
+	width: 70%;
+}
+
+.submit-button:hover,.interested-button:hover {
 	background-color: var(--color-blue-light);
 	color: #ffffff;
 	border: 1px solid var(--color-blue-light);
 }
 
-.event-input-description {
-	width: 40%;
+.event-input-description,.event-input-name {
+	width: 100%;
+}
+
+ .collapsible-reaction .reaction-container {
+	position: absolute;
+	top: 2px;
+	right: 14px;
+	text-align: center;
+	font-size: 30px;
+	user-select: none;
+	line-height: 25px;
+	width: auto;
 }
 
 /* Admin Dashboard */
