@@ -21,6 +21,7 @@
 		<br>
 		<div class="chatboard-message-container">
 			<img src="assets\images\Random guy.jpg" class="avatar">
+			<%- include("../partials/reaction") %>
 			<span class="chatboard-message-title"><%= configuration.text.pages.user.chatboardContent.messages[1].topic %></span>
 			<br>
 			<span class="chatboard-message-author"><%= configuration.text.pages.user.chatboardContent.messages[1].username %></span>
@@ -33,24 +34,22 @@
 			<br>
 			<br>
 			<button type="button" class="collapsible"><%= configuration.text.pages.user.chatboardContent.commentsTitleText %></button>
-			<div class="voting-container">
-				<span class="voting-upvote">&#9650;</span><br>
-				<span class="voting-score">1</span><br>
-				<span class="voting-downvote">&#9660;</span>
-			</div>
 			<div class="collapsible-content">
 				<br>
 				<%- include("../partials/add-comment") %>
 				<br><br>
-				<div class="chatboard-comment-container">
-					<img src="assets\images\Random girl.jpg" class="avatar">
-					<br>
-					<span class="chatboard-comment-author"><%= configuration.text.pages.user.chatboardContent.comments[1].username %></span>
-					<br>
-					<span class="chatoard-comment-time"><%= configuration.text.pages.user.chatboardContent.comments[1].datetime %></span>
-					<br><br>
-					<div class="comment-container">
-						<span class="chatboard-comment"><%= configuration.text.pages.user.chatboardContent.comments[1].content %></span>
+				<div style="width:90%; margin:auto">
+					<div class="chatboard-comment-container">
+						<img src="assets\images\Random girl.jpg" class="avatar">
+						<%- include("../partials/reaction") %>
+						<br>
+						<span class="chatboard-comment-author"><%= configuration.text.pages.user.chatboardContent.comments[1].username %></span>
+						<br>
+						<span class="chatoard-comment-time"><%= configuration.text.pages.user.chatboardContent.comments[1].datetime %></span>
+						<br><br>
+						<div class="comment-container">
+							<span class="chatboard-comment"><%= configuration.text.pages.user.chatboardContent.comments[1].content %></span>
+						</div>
 					</div>
 				</div>
 				<br>
