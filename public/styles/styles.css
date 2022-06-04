@@ -818,16 +818,14 @@ ul,
 	line-height: 25px;
 	width: auto;
 }
-<<<<<<< HEAD
 .voting-upvote {
 	color: green;
 	opacity: 0.4;
-=======
+}
 
 .reaction-upvote {
 	color: green;
 	opacity: 0.3;
->>>>>>> e3b849b91a029265c066970cc15e58249e0cd940
 	transition-duration: 0.3s;
 }
 .reaction-downvote {
@@ -841,7 +839,6 @@ ul,
 	text-align: center;
 }
 
-<<<<<<< HEAD
 .voting-upvote:hover,
 .voting-downvote:hover {
 	opacity: 0.7;
@@ -850,8 +847,6 @@ ul,
 .voting-container br {
 	display: block;
 	margin-bottom: 0px;
-=======
-.reaction-upvote:hover,.reaction-downvote:hover {
 	opacity: 0.5;
 }
 
@@ -865,7 +860,6 @@ ul,
 .reaction-star:hover {
 	color: goldenrod;
 	opacity: 0.7;
->>>>>>> e3b849b91a029265c066970cc15e58249e0cd940
 }
 
 /* Add message/comment */
