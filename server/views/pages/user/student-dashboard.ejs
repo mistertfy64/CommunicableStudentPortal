@@ -16,19 +16,19 @@
 			<button class="tablinks" onclick="openDashboard(event, 'Friends')"><%= configuration.text.pages.user.studentDashboard.tabText.friends %></button>
 		</div>
 		<div id="Home" class="tabcontent">
-			<%- include("../../partials/student-dashboard-home") %>
+			<%- include("../../partials/student-dashboard-home",{configuration: configuration, data: data}) %>
 		</div>
 		<div id="Profile" class="tabcontent">
-			<%- include("../../partials/student-dashboard-profile") %>
+			<%- include("../../partials/student-dashboard-profile",{configuration: configuration, data: data}) %>
 		</div>
 		<div id="Security" class="tabcontent">
-			<%- include("../../partials/student-dashboard-security") %>
+			<%- include("../../partials/student-dashboard-security",{configuration: configuration, data: data}) %>
 		</div>
 		<div id="History" class="tabcontent">
-			<%- include("../../partials/student-dashboard-history") %>
+			<%- include("../../partials/student-dashboard-history",{configuration: configuration, data: data}) %>
 		</div>
 		<div id="Friends" class="tabcontent">
-			<%- include("../../partials/student-dashboard-friends") %>
+			<%- include("../../partials/student-dashboard-friends",{configuration: configuration, data: data}) %>
 		</div>
 		  
 		<script>
