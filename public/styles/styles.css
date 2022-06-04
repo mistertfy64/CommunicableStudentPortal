@@ -798,36 +798,49 @@ ul,
 	margin: auto;
 }
 
-.voting-container {
+/* Reaction */
+
+.reaction-container {
 	position: absolute;
 	top: 2px;
-	right: 10px;
+	right: 14px;
 	text-align: center;
 	font-size: 30px;
 	user-select: none;
+	line-height: 25px;
+	width: auto;
 }
-.voting-upvote {
-	color:green;
-	opacity: 0.4;
+
+.reaction-upvote {
+	color: green;
+	opacity: 0.3;
 	transition-duration: 0.3s;
 }
-.voting-downvote {
-	color: var(--color-red-light);
-	opacity: 0.4;
+.reaction-downvote {
+	color: var(--color-negative);
+	opacity: 0.3;
 	transition-duration: 0.3s;
 }
-.voting-score {
+.reaction-score {
 	color: #182859;
 	font-size: 20px;
+	text-align: center;
 }
 
-.voting-upvote:hover,.voting-downvote:hover {
+.reaction-upvote:hover,.reaction-downvote:hover {
+	opacity: 0.5;
+}
+
+.reaction-star {
+	color: #717171;
+	text-align: center;
+	transition-duration: 0.3s;
+	opacity: 0.3;
+}
+
+.reaction-star:hover {
+	color: goldenrod;
 	opacity: 0.7;
-}
-
-.voting-container br {
-	display: block;
-    margin-bottom: 0px;
 }
 
 /* Add message/comment */
@@ -848,6 +861,7 @@ ul,
 
 .message-form-container label {
 	text-align: left;
+	font-size: 15px;
 	font-weight: bold;
 }
 
@@ -879,7 +893,7 @@ ul,
 }
 
 .message-context-input {
-	width: 40%;
+	width: 100%;
 }
 
 .message-comment-container {
@@ -890,7 +904,7 @@ ul,
 	background-color: inherit;
 	border: 2px solid var(--color-blue-dark);
 	border-radius: 8px;
-	width: 95%;
+	width: 100%;
 	display: block;
 	text-align: left;
 	padding: 10px 20px;
@@ -917,7 +931,7 @@ ul,
 }
 
 .comment-context-input {
-	width: 70%;
+	width: 100%;
 	height: 80px;
 }
 
@@ -953,6 +967,7 @@ ul,
 
 .studymaterial-pic {
 	width: 150px;
+	height: 187.5px;
 	border-radius: 8px;
 }
 
@@ -978,10 +993,42 @@ ul,
 	-webkit-box-orient: vertical;
 }
 
+/* Add-studymaterial */
+
+.studymaterial-form-container {
+	width: 70%;
+	margin: auto;
+}
+
+.studymaterial-form-container label {
+	font-size: 15px;
+	text-align: left;
+	font-weight: bold;
+}
+
+.studymaterial-form-container .name-input {
+	width: 100%
+}
+
+.studymaterial-form-container .description-input {
+	width: 100%
+}
+
+.studymaterial-form-container .contents-input {
+	width:100%;
+}
+
+.studymaterial-form-container .files-input {
+	margin: auto;
+	cursor: pointer;
+	font-size: 15px;
+	font-weight: bold;
+}
+
 .add-studymaterial-button {
-	background-color: var(--color-blue-dark);
+	background-color: green;
 	color: #fefefe;
-	border: 1px solid var(--color-blue-dark);
+	border: 1px solid green;
 	width: 100%;
 	height: 35px;
 	border-radius: 8px;
@@ -993,9 +1040,9 @@ ul,
 }
 
 .add-studymaterial-button:hover {
-	background-color: var(--color-blue-light);
+	background-color: yellowgreen;
 	color: #ffffff;
-	border: 1px solid var(--color-blue-light);
+	border: 1px solid yellowgreen;
 }
 
 /* Studymaterial Content */
@@ -1013,12 +1060,13 @@ ul,
 .studymaterial-content-container img {
 	float: left;
 	width: 300px;
+	height:375px;
 	border-radius: 8px;
 	margin-right: 20px;
 }
 
 .studymaterial-content-container hr {
-	width: 73.2%;
+	width: 76%;
 }
 
 .studymaterial-content-detail {

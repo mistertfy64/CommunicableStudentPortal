@@ -4,22 +4,43 @@
 </div>
 <br>
 <form action="?action=createstudymaterial" method="post">
-    <label for="studymaterial-name"><b><%= configuration.text.partials.addStudymaterial.nameInputText %></b></label><br>
-	<input type="text" placeholder="NAME" name="studymaterial-name" required>
-    <br><br>
-    <label for="studymaterial-description"><b><%= configuration.text.partials.addStudymaterial.descriptionInputText %></b></label>
-    <br>
-	<textarea placeholder="DESCRIPTION" name="studymaterial-description" class="message-context-input" required></textarea>
-    <br*2>
-    <label for="studymaterial-contents"><b><%= configuration.text.partials.addStudymaterial.contentsInputText %></b></label>
-    <br>
-    <textarea placeholder="CONTENTS" name="studymaterial-contents" class="message-context-input"></textarea>
-    <br*2>
-    <label for="studymaterial-files"><b>Files</b></label>
-    <input type="file" name="studymaterial-files">
-    <br>
-    <div style="display:flex;justify-content:center;align-items:center;"><br><br><br><br><br>
-        <button type="submit" class="button submit-button" value="submit"><%= configuration.text.partials.addStudymaterial.titleText %></button>
-    </div>
-    <br><br>
+    <div class="studymaterial-form-container">
+        <label for="studymaterial-name"><%= configuration.text.partials.addStudymaterial.nameInputText %></label>
+        <input 
+            type="text" 
+            placeholder="Name" 
+            name="studymaterial-name"
+            class="name-input" 
+            required
+        />
+        <br/>
+        <br>
+        <label for="studymaterial-description"><%= configuration.text.partials.addStudymaterial.descriptionInputText %></label>
+        <textarea
+            placeholder="Description"
+            name="studymaterial-description"
+            class="description-input"
+            required
+        ></textarea>
+        <br/>
+        <br>
+        <label for="studymaterial-contents"><%= configuration.text.partials.addStudymaterial.contentsInputText %></label>
+        <textarea
+            placeholder="Contents"
+            name="studymaterial-contents"
+            class="contents-input"
+            required
+        ></textarea>
+        </br>
+        <br>
+        <label for="studymaterial-files"><%= configuration.text.partials.addStudymaterial.filesInputText %></label>
+        <input type="file"
+            name="studymaterial-files"
+            class="files-input"
+            required
+        />
+
+        <br*2>
+        <button type="submit" class="add-studymaterial-button" value="submit"><%= configuration.text.partials.addStudymaterial.titleText %></button>
+	</div>
 </form>
