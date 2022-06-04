@@ -232,7 +232,8 @@
             "eventBar": {
                 "titleText": "Technology Lecture on June 14th, 2022 (13:00)",
                 "description": "Dear students,there will be an online lecture hosted by Professor Davis about the future of AI. If you are interested, you may join by this link.  Videotelephony service link: https://us02web.zoom.us/",
-                "interestedButton": "Interested"
+                "interestedButton": "Interested",
+                "interestedNum": "4"
             }
         },
         

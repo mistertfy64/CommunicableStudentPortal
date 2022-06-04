@@ -798,9 +798,7 @@ ul,
 	margin: auto;
 }
 
-/* Reaction */
-
-.reaction-container {
+.chatboard-message-container .reaction-container {
 	position: absolute;
 	top: 2px;
 	right: 14px;
@@ -810,6 +808,39 @@ ul,
 	line-height: 25px;
 	width: auto;
 }
+
+.chatboard-comment-container {
+	background-color: inherit;
+	border: 2px solid var(--color-blue-dark);
+	border-radius: 8px;
+	width: 100%;
+	display: block;
+	text-align: left;
+	padding: 10px 20px;
+	align-items: left;
+	position: relative;
+}
+
+.chatboard-comment-author,
+.chatoard-comment-time {
+	font-size: 14px;
+	color: #484848;
+	font-weight: bold;
+}
+
+.chatboard-comment {
+	font-size: 16px;
+	background-color: inherit;
+	padding-left: 88px;
+}
+
+.comment-container {
+	width: 90%;
+	text-align: left;
+	margin: auto;
+}
+
+/* Reaction */
 
 .reaction-upvote {
 	color: green;
@@ -824,7 +855,6 @@ ul,
 .reaction-score {
 	color: #182859;
 	font-size: 20px;
-	text-align: center;
 }
 
 .reaction-upvote:hover,.reaction-downvote:hover {
@@ -898,36 +928,6 @@ ul,
 
 .message-comment-container {
 	border: 2px solid var(--color-blue-dark);
-}
-
-.chatboard-comment-container {
-	background-color: inherit;
-	border: 2px solid var(--color-blue-dark);
-	border-radius: 8px;
-	width: 100%;
-	display: block;
-	text-align: left;
-	padding: 10px 20px;
-	align-items: left;
-}
-
-.chatboard-comment-author,
-.chatoard-comment-time {
-	font-size: 14px;
-	color: #484848;
-	font-weight: bold;
-}
-
-.chatboard-comment {
-	font-size: 16px;
-	background-color: inherit;
-	padding-left: 88px;
-}
-
-.comment-container {
-	width: 90%;
-	text-align: left;
-	margin: auto;
 }
 
 .comment-context-input {
