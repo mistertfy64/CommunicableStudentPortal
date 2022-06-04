@@ -50,6 +50,7 @@ function checkInitialSetUpProgress(){
 require("fs").readdirSync(require("path").join(__dirname, "/server/routes")).forEach((file) => {
     app.use(require("./server/routes/" + file));
 });
+app.use(require("./server/core/operations.js"));
 app.use(require("./server/core/api.js"));
 
 app.listen(configuration.unsafeConfiguration.port, () => {

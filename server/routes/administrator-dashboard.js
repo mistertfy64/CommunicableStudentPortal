@@ -17,6 +17,7 @@ router.get("/administrator-dashboard", async (request, response) => {
 	let currentUser = await User.safeFindUserBySessionToken(sessionToken);
 	if (!currentUser) {
 		response.redirect("/");
+		return;
 	}
 	if (
 		!(
@@ -25,6 +26,7 @@ router.get("/administrator-dashboard", async (request, response) => {
 		)
 	) {
 		response.redirect("/");
+		return;
 	}
 	response.render("pages/administrator/administrator-dashboard", {
 		configuration: configuration.safeConfiguration,
