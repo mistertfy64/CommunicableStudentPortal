@@ -25,6 +25,23 @@ router.post("/operations/:operation", urlencodedParser, async (request, response
     }
 });
 
+async function changeUsernameForSessionToken(sessionToken, newName){
+    if (!newUsername){
+        return false;
+    }
+    if (!/[.*]{3,64}/.test(newUsername)){
+        return false;
+    }
+    let usernameAlreadyExists = await User.safeFindUserByUsername(newUsername);
+    if (usernameAlreadyExists){
+        return false;
+    }
+    let currentUser = await User.safeFindUserBySessionToken(sessionToken);
+    await User.changeUsernameForUserID(currentUser.userID, newUsername);
+    return true;
+}
+
+
 async function changeUsernameForSessionToken(sessionToken, newUsername){
     if (!newUsername){
         return false;

@@ -32,7 +32,7 @@ router.get("/api/users/:userID", async (request, response) => {
 
     if (safe){
         let data = await User.safeFindUserByUserID(request.params.userID)
-        response.status(200).send(data);
+        response.status(200).json(data);
         return;
     } else {
 
