@@ -7,6 +7,10 @@ router.use(cookieParser());
 
 router.get("/student-dashboard", async (request, response) => {
     let data = await User.safeFindUserBySessionToken(request.cookies.sessionToken);
+    if (!data){
+        response.redirect("/");
+        return;
+    }
     response.render("pages/user/student-dashboard", {configuration: configuration.safeConfiguration, data: data}); 
 });
 

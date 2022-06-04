@@ -12,6 +12,7 @@
 
 	/* Colors */
 	--color-red-light: #df0000;
+	--color-red-dark: #700000;
 	--color-green-light: #00df00;
 	--color-blue-light: #4167dc;
 	--color-blue-dark: #182859;
@@ -21,6 +22,7 @@
 	--color-neutral: #555555;
 	--color-positive: var(--color-green-light);
 	--color-negative: var(--color-red-light);
+	--color-dangerous: var(--color-red-dark);
 
 	/* This is the background color to be used for the top navigation bar. */
 	--default-top-navigation-bar-background-color: var(--color-blue-dark);
@@ -123,6 +125,12 @@ hr {
 	width: 100%;
 }
 
+.clearfix {
+	content: "";
+	clear: both;
+	display: table;
+}
+
 .horizontal-center {
 	margin: auto;
 }
@@ -182,9 +190,9 @@ textarea {
 }
 
 hr {
-	width:70%;
-	border: 1px solid #182859 ;
-	color:#182859
+	width: 70%;
+	border: 1px solid #182859;
+	color: #182859;
 }
 
 /* Buttons */
@@ -201,17 +209,17 @@ hr {
 }
 
 .button-color-positive {
-	background-color:var(--color-positive);
+	background-color: var(--color-positive);
 	color: var(--default-text-color);
 }
 
 .button-color-neutral {
-	background-color:var(--color-neutral);
+	background-color: var(--color-neutral);
 	color: var(--default-text-color);
 }
 
 .button-color-negative {
-	background-color:var(--color-negative);
+	background-color: var(--color-negative);
 	color: var(--default-text-color);
 }
 
@@ -452,30 +460,31 @@ button {
 	color: #ffffff;
 	border: 1px solid var(--color-blue-light);
 }
-.username-input,.password-input {
-	width:100%;
-	height:35px;
-	margin:auto;
+.username-input,
+.password-input {
+	width: 100%;
+	height: 35px;
+	margin: auto;
 	text-align: left;
-
 }
 .login-form-container {
 	margin: auto;
-	width:30%;
-	left:50%;
-	right:50%;
+	width: 30%;
+	left: 50%;
+	right: 50%;
 	justify-content: center;
 	align-items: center;
 }
 
 .login-label {
-	text-align:left;
+	text-align: left;
 	font-weight: bold;
 }
 
-.username-container,.password-container {
-	margin:auto;
-	width:100%
+.username-container,
+.password-container {
+	margin: auto;
+	width: 100%;
 }
 
 /* Top Navigation Bar */
@@ -628,7 +637,6 @@ button {
 
 .tab button:hover {
 	background-color: #4167dc;
-	
 }
 
 .tab button.active {
@@ -757,7 +765,7 @@ ul,
 
 .chatboard-menu-list {
 	margin: auto;
-	width:60%;
+	width: 60%;
 	justify-content: center;
 	align-items: center;
 }
@@ -814,6 +822,10 @@ ul,
 	line-height: 25px;
 	width: auto;
 }
+.voting-upvote {
+	color: green;
+	opacity: 0.4;
+}
 
 .chatboard-comment-container {
 	background-color: inherit;
@@ -863,7 +875,14 @@ ul,
 	font-size: 20px;
 }
 
-.reaction-upvote:hover,.reaction-downvote:hover {
+.voting-upvote:hover,
+.voting-downvote:hover {
+	opacity: 0.7;
+}
+
+.voting-container br {
+	display: block;
+	margin-bottom: 0px;
 	opacity: 0.5;
 }
 
@@ -883,8 +902,8 @@ ul,
 
 .message-form-container {
 	margin: auto;
-	width:70%;
-	left:50%;
+	width: 70%;
+	left: 50%;
 	right: 50%;
 	justify-content: center;
 	align-items: center;
@@ -945,7 +964,7 @@ ul,
 
 .studymaterial-menu-list {
 	margin: auto;
-	width:60%;
+	width: 60%;
 	justify-content: center;
 	align-items: center;
 }
@@ -1185,7 +1204,8 @@ ul,
 	border: 1px solid greenyellow;
 }
 
-.submit-button,.interested-button {
+.submit-button,
+.interested-button {
 	background-color: var(--color-blue-dark);
 	color: #fefefe;
 	border: 1px solid var(--color-blue-dark);
@@ -1195,7 +1215,7 @@ ul,
 	border-radius: 8px;
 	transition-duration: 0.4s;
 	cursor: pointer;
-	margin:auto;
+	margin: auto;
 	text-decoration: none;
 	display: block;
 	font-size: 20px;
@@ -1235,9 +1255,21 @@ div.administrator-dashboard-box {
 	border-radius: 3px;
 	padding: 10px;
 	margin: 1vw 1.5vw;
-	overflow: auto;
+	overflow: none;
+	width: max(fit-content, 90%);
 }
 
 .hidden-text {
 	opacity: 0.2;
+}
+
+/* Student Dashboard */
+div.student-dashboard-box {
+	border-color: var(--color-black);
+	border-style: solid;
+	border-radius: 3px;
+	padding: 10px;
+	margin: 1vw 1.5vw;
+	overflow: none;
+	width: max(fit-content, 90%);
 }

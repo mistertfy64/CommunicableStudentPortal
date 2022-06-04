@@ -33,7 +33,13 @@ router.get("/administrator-dashboard", async (request, response) => {
 	});
 });
 
+//TODO: MAKE THIS MORE STABLE
 router.get("/administrator-dashboard/:action", async (request, response) => {
+	let data;
+	if (request.query.userToModify){
+		data = await User.safeFindUserByUserID(request.query.userToModify);
+
+	}	
 	let sessionToken = request.cookies.sessionToken;
 	let currentUser = await User.safeFindUserBySessionToken(sessionToken);
 	if (!currentUser) {
@@ -50,7 +56,7 @@ router.get("/administrator-dashboard/:action", async (request, response) => {
 		return;
 	}
 	response.render(`pages/administrator/${request.params.action}`, {
-		configuration: configuration.safeConfiguration,
+		configuration: configuration.safeConfiguration, data: data
 	});
 });
 
@@ -84,7 +90,6 @@ router.post(
 		};
 
 		console.log(log.addMetadata("Creating users...", "info"));
-		console.log(options)
 
         users.createUsers(options);
 	}
@@ -110,8 +115,9 @@ router.post(
 			return;
 		}
 		//TODO: Add find by username.
-		let user = await User.safeFindUserByUserID(body["user-id-to-find"].toString());
-		console.log(user);
+		
+		let user = await User.safeFindUserByUserID(request.body["user-id-to-find"].toString());
+		response.redirect(`/administrator-dashboard/modify-user?userToModify=${user.userID}`);
 	}
 );
 
