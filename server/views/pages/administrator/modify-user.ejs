@@ -11,7 +11,7 @@
 			<%= configuration.text.pages.administrator.modifyUser.titleText %>
 		</h1>
         <div class="administrator-dashboard-box">
-			<form action="/administrator-dashboard/modify-user" , method="post">
+			<form action="/administrator-dashboard/find-user" , method="post">
 				<div
 					style="
 						flex-direction: row;
@@ -23,9 +23,9 @@
                 <button class="button-color-neutral">Search</button>
 			</div>
 		</div>
-		<% if (data) {
+		<% if (data) { %>
 			<%- include(`../../partials/user-modification-box`, {data: data}) %>
-		} %>
+		<% } %>
 		<footer><%- include("../../partials/footer", {configuration: configuration}); %></footer>
 	</body>
 </html>
