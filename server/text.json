@@ -106,8 +106,7 @@
                         "friends": "Friends"
                     },
                     "homeTab": {
-                        "informationText": "Information",
-                        "": ""
+                        "informationText": "Information"
                     }
                 },
                 "blogContent": {
@@ -194,8 +193,15 @@
                     "titleText": "Study Material Content",
                     "descriptionText": "Study material content pages will show students information of the stdudy material. They can also download the material as well by clicking the download button.",
                     "studymaterialName": "Gray's Anatomy",
+                    "studymaterialDescriptionTitle": "Description",
                     "studymaterialDescription": "Gray's anatomy is a famous medical book due to how it revolutinized the medical industry. It is often cited as the doctors' bible. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam congue purus urna, sed cursus massa tincidunt at. Etiam pellentesque vulputate nisl quis aliquam. Nam magna justo, tincidunt vel augue vel, sodales lacinia odio. Mauris purus neque, sodales et pharetra ac, auctor eget tortor. Nam semper lorem et sollicitudin molestie. Ut purus lacus, eleifend at mauris a, vulputate malesuada dolor. Fusce eget nibh convallis, accumsan urna vitae, fringilla sapien. Ut ullamcorper dapibus rhoncus.",
-                    "contentsText": "Contents"
+                    "studymaterialContentsTitle": "Contents",
+                    "studymaterialContents": {
+                        "1": "Pages 1-20: Index and introduction",
+                        "2": "Pages 21-50: The Skelular System",
+                        "3": "Pages 51-76: The Muscular System"
+                    },
+                    "downloadText": "Download"
                 }
             }
         },
