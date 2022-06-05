@@ -1433,3 +1433,45 @@ div.student-dashboard-box {
 	overflow: none;
 	width: max(fit-content, 90%);
 }
+
+/* Chat */
+div#chat-content-container {
+	display: grid;
+	grid-template-columns: 6.5fr 1fr;
+	grid-template-rows: 7.5fr 2fr;
+	width: 100%;
+	height: 100%;
+	grid-template-areas: 
+    "chat-box list"
+    "message-box send-button";
+}
+
+div#chat-box-container {
+	border-color: var(--color-black);
+	border-style: solid;
+	border-radius: 3px;
+	padding: 10px;
+	margin: 1vw 1.5vw;
+	overflow: auto;
+	width: max(fit-content, 90vw);
+	height: 70vh;
+}
+
+div#chat-items-container {
+	width: 95%;
+	height: 95%;
+}
+
+div#chat-message-box {
+	grid-area: message-box;
+}
+
+button#chat-message-send-button {
+	width: 80%;
+	height: 75%;
+}
+
+button#chat-message-clear-button {
+	width: 80%;
+	height: 20%;
+}

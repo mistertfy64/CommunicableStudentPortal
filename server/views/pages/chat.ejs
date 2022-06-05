@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<%- include("../partials/head") %>
+		<title>CSP</title>
+	</head>
+
+	<body>
+		<header>
+			<%- include("../partials/header", {configuration: configuration});
+			%>
+		</header>
+
+		<div id="chat-box-container">
+			<div id="chat-content-container"style="overflow:none;">
+				<div style="display: flex;flex-direction: column-reverse;overflow:auto;">
+					<div id="chat-message-container"style="overflow:auto;">
+						Welcome to chat!
+					</div>
+				</div>
+				<div id="chat-message-box">
+					<textarea
+						style="width: 95%; height: 95%; text-align: top"
+						type="text"
+						placeholder="Enter message..."
+                        id="message"
+					></textarea>
+				</div>
+				<div>(People container)</div>
+				<div>
+					<button
+						id="chat-message-send-button"
+						class="button-color-positive"
+					>
+						Send Message
+					</button>
+					<button
+						id="chat-message-clear-button"
+						class="button-color-negative"
+					>
+						Clear Message
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<footer>
+			<%- include("../partials/footer", {configuration: configuration});
+			%>
+		</footer>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.0/socket.io.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="scripts/chat.js"></script>
+	</body>
+</html>
