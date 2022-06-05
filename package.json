@@ -21,6 +21,7 @@
     "bcrypt": "^5.0.1",
     "chalk": "4.x",
     "cheerio": "^1.0.0-rc.10",
+    "cookie": "^0.5.0",
     "cookie-parser": "^1.4.6",
     "crypto-js": "^4.1.1",
     "csurf": "^1.11.0",
