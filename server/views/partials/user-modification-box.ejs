@@ -1,15 +1,91 @@
-<div class="administrator-dashboard-box">
-    <form action="/administrator-dashboard/modify-user" , method="post">
-        <div
-            style="
-                flex-direction: row;
-                align-items: center;
-                vertical-align: bottom;
-            "
-        >
-        Currently Modifying user
-        <br>
-        <div style="font-size:48px;"><%= data.username %></div>
-        <div style="font-size:16px;"><%= data.name %> | <%= data.userID %></div>
-    </div>
+<div
+	class="administrator-dashboard-box"
+	style=" grid-template-columns: 1fr 1fr; overflow: auto"
+>
+	<form action="/administrator-dashboard/modify-user" method="post">
+		<div style="grid-row: 1fr">
+			Currently Modifying user
+			<br />
+			<div style="font-size: 48px"><%= data.username %></div>
+			<div style="font-size: 16px">
+				<%= data.name %> | <%= data.userID %>
+			</div>
+		</div>
+		<div style="grid-row:1fr;text-align: right">
+			<div style="display: table; float: right">
+				<div style="display: table-cell" id="name-change-field">
+					<input type="text" name="new-name" placeholder="New Name" />
+				</div>
+				<button
+					type="button"
+					onClick="$('#name-change-field').toggle(0)"
+					class="button-rounded button-color-neutral"
+				>
+					Change Name
+				</button>
+			</div>
+			<br /><br />
+			<div style="display: table; float: right">
+				<div style="display: table-cell" id="username-change-field">
+					<input
+						type="text"
+						name="new-username"
+						placeholder="New Username"
+					/>
+				</div>
+				<button
+					type="button"
+					onClick="$('#username-change-field').toggle(0)"
+					class="button-rounded button-color-neutral"
+				>
+					Change Username
+				</button>
+			</div>
+			<br /><br /><br />
+			<div style="display: table; float: right">
+				<div style="display: table-cell" id="user-id-change-field">
+					<input
+						type="text"
+						name="new-user-id"
+						placeholder="New User ID"
+					/>
+				</div>
+				<button
+					type="button"
+					onClick="$('#user-id-change-field').toggle(0)"
+					class="button-rounded button-color-dangerous"
+				>
+					Change User ID
+				</button>
+			</div>
+			<br /><br />
+			<div style="display: table; float: right">
+				<div style="display: table-cell" id="permissions-change-field">
+					<input type="checkbox" /> Administrator
+					<input type="checkbox" /> Super Administrator
+				</div>
+				<button
+					type="button"
+					onClick="$('#permissions-change-field').toggle(0)"
+					class="button-rounded button-color-dangerous"
+				>
+					Change User Permissions
+				</button>
+			</div>
+			<br /><br /><br /><div>
+                <input type="hidden" name="user-to-modify" value="<%=data.userID.toString()%>">
+            </div>
+			<button type="submit" class="button-rounded button-color-positive">
+				Save Changes</button
+			><br />
+            
+		</div>
+	</form>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script>
+		$("#permissions-change-field").toggle(0);
+		$("#user-id-change-field").toggle(0);
+		$("#username-change-field").toggle(0);
+		$("#name-change-field").toggle(0); // ?????????
+	</script>
 </div>

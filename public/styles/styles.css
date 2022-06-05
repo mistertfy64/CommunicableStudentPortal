@@ -31,7 +31,7 @@
 	/* This is the font size to be used for the top navigation bar. */
 	--default-top-navigation-bar-font-size: 16px;
 
-	--default-text-color: var(--color-white);
+	--default-button-text-color: var(--color-white);
 }
 
 /*
@@ -149,7 +149,7 @@ hr {
 input[type="text"],
 input[type="password"],
 input[type="datetime-local"] {
-	height: 35px;
+	height: 20px;
 	padding: 12px 16px;
 	margin: 0;
 	display: inline-block;
@@ -210,18 +210,24 @@ hr {
 
 .button-color-positive {
 	background-color: var(--color-positive);
-	color: var(--default-text-color);
+	color: var(--default-button-text-color);
 }
 
 .button-color-neutral {
 	background-color: var(--color-neutral);
-	color: var(--default-text-color);
+	color: var(--default-button-text-color);
 }
 
 .button-color-negative {
 	background-color: var(--color-negative);
-	color: var(--default-text-color);
+	color: var(--default-button-text-color);
 }
+
+.button-color-dangerous {
+	background-color: var(--color-dangerous);
+	color: var(--default-button-text-color);
+}
+
 
 button {
 	cursor: pointer;

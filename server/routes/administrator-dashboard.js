@@ -36,10 +36,9 @@ router.get("/administrator-dashboard", async (request, response) => {
 //TODO: MAKE THIS MORE STABLE
 router.get("/administrator-dashboard/:action", async (request, response) => {
 	let data;
-	if (request.query.userToModify){
+	if (request.query.userToModify) {
 		data = await User.safeFindUserByUserID(request.query.userToModify);
-
-	}	
+	}
 	let sessionToken = request.cookies.sessionToken;
 	let currentUser = await User.safeFindUserBySessionToken(sessionToken);
 	if (!currentUser) {
@@ -56,7 +55,8 @@ router.get("/administrator-dashboard/:action", async (request, response) => {
 		return;
 	}
 	response.render(`pages/administrator/${request.params.action}`, {
-		configuration: configuration.safeConfiguration, data: data
+		configuration: configuration.safeConfiguration,
+		data: data,
 	});
 });
 
@@ -91,7 +91,7 @@ router.post(
 
 		console.log(log.addMetadata("Creating users...", "info"));
 
-        users.createUsers(options);
+		users.createUsers(options);
 	}
 );
 
@@ -115,13 +115,68 @@ router.post(
 			return;
 		}
 		//TODO: Add find by username.
-		
-		let user = await User.safeFindUserByUserID(request.body["user-id-to-find"].toString());
-		response.redirect(`/administrator-dashboard/modify-user?userToModify=${user.userID}`);
+
+		let user = await User.safeFindUserByUserID(
+			request.body["user-id-to-find"].toString()
+		);
+		response.redirect(
+			`/administrator-dashboard/modify-user${
+				user?.userID ? `?userToModify=${user.userID}` : ""
+			}`
+		);
 	}
 );
 
+router.post(
+	"/administrator-dashboard/modify-user",
+	urlencodedParser,
+	async (request, response) => {
 
+		let sessionToken = request.cookies.sessionToken;
+		let currentUser = await User.safeFindUserBySessionToken(sessionToken);
+		if (!currentUser) {
+			response.redirect("/");
+			return;
+		}
+		if (
+			!(
+				currentUser.membership.isSuperAdministrator ||
+				currentUser.membership.isAdministrator
+			)
+		) {
+			response.redirect("/");
+			return;
+		}
+
+		
+		let body = request.body;
+		let userToModify = request.body["user-to-modify"];
+
+		body["new-name"] &&
+			(await User.changeNameForUserID(
+				userToModify,
+				body["new-name"].toString()
+			));
+
+		if (await User.safeFindUserByUserID(body["new-username"].toString())) {
+			body["new-username"] &&
+				(await User.changeUsernameForUserID(
+					userToModify,
+					body["new-username"].toString()
+				));
+		}
+
+		if (await User.safeFindUserByUserID(body["new-user-id"].toString())) {
+			body["new-user-id"] &&
+				(await User.changeUserIDForUserID(
+					userToModify,
+					body["new-user-id"].toString()
+				));
+		}
+		response.redirect(request.originalUrl)
+	}
+
+);
 
 router.post(
 	"/administrator-dashboard/view-api-key",
@@ -144,23 +199,19 @@ router.post(
 
 		console.log(log.addMetadata("Creating API key...", "info"));
 
-	
 		let key = crypto.randomBytes(24).toString("hex");
 
 		let apiKey = {
-			apiKey: key
-		}
-
-
+			apiKey: key,
+		};
 
 		await User.createAPIKeyForUserID(currentUser.userID, key);
-	
+
 		response.render(`pages/administrator/view-api-key`, {
 			configuration: configuration.safeConfiguration,
 			apiKey: apiKey,
 		});
 	}
 );
-
 
 module.exports = router;

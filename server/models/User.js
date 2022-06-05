@@ -158,4 +158,36 @@ UserSchema.statics.changeUsernameForUserID = function (userID, newUsername) {
 	);
 };
 
+UserSchema.statics.changeNameForUserID = function (userID, newName) {
+	this.findOneAndUpdate(
+		{ userID: userID },
+		{ $set: { name: newName } },
+		(error, result) => {
+			// error?
+			if (error) {
+				console.error("Unable to change name");
+				console.error(`Error stack: ${error}`);
+			}
+		}
+	);
+};
+
+UserSchema.statics.changeUserIDForUserID = function (userID, newUserID) {
+	// FIXME: This does not check for a user with already existing username. 
+	// Therefore, when calling this, make sure to have some duplicate username checking.
+	this.findOneAndUpdate(
+		{ userID: userID },
+		{ $set: { userID: newUserID } },
+		(error, result) => {
+			// error?
+			if (error) {
+				console.error("Unable to change user ID");
+				console.error(`Error stack: ${error}`);
+			}
+		}
+	);
+};
+
+// =======================================================
+
 module.exports = mongoose.model("User", UserSchema, "users");
