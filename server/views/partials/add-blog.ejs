@@ -1,0 +1,38 @@
+<div class="modal-header">
+    <span class="close">&times;</span>
+    <h2><%= configuration.text.partials.addBlog.titleText %></h2>
+</div>
+<br>
+<form action="?action=createblog" method="post">
+    <div class="blog-form-container">
+        <label for="blog-title"><%= configuration.text.partials.addBlog.titleInputText %></label>
+        <input
+        type="text"
+        placeholder="Title"
+        name="blog-title"
+        class="blog-input-title"
+        required>
+        <br />
+        <br>
+        <label for="blog-content"><%= configuration.text.partials.addBlog.contentInputText %></label>
+        <textarea
+        placeholder="Content"
+        name="blog-content"
+        class="blog-input-content"
+        required></textarea>
+        <br />
+        <br>
+        <div style="text-align:center">
+            <label for="blog-pic"><%= configuration.text.partials.addBlog.picInputText %></label>
+            <input
+            type="file"
+            name="blog-pic"
+            style
+            >
+        </div>
+        <br />
+        <br><br>
+        <button type="submit" class="add-blog-button" value="submit"><%= configuration.text.partials.addBlog.titleText %></button>
+    </div>
+    
+</form>

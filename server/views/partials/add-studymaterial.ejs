@@ -33,12 +33,14 @@
         ></textarea>
         </br>
         <br>
-        <label for="studymaterial-files"><%= configuration.text.partials.addStudymaterial.filesInputText %></label>
-        <input type="file"
-            name="studymaterial-files"
-            class="files-input"
-            required
-        />
+        <div style="text-align:center">
+            <label for="studymaterial-files"><%= configuration.text.partials.addStudymaterial.fileInputText %></label>
+            <input type="file"
+                name="studymaterial-files"
+                class="files-input"
+                required
+            />
+    </div>
 
         <br*2>
         <button type="submit" class="add-studymaterial-button" value="submit"><%= configuration.text.partials.addStudymaterial.titleText %></button>

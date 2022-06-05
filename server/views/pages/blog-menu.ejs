@@ -10,6 +10,11 @@
 			<p><%= configuration.text.pages.user.blogMenu.descriptionText %></p>
 			<br>
 			<div style="margin:auto; width:70%">
+				<button type="button" class="add-blog-button" id="modal-button"><%= configuration.text.pages.user.blogMenu.newblogText %></button>
+				<div id="modal" class="modal">
+					<div class="modal-content"><%- include("../partials/add-blog") %></div>
+				</div>
+				<br>
 				<a href="/blog-content">
 					<div class="blog-menu-container">
 						<img src="assets\images\Random guy 2.jpg" class="avatar">
@@ -23,5 +28,27 @@
 				</a>
 			</div>
 		<footer><%- include("../partials/footer", {configuration: configuration}); %></footer>
+
+		<script>
+			var modal = document.getElementById("modal");
+			
+			var btn = document.getElementById("modal-button");
+			
+			var span = document.getElementsByClassName("close")[0];
+			
+			btn.onclick = function() {
+			  modal.style.display = "block";
+			}
+			
+			span.onclick = function() {
+			  modal.style.display = "none";
+			}
+			
+			window.onclick = function(event) {
+			  if (event.target == modal) {
+				modal.style.display = "none";
+			  }
+			}
+		</script>
 	</body>
 </html>

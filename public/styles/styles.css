@@ -160,17 +160,32 @@ input[type="datetime-local"] {
 	transition-duration: 0.5s;
 }
 
-
-
 input[type="text"]:hover,
 input[type="password"]:hover,
 input[type="datetime-local"]:hover,
 input[type="text"]:active,
-input[type="password"]:active
+input[type="password"]:active,
 input[type="datetime-local"]:active {
 	border: 1px solid #182859;
 }
 
+::-webkit-file-upload-button {
+	background: #182859;
+	color: #fefefe;
+	padding: 2px;
+	border-radius: 8px;
+	border: 2px solid #182859;
+	cursor: pointer;
+	width: 40%;
+	transition-duration: 0.4s;
+  }
+
+  ::-webkit-file-upload-button:hover {
+	background: #4167dc;
+	color: #fefefe;
+	border: 2px solid #4167dc
+  }
+  
 textarea {
 	height: 150px;
 	padding: 12px 16px;
@@ -227,7 +242,6 @@ hr {
 	background-color: var(--color-dangerous);
 	color: var(--default-button-text-color);
 }
-
 
 button {
 	cursor: pointer;
@@ -1298,6 +1312,50 @@ ul,
 .blog-menu-container:hover {
 	color: #fefefe;
 	background-color: #182859;
+}
+
+.add-blog-button {
+	background-color: green;
+	color: #fefefe;
+	border: 1px solid green;
+	width: 100%;
+	height: 35px;
+	align-content: center;
+	display: block;
+	font-size: 20px;
+	font-family: inherit;
+	border-radius: 8px;
+	transition-duration: 0.4s;
+	cursor: pointer;
+}
+
+.add-blog-button:hover {
+	background-color: #00df00;
+	border: 1px solid #00df00;
+}
+
+/* Add Blog */
+
+.blog-form-container {
+	margin: auto;
+	width: 70%;
+}
+
+.blog-form-container label {
+	text-align: left;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.blog-input-title,.blog-input-content{
+	width: 100%;
+}
+
+.blog-form-container .files-input {
+	margin: auto;
+	cursor: pointer;
+	font-size: 15px;
+	font-weight: bold;
 }
 
 /* Blog Content */

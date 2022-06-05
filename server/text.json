@@ -129,7 +129,8 @@
                         "username": "James Doe",
                         "rank": "Teacher",
                         "datetime": "Posted on 7th October, 2022"
-                    }
+                    },
+                    "newblogText": "Add a new blog post"
                 },
                 "announcements": {
                     "titleText": "Announcements",
@@ -240,7 +241,13 @@
                 "nameInputText": "Name",
                 "descriptionInputText": "Description",
                 "contentsInputText": "Contents",
-                "fileInputText": "File(s)"
+                "fileInputText": "File"
+            },
+            "addBlog": {
+                "titleText": "Add a blog post",
+                "titleInputText": "Title",
+                "contentInputText": "Content",
+                "picInputText": "Image (Optional)"
             },
             "eventBar": {
                 "titleText": "Technology Lecture on June 14th, 2022 (13:00)",
