@@ -9,8 +9,18 @@
 			<h1><%= configuration.text.pages.user.blogMenu.titleText %></h1>
 			<p><%= configuration.text.pages.user.blogMenu.descriptionText %></p>
 			<br>
-			<div class="blog-content-container">
-				
+			<div style="margin:auto; width:70%">
+				<a href="/blog-content">
+					<div class="blog-menu-container">
+						<img src="assets\images\Random guy 2.jpg" class="avatar">
+						<%- include("../partials/reaction.ejs") %>
+						<span class="blog-menu-title"><%= configuration.text.pages.user.blogMenu.blog1.title %></span><br>
+						<span class="blog-menu-author"><%= configuration.text.pages.user.blogMenu.blog1.username %></span><br>
+						<span class="blog-menu-rank"><%= configuration.text.pages.user.blogMenu.blog1.rank %></span><br>
+						<span class="blog-menu-datetime"><%= configuration.text.pages.user.blogMenu.blog1.datetime %></span>
+						<br>
+					</div>	
+				</a>
 			</div>
 		<footer><%- include("../partials/footer", {configuration: configuration}); %></footer>
 	</body>
