@@ -5,7 +5,7 @@ const path = require("path");
 const _ = require("lodash");
 const mongoose = require("mongoose");
 const csurf = require('csurf');
-
+const http = require("http");
 
 const configuration = require("./server/configuration.js");
 
@@ -16,6 +16,9 @@ const log = require("./server/core/log.js");
 
 const app = express();
 app.use(express.static("public"))
+const server = http.createServer(app);
+const { Server } = require("socket.io");
+const io = new Server(server);
 
 configuration.initialize();
 require('dotenv').config({path: path.join(__dirname, configuration.unsafeConfiguration.environmentVariablesFileLocation)});
@@ -53,7 +56,17 @@ require("fs").readdirSync(require("path").join(__dirname, "/server/routes")).for
 app.use(require("./server/core/operations.js"));
 app.use(require("./server/core/api.js"));
 
-app.listen(configuration.unsafeConfiguration.port, () => {
+// TODO: Relocate this.
+io.on("connection", (socket) => {
+    socket.on("sendChatMessage", (message) => {
+        io.emit("receiveChatMessage", message);
+    })
+})
+
+
+
+
+server.listen(configuration.unsafeConfiguration.port, () => {
     console.log(log.addMetadata(`App listening on port ${configuration.unsafeConfiguration.port}`, "info"));
     checkInitialSetUpProgress();
 
