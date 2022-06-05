@@ -3,10 +3,10 @@
         <img src="assets\images\Random girl.jpg" class="avatar">
         <%- include("reaction.ejs") %>
         <br>
-        <span class="chatboard-comment-author"><%= configuration.text.partials.comments[1].username %></span>
+        <span class="chatboard-comment-author"><%= configuration.text.partials.comments[1].username %></span><br>
+        <span class="chatboard-comment-author"><%= configuration.text.partials.comments[1].rank %></span><br>
+        <span class="chatoard-comment-time"><%= configuration.text.partials.comments[1].datetime %></span><br>
         <br>
-        <span class="chatoard-comment-time"><%= configuration.text.partials.comments[1].datetime %></span>
-        <br><br>
         <div class="comment-container">
             <span class="chatboard-comment"><%= configuration.text.partials.comments[1].content %></span>
         </div>

@@ -91,6 +91,7 @@
                             "topic": "Anyone know how to solve this problem?",
                             "username": "John Doe",
                             "profile": "Random guy.jpg",
+                            "rank": "Student",
                             "datetime": "Posted on April 19th, 2022 21:57",
                             "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus bibendum orci, eu eleifend risus porttitor sed. Quisque non libero eu mi condimentum vestibulum. Vestibulum gravida tellus in nisl eleifend, sed laoreet lorem convallis. Nulla quis erat leo. Aliquam eu semper diam, ut ullamcorper justo. Morbi aliquet aliquet ipsum condimentum hendrerit. Etiam condimentum, tellus quis aliquet pharetra, ligula ipsum dignissim leo, at placerat urna ex id ante. Nullam tempus scelerisque erat finibus congue. Duis suscipit vulputate sapien, in ultrices elit tempus vitae."
                         }
@@ -110,12 +111,25 @@
                     }
                 },
                 "blogContent": {
-                    "titleText":"Blog Content"
-                
+                    "titleText": "Blog Content",
+                    "description": "The blog content page will show the full blog post.",
+                    "blog1": {
+                        "title": "Studying for exams is hard, here's how you should do it",
+                        "username": "James Doe",
+                        "rank": "Teacher",
+                        "datetime": "Posted on 7th October, 2022",
+                        "description": "In university, tests and exams will become harder and challenging as the semester continues. There will be students who are able to accomplish these tests with sastifactory grades, and there will be some who can't achieve them. This is due to many factors, such as, inefficient studying, memory, or stress."
+                    }
                 },
                 "blogMenu": {
                     "titleText": "Blog Menu",
-                    "descriptionText": "The blog page will show all of the blogs which teachers or authroized seniors posted. Most of the contents of the page will be about self-help, careers, and advices."
+                    "descriptionText": "The blog page will show all of the blogs which teachers or authroized seniors posted. Most of the contents of the page will be about self-help, careers, and advices. There will be moderators to delete innaproprete blogs or comments here.",
+                    "blog1": {
+                        "title": "Studying for exams is hard, here's how you should do it",
+                        "username": "James Doe",
+                        "rank": "Teacher",
+                        "datetime": "Posted on 7th October, 2022"
+                    }
                 },
                 "announcements": {
                     "titleText": "Announcements",
@@ -239,6 +253,7 @@
                 "1": {
                     "username": "Jane Doe",
                     "profile": "Random girl.jpg",
+                    "role": "Teacher",
                     "datetime": "Posted on April 19th, 2022 21:59",
                     "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus bibendum orci, eu eleifend risus porttitor sed. Quisque non libero eu mi condimentum vestibulum. Vestibulum gravida tellus in nisl eleifend, sed laoreet lorem convallis. Nulla quis erat leo. Aliquam eu semper diam, ut ullamcorper justo. Morbi aliquet aliquet ipsum condimentum hendrerit. Etiam condimentum, tellus quis aliquet pharetra, ligula ipsum dignissim leo, at placerat urna ex id ante. Nullam tempus scelerisque erat finibus congue. Duis suscipit vulputate sapien, in ultrices elit tempus vitae."
                 }

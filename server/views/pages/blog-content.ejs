@@ -6,10 +6,22 @@
 	</head>
 	<body>
 		<header><%- include("../partials/header", {configuration: configuration}); %></header>
-		<h1><%= configuration.text.pages.user.blogContent.textTitle %></h1>
+		<h1><%= configuration.text.pages.user.blogContent.titleText %></h1>
+		<p style="text-align:center"><%= configuration.text.pages.user.blogContent.descriptionText %></p>
 		<br>
-		<div class="">
-
+		<div class="blog-content-container">
+			<img src="assets\images\Random guy 2.jpg" class="avatar">
+			<%- include("../partials/reaction.ejs") %>
+			<span class="blog-content-title"><%= configuration.text.pages.user.blogContent.blog1.title %></span><br>
+			<span class="blog-content-author"><%= configuration.text.pages.user.blogContent.blog1.username %></span><br>
+			<span class="blog-content-rank"><%= configuration.text.pages.user.blogContent.blog1.rank %></span><br>
+			<span class="blog-content-datetime"><%= configuration.text.pages.user.blogContent.blog1.datetime %></span>
+			<br />
+			<div style="width:60%; margin:auto">
+				<img src="assets\images\Random event.jpg" class="blog-content-pic">
+			</div>
+			<br>
+			<p class=""><%= configuration.text.pages.user.blogContent.blog1.description %></p>
 		</div>
 		<br>
 		<footer><%- include("../partials/footer", {configuration: configuration}); %></footer>
