@@ -6,24 +6,27 @@
 	</head>
 	<body>
 		<header><%- include("../partials/header", {configuration: configuration}); %></header>
-		<h1></h1>
+		<h1><%= configuration.text.pages.user.studymaterialContent.titleText %></h1>
+		<p style="text-align:center"><%= configuration.text.pages.user.studymaterialContent.descriptionText %></p>
 		<br>
 		<div class="studymaterial-content-container">
 			<img src="assets\images\Random book 1.jpg">
 			<div class="studymaterial-content-detail">
-				<span class="studymaterial-content-name">Gray's Anatomy</span>
+				<span class="studymaterial-content-name"><%= configuration.text.pages.user.studymaterialContent.studymaterialName %></span>
 				<hr>
 				<div class="studymaterial-content-description">
-					Gray's anatomy is a famous medical book due to how it revolutinized the medical industry. It is often cited as the doctors' bible. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam congue purus urna, sed cursus massa tincidunt at. Etiam pellentesque vulputate nisl quis aliquam. Nam magna justo, tincidunt vel augue vel, sodales lacinia odio. Mauris purus neque, sodales et pharetra ac, auctor eget tortor. Nam semper lorem et sollicitudin molestie. Ut purus lacus, eleifend at mauris a, vulputate malesuada dolor. Fusce eget nibh convallis, accumsan urna vitae, fringilla sapien. Ut ullamcorper dapibus rhoncus.
+					<%= configuration.text.pages.user.studymaterialContent.studymaterialDescription %>
 				</div>
 				<br>
-				<span class="studymaterial-content-content">Contents</span>
+				<span class="studymaterial-content-content"><%= configuration.text.pages.user.studymaterialContent.studymaterialContentsTitle %></span>
 				<hr>
-
-				<br><br>
-				<div style="text-align:center;">
-					<button class="download-studymaterial-button">Download</button>
-				<div>
+				<%= configuration.text.pages.user.studymaterialContent.studymaterialContents[1] %><br>
+				<%= configuration.text.pages.user.studymaterialContent.studymaterialContents[2] %><br>
+				<%= configuration.text.pages.user.studymaterialContent.studymaterialContents[3] %>
+				</br><br><br><br><br><br>
+				<div style="width:60%; margin:auto">
+					<button class="download-studymaterial-button"><%= configuration.text.pages.user.studymaterialContent.downloadText %></button>
+				</div>
 			</div>
 		</div>
 		<footer><%- include("../partials/footer", {configuration: configuration}); %></footer>
