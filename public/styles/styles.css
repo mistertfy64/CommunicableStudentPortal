@@ -98,7 +98,9 @@ a:hover {
 }
 
 hr {
-	border: 1px solid var(--color-blue-dark);
+	width: 70%;
+	border: 1px solid #182859;
+	color: #182859;
 }
 
 .button {
@@ -202,12 +204,6 @@ textarea {
 	width: 50px;
 	border-radius: 50%;
 	vertical-align: middle;
-}
-
-hr {
-	width: 70%;
-	border: 1px solid #182859;
-	color: #182859;
 }
 
 /* Buttons */
@@ -552,7 +548,7 @@ button {
 	background-color: #fefefe;
 	color: var(--color-blue-dark);
 	min-width: 160px;
-	box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 	z-index: 1;
 }
 
@@ -1300,7 +1296,7 @@ ul,
 
 .blog-menu-container .reaction-container {
 	position: absolute;
-	top: 0px;
+	top: 0;
 	right: 14px;
 	text-align: center;
 	font-size: 24px;
@@ -1374,7 +1370,7 @@ ul,
 
 .blog-content-container .reaction-container {
 	position: absolute;
-	top: 0px;
+	top: 0;
 	right: 14px;
 	text-align: center;
 	font-size: 30px;
