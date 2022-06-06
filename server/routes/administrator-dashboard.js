@@ -158,7 +158,7 @@ router.post(
 				body["new-name"].toString()
 			));
 
-		if (await User.safeFindUserByUserID(body["new-username"].toString())) {
+		if (!await User.safeFindUserByUserID(body["new-username"].toString())) {
 			body["new-username"] &&
 				(await User.changeUsernameForUserID(
 					userToModify,
@@ -166,7 +166,7 @@ router.post(
 				));
 		}
 
-		if (await User.safeFindUserByUserID(body["new-user-id"].toString())) {
+		if (!await User.safeFindUserByUserID(body["new-user-id"].toString())) {
 			body["new-user-id"] &&
 				(await User.changeUserIDForUserID(
 					userToModify,

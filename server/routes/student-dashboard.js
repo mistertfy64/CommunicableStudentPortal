@@ -11,6 +11,10 @@ router.get("/student-dashboard", async (request, response) => {
         response.redirect("/");
         return;
     }
+    if (data.membership.isSuperAdministrator || data.membership.isAdministrator){
+        response.redirect("/administrator-dashboard");
+        return;
+    }
     response.render("pages/user/student-dashboard", {configuration: configuration.safeConfiguration, data: data}); 
 });
 
