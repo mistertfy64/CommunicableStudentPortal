@@ -11,41 +11,75 @@
 			configuration}); %>
 		</header>
 		<br />
-		<h1><%= configuration.text.pages.administrator.administratorDashboard.titleText %></h1>
+		<h1>
+			<%=
+			configuration.text.pages.administrator.administratorDashboard.titleText
+			%>
+		</h1>
 		<br />
 		<div>
-		<div
-			style="display: flex;flex-wrap: wrap;flex-direction: row;justify-content: center;"
-		>
-			<div class="administrator-dashboard-box">
-				<span style="font-size: large"><%= configuration.text.pages.administrator.administratorDashboard.userManagementTitleText %></span>
-				<br />
-				<div
-					style="
-						display: flex;
-						justify-content: flex-end;
-						align-items: center;	width: min-content;
-					"
-				>
-					<button onclick="location.href='/administrator-dashboard/create-user'" class="button-color-positive button-rounded">
-						<%= configuration.text.pages.administrator.administratorDashboard.createUserText %>
-					</button>
+			<div
+				style="
+					display: flex;
+					flex-wrap: wrap;
+					flex-direction: row;
+					justify-content: center;
+				"
+			>
+				<div class="administrator-dashboard-box">
+					<span style="font-size: large"
+						><%=
+						configuration.text.pages.administrator.administratorDashboard.userManagementTitleText
+						%></span
+					>
 					<br />
-					<button onclick="location.href='/administrator-dashboard/modify-user'" class="button-color-neutral button-rounded">
-						<%= configuration.text.pages.administrator.administratorDashboard.modifyUserText %>
-					</button>
-					<br />
-					<button class="button-color-negative button-rounded">
-						<%= configuration.text.pages.administrator.administratorDashboard.deleteUserText %>
-					</button>
+					<div
+						style="
+							display: flex;
+							justify-content: flex-end;
+							align-items: center;
+							width: min-content;
+						"
+					>
+						<button
+							onclick="location.href='/administrator-dashboard/create-user'"
+							class="button-color-positive button-rounded"
+						>
+							<%=
+							configuration.text.pages.administrator.administratorDashboard.createUserText
+							%>
+						</button>
+						<br />
+						<button
+							onclick="location.href='/administrator-dashboard/modify-user'"
+							class="button-color-neutral button-rounded"
+						>
+							<%=
+							configuration.text.pages.administrator.administratorDashboard.modifyUserText
+							%>
+						</button>
+						<br />
+						<button class="button-color-negative button-rounded">
+							<%=
+							configuration.text.pages.administrator.administratorDashboard.deleteUserText
+							%>
+						</button>
+					</div>
 				</div>
 			</div>
+			<div style="text-align: center">
+				<a href="/administrator-dashboard/api-keys" class="hidden-text"
+					><%=
+					configuration.text.pages.administrator.administratorDashboard.apiKeysText
+					%></a
+				>
+			</div>
 		</div>
-		<a href="/administrator-dashboard/api-keys" style="text-align:center;" class="hidden-text"><%= configuration.text.pages.administrator.administratorDashboard.apiKeysText %></a>
-</div>
-		<br>
-		
-		<footer><%- include("../../partials/footer", {configuration:
-			configuration}); %></footer>
+		<br />
+
+		<footer>
+			<%- include("../../partials/footer", {configuration:
+			configuration}); %>
+		</footer>
 	</body>
 </html>
