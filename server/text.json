@@ -161,27 +161,7 @@
                 },
                 "leaderboard": {
                     "titleText": "Leaderboard",
-                    "descriptionText": "The leaderboard pages will collect students' scores from tests, homework, projects and rank them by order. This will hopefully encourage students to study.",
-                    "leaderboardTable": {
-                        "rankText": "Rank",
-                        "usernameText": "Username",
-                        "scoreText": "Score"
-                    },
-                    "1Place": {
-                        "rankText": "1",
-                        "usernameText": "John Doe",
-                        "scoreText": "Score"
-                    },
-                    "2Place": {
-                        "rankText": "2",
-                        "usernameText": "Jane Doe",
-                        "scoreText": "Score"
-                    },
-                    "3Place": {
-                        "rankText": "3",
-                        "usernameText": "Chad Moore",
-                        "scoreText": "Score"
-                    }
+                    "descriptionText": "The leaderboard pages will collect students' scores from tests, homework, projects and rank them by order. This will hopefully encourage students to study."
                 },
                 "studymaterialMenu": {
                     "titleText": "Study Material Menu",
@@ -264,6 +244,32 @@
                     "datetime": "Posted on April 19th, 2022 21:59",
                     "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus bibendum orci, eu eleifend risus porttitor sed. Quisque non libero eu mi condimentum vestibulum. Vestibulum gravida tellus in nisl eleifend, sed laoreet lorem convallis. Nulla quis erat leo. Aliquam eu semper diam, ut ullamcorper justo. Morbi aliquet aliquet ipsum condimentum hendrerit. Etiam condimentum, tellus quis aliquet pharetra, ligula ipsum dignissim leo, at placerat urna ex id ante. Nullam tempus scelerisque erat finibus congue. Duis suscipit vulputate sapien, in ultrices elit tempus vitae."
                 }
+            },
+            "leaderboardTable": {
+                "rankText": "Rank",
+                "usernameText": "Username",
+                "scoreText": "Score",
+                "1Place": {
+                    "rankText": "1",
+                    "usernameText": "John Doe",
+                    "scoreText": "Score"
+                },
+            
+                "2Place": {
+                    "rankText": "2",
+                    "usernameText": "Jane Doe",
+                    "scoreText": "Score"
+                },
+
+                "3Place": {
+                    "rankText": "3",
+                    "usernameText": "Chad Moore",
+                    "scoreText": "Score"
+                },
+                "year1Text": "Year 1",
+                "year2Text": "Year 2",
+                "year3Text": "Year 3",
+                "year4Text": "Year 4"
             }
         },
         

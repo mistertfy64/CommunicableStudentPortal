@@ -8,6 +8,12 @@
 	<body>
 		<header><%- include("../partials/header", {configuration: configuration}); %></header>
         <h1><%= configuration.text.pages.user.about.titleText %></h1>
+        <div style="width:70%; margin:auto">
+			<ul class="breadcrumb">
+				<li><a href="/">Home</a></li>
+				<li>About</a></li>
+			</ul>
+		</div>
         <p style="text-align:center"><%= configuration.text.pages.user.about.descriptionText %></p>
         <h3><%= configuration.text.pages.user.about.question.Q1 %></h3>
         <p><%= configuration.text.pages.user.about.answer.A1 %></p>

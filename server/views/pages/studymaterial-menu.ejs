@@ -9,8 +9,11 @@
 		<header><%- include("../partials/header", {configuration: configuration}); %></header>
 		<h1>Study Material Menu</h1>
 		<p style="text-align:center"><%= configuration.text.pages.user.chatboardMenu.descriptionText %></p>
-		<br>
 		<div class="studymaterial-menu-list">
+			<ul class="breadcrumb">
+				<li><a href="/">Home</a></li>
+				<li>Study Material Menu</a></li>
+			</ul>
 			<button type="button" class="collapsible">Year 1</button>
 			<div class="collapsible-content">
 				<br>

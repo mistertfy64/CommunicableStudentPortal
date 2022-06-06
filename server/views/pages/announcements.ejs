@@ -6,6 +6,13 @@
 	</head>
 	<body>
 		<header><%- include("../partials/header", {configuration: configuration}); %></header>
+		<div style="width:70%; margin:auto">
+			<ul class="breadcrumb">
+				<li><a href="/">Home</a></li>
+				<li><a href="/chatboard-menu">Chatboard Menu</a></li>
+				<li>Chatboard Content</li>
+			</ul>
+		</div>
 		<h1><%= configuration.text.pages.user.announcements.textTitle %></h1>
 		<p><%= configuration.text.pages.user.announcements.descriptionText %></p>
 		<br>

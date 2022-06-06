@@ -777,6 +777,39 @@ ul,
 	}
 }
 
+/* Breadcrumbs */
+
+ul.breadcrumb {
+	padding: 10px 16px;
+	list-style: none;
+	background-color: #eee;
+	border-radius: 8px;
+	font-family: var(--default-font);
+}
+
+ul.breadcrumb li {
+	display: inline;
+	font-size: 20px;
+	user-select: none;
+}
+
+ul.breadcrumb li+li:before {
+	padding: 8px;
+	color: black;
+	content: "\003E";
+}
+
+ul.breadcrumb li a {
+	color: #0275d8;
+	text-decoration: none;
+	transition-duration:0.4s;
+}
+
+ul.breadcrumb li a:hover {
+	color: #01447e;
+	text-decoration: none;
+}
+
 /* Chatboard Menu */
 
 .chatboard-menu-list {
