@@ -24,12 +24,20 @@
 		<% } %>
 	<% } %>
 
-	<a href='javascript:void(0)' class='icon' onclick='responsiveNav()'>&#9776;</a>
+	<div style="float:right;text-align:right;">
+		<% const reversedTopNavigationBarSections = Object.entries(configuration.topNavigationBarSections).filter(([key, value]) => {return value.position <= -1;}).sort((first, second) => first[1] - second[1]); %>
+		<% for (value of reversedTopNavigationBarSections) { %>
+			<% content = value[1]; %>
+			<%- `<a href=${content.link}>${content.text}</a>` %>
+		<% } %>
+	</div>
+
+	<!-- <a href='javascript:void(0)' class='icon' onclick='responsiveNav()'>&#9776;</a> -->
 </div>
 
 
 
-<script>
+<!-- <script>
 	function responsiveNav() {
 	  var x = document.getElementById("mytop-navigation-bar");
 	  if (x.className === "top-navigation-bar") {
@@ -51,4 +59,4 @@
     	navbar.classList.remove("sticky");
  	 }
 	}
-</script>
+</script> -->

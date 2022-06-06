@@ -8,6 +8,21 @@
             "text": "Home",
             "link": "/",
             "position": 1
+        },
+        "announcements": {
+            "text": "Announcements",
+            "link": "/announcements",
+            "position": 2
+        }, 
+        "what": {
+            "text": "What",
+            "link": "/login",
+            "position": -2
+        },
+        "login": {
+            "text": "Login",
+            "link": "/login",
+            "position": -1
         }
     },
     "maximumNumberOfUsersThatCanBeCreatedEachTime": 100
