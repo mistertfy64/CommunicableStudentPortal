@@ -49,6 +49,7 @@ function checkInitialSetUpProgress() {
 	if (!configuration.safeConfiguration.applicationIsSetUp) {
 		setup.startSetUp(_.cloneDeep(configuration));
 	} else {
+		
 		initialize();
 	}
 }
