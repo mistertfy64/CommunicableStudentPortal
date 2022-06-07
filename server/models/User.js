@@ -15,6 +15,7 @@ const UserSchema = new mongoose.Schema({
 		isAdministrator: Boolean,
 		isNormalUser: Boolean,
 	},
+	statistics: Object,
 	sessionTokensWithExpiryTime: [String],
 	sessionTokens: [String],
 	apiKey: String,
@@ -143,7 +144,7 @@ UserSchema.statics.findUserByAPIKey = function (apiKey) {
 // ===========================================
 
 UserSchema.statics.changeUsernameForUserID = function (userID, newUsername) {
-	// FIXME: This does not check for a user with already existing username. 
+	// FIXME: This does not check for a user with already existing username.
 	// Therefore, when calling this, make sure to have some duplicate username checking.
 	this.findOneAndUpdate(
 		{ userID: userID },
@@ -173,7 +174,7 @@ UserSchema.statics.changeNameForUserID = function (userID, newName) {
 };
 
 UserSchema.statics.changeUserIDForUserID = function (userID, newUserID) {
-	// FIXME: This does not check for a user with already existing username. 
+	// FIXME: This does not check for a user with already existing username.
 	// Therefore, when calling this, make sure to have some duplicate username checking.
 	this.findOneAndUpdate(
 		{ userID: userID },
@@ -189,5 +190,28 @@ UserSchema.statics.changeUserIDForUserID = function (userID, newUserID) {
 };
 
 // =======================================================
+
+UserSchema.statics.changeStatValueForUserID = async function (userID, key, value) {
+	let user = await this.findOne({userID: userID});
+	user.statistics[key] = value;
+	await user.markModified(`statistics`);
+	await user.save();
+};
+
+UserSchema.statics.addStatWithValueForUserID = async function (userID, key, value) {
+	let user = await this.findOne({userID: userID});
+	user.statistics[key] = value;
+	await user.markModified(`statistics`);
+	await user.save();
+};
+
+UserSchema.statics.deleteStatForUserID = async function (userID, key, value) {
+	if (!key) { return; }
+	// FIXME: DANGEROUS
+	let user = await this.findOne({userID: userID});
+	delete user.statistics[key];
+	await user.markModified(`statistics`);
+	await user.save();
+};
 
 module.exports = mongoose.model("User", UserSchema, "users");

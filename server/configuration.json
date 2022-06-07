@@ -14,9 +14,9 @@
             "link": "/announcements",
             "position": 2
         }, 
-        "what": {
-            "text": "What",
-            "link": "/login",
+        "repository": {
+            "text": "GitHub Repository",
+            "link": "https://github.com/mistertfy64/CommunicableStudentPortal",
             "position": -2
         },
         "login": {

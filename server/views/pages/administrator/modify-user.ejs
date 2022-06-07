@@ -26,6 +26,7 @@
 		</div>
 		<% if (data) { %>
 			<%- include(`../../partials/user-modification-box`, {data: data}) %>
+			<%- include(`../../partials/user-statistics-modification-box`, {data: data}) %>
 		<% } %>
 		<footer><%- include("../../partials/footer", {configuration: configuration}); %></footer>
 	</body>
