@@ -5,11 +5,11 @@ An open-source student portal with "social media" capabilities.
 
 This project is created for [Mahidol University International College's Young Tech Creator (myTech) Challenge 2022](https://muic.mahidol.ac.th/eng/muic-young-tech-creator-mytech-challenge-2022/) by mistertfy64, Taweikug09, and Enchantingplayz.
 
-**Currently this project is in its Proof of Concept stage.** Therefore, project is incomplete, and is not recommended for serious/commerical/academic usage (as of 2022-05-13).
+**Currently this project is in its Proof of Concept stage.** Therefore, project is incomplete, and is not recommended for serious/commerical/academic usage (as of 2022-06-08).
 
 ## (Planned) Features
 - Fully customizable. (partially complete, check CSS file for details)
-- Integration with existing student portal software. (planned for later)
+- Integration with existing student portal software. ([partially complete](https://github.com/mistertfy64/CommunicableStudentPortal/wiki/HTTP-API))
 - Leaderboards for various stuff. (planned for later)
 - Interactive setup wizard. (partially complete)
 - Private*!
