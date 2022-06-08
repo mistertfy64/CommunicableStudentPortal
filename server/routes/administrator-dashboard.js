@@ -181,6 +181,7 @@ router.post(
 
 
 
+//FIXME: refactor
 
 router.post(
 	"/administrator-dashboard/view-api-key",
@@ -217,6 +218,7 @@ router.post(
 		});
 	}
 );
+
 router.post("/administrator-dashboard/:action", urlencodedParser, async (request, response) => {
 	let userID = request.body[`user-to-modify-stat-of`];
 	switch (request.params.action){

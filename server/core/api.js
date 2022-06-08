@@ -13,22 +13,10 @@ router.get("/api/users/:userID", async (request, response) => {
 
 	if (!checkIfAPIKeyIsValid(apiKey)) {
 		response.status(400).send("Error 400");
-        return;
-	}
-
-	let userCalling = await User.safeFindUserByAPIKey(apiKey);
-
-	if (!userCalling) {
-		response.status(400).send("Error 400");
 		return;
 	}
 
-	if (
-		!(
-			userCalling.membership.isAdministrator ||
-			userCalling.membership.isSuperAdministrator
-		)
-	) {
+	if (!checkIfUserIsAdministrator(apiKey)) {
 		response.status(400).send("Error 400");
 		return;
 	}
@@ -50,6 +38,31 @@ router.get("/api/users/:userID", async (request, response) => {
 		return;
 	}
 });
+
+async function checkIfUserExists(apiKey) {
+	userCalling = await User.safeFindUserByAPIKey(apiKey);
+	if (!userCalling) {
+		return;
+	}
+	return userCalling;
+}
+
+async function checkIfUserIsAdministrator(apiKey) {
+	let userCalling = await checkIfUserExists(apiKey);
+	if (!userCalling) {
+		return false;
+	}
+
+	if (
+		!(
+			userCalling.membership.isAdministrator ||
+			userCalling.membership.isSuperAdministrator
+		)
+	) {
+		return false;
+	}
+	return true;
+}
 
 function checkIfAPIKeyIsValid(apiKey) {
 	return /[0-9a-f]{48}/g.test(apiKey);
