@@ -106,7 +106,7 @@ UserSchema.statics.createAPIKeyForUserID = function (userID, key) {
 		(error, result) => {
 			// error?
 			if (error) {
-				//TODO: error message
+				console.log(log.addMetadata(error.stack,"error"));
 			}
 		}
 	);

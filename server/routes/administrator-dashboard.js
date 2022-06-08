@@ -178,27 +178,7 @@ router.post(
 
 );
 
-router.post("/administrator-dashboard/:action", urlencodedParser, async (request, response) => {
-	let userID = request.body[`user-to-modify-stat-of`];
-	switch (request.params.action){
-		case "modify-user-stat": {
-			await User.changeStatValueForUserID(userID, request.body[`key-to-modify`], request.body[`value-to-modify-key-with`]);
-			break;
-		}
-		case "add-user-stat": {
-			await User.addStatWithValueForUserID(userID, request.body[`key-to-add`], request.body[`initial-value-for-key`]);
-			break;
-		}
-		case "delete-user-stat": {
-			await User.deleteStatForUserID(userID, request.body[`key-to-delete`], request.body[`value-to-modify-key-with`]);
-			break;
-		}
-		default: {
-			break;
-		}
 
-	}
-});
 
 
 
@@ -237,5 +217,25 @@ router.post(
 		});
 	}
 );
+router.post("/administrator-dashboard/:action", urlencodedParser, async (request, response) => {
+	let userID = request.body[`user-to-modify-stat-of`];
+	switch (request.params.action){
+		case "modify-user-stat": {
+			await User.changeStatValueForUserID(userID, request.body[`key-to-modify`], request.body[`value-to-modify-key-with`]);
+			break;
+		}
+		case "add-user-stat": {
+			await User.addStatWithValueForUserID(userID, request.body[`key-to-add`], request.body[`initial-value-for-key`]);
+			break;
+		}
+		case "delete-user-stat": {
+			await User.deleteStatForUserID(userID, request.body[`key-to-delete`], request.body[`value-to-modify-key-with`]);
+			break;
+		}
+		default: {
+			break;
+		}
 
+	}
+});
 module.exports = router;
