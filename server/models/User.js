@@ -206,7 +206,7 @@ UserSchema.statics.addStatWithValueForUserID = async function (userID, key, valu
 };
 
 UserSchema.statics.deleteStatForUserID = async function (userID, key, value) {
-	if (!key) { return; }
+	if (!key || key == "") { return; }
 	// FIXME: DANGEROUS
 	let user = await this.findOne({userID: userID});
 	delete user.statistics[key];

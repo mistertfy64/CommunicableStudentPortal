@@ -42,6 +42,65 @@ router.get("/api/users/:userID", urlencodedParser, async (request, response) => 
 	}
 });
 
+router.put("/api/users/:userID/statistics/:key", urlencodedParser, async (request, response) => {
+	if (!request.headers["x-api-key"]) {
+		response.status(400).send("Error 400");
+		return;
+	}
+	let apiKey = request.headers["x-api-key"];
+	//FIXME: Consider data validation.
+
+	if (!checkIfAPIKeyIsValid(apiKey)) {
+		response.status(400).send("Error 400");
+		return;
+	}
+
+	if (!checkIfUserIsAdministrator(apiKey)) {
+		response.status(400).send("Error 400");
+		return;
+	}
+
+
+	let newValue = request.body.value;
+
+	// if (!(safetyLevel == 1 || safetyLevel === 0 || safetyLevel === "0")) {
+		// response.status(400).send("Error 400");
+		// return;
+
+	// if (safetyLevel == 1) {
+	// 	let data = await User.safeFindUserByUserID(request.params.userID);
+	// 	response.status(200).json(data);
+	// 	return;
+	// } else {
+	// 	let data = await User.findOne({ userID: userID });
+	// 	response.status(200).json(data);
+	// 	return;
+	// }
+	
+	let data = await User.safeFindUserByUserID(request.params.userID);
+	let key = request.params.key;
+
+	if (!data){
+		response.status(404).send("Error 404");
+	}
+	
+	if (data.statistics[key]){
+		User.changeStatValueForUserID(data.userID, key, newValue);
+		response.status(200).json({"success": true});
+	} else {
+		User.changeStatValueForUserID(data.userID, key, newValue);
+		response.status(201).json({"success": true});
+	}
+
+
+
+
+
+});
+
+
+
+
 async function checkIfUserExists(apiKey) {
 	userCalling = await User.safeFindUserByAPIKey(apiKey);
 	if (!userCalling) {
