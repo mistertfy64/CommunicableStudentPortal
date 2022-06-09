@@ -8,26 +8,26 @@ let urlencodedParser = bodyParser.urlencoded({ extended: true });
 
 router.get("/api/users/:userID", urlencodedParser, async (request, response) => {
 	if (!request.headers["x-api-key"]) {
-		response.status(400).send("Error 400");
+		response.status(400).json({"responseCode":400,"message":"Bad Request"});
 		return;
 	}
 	let apiKey = request.headers["x-api-key"];
 	//FIXME: Consider data validation.
 
 	if (!checkIfAPIKeyIsValid(apiKey)) {
-		response.status(400).send("Error 400");
+		response.status(400).json({"responseCode":400,"message":"Bad Request"});
 		return;
 	}
 
 	if (!checkIfUserIsAdministrator(apiKey)) {
-		response.status(400).send("Error 400");
+		response.status(400).json({"responseCode":400,"message":"Bad Request"});
 		return;
 	}
 
 	let safetyLevel = request.body.safetyLevel;
 
 	if (!(safetyLevel == 1 || safetyLevel === 0 || safetyLevel === "0")) {
-		response.status(400).send("Error 400");
+		response.status(400).json({"responseCode":400,"message":"Bad Request"});
 		return;
 	}
 
@@ -44,44 +44,29 @@ router.get("/api/users/:userID", urlencodedParser, async (request, response) => 
 
 router.put("/api/users/:userID/statistics/:key", urlencodedParser, async (request, response) => {
 	if (!request.headers["x-api-key"]) {
-		response.status(400).send("Error 400");
+		response.status(400).json({"responseCode":400,"message":"Bad Request"});
 		return;
 	}
 	let apiKey = request.headers["x-api-key"];
 	//FIXME: Consider data validation.
 
 	if (!checkIfAPIKeyIsValid(apiKey)) {
-		response.status(400).send("Error 400");
+		response.status(400).json({"responseCode":400,"message":"Bad Request"});
 		return;
 	}
 
 	if (!checkIfUserIsAdministrator(apiKey)) {
-		response.status(400).send("Error 400");
+		response.status(400).json({"responseCode":400,"message":"Bad Request"});
 		return;
 	}
 
 
 	let newValue = request.body.value;
-
-	// if (!(safetyLevel == 1 || safetyLevel === 0 || safetyLevel === "0")) {
-		// response.status(400).send("Error 400");
-		// return;
-
-	// if (safetyLevel == 1) {
-	// 	let data = await User.safeFindUserByUserID(request.params.userID);
-	// 	response.status(200).json(data);
-	// 	return;
-	// } else {
-	// 	let data = await User.findOne({ userID: userID });
-	// 	response.status(200).json(data);
-	// 	return;
-	// }
-	
 	let data = await User.safeFindUserByUserID(request.params.userID);
 	let key = request.params.key;
 
 	if (!data){
-		response.status(404).send("Error 404");
+		response.status(404).json({"responseCode":404,"message":"Not Found"});
 	}
 	
 	if (data.statistics[key]){
