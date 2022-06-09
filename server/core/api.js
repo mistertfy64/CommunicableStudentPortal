@@ -2,8 +2,11 @@ var router = require("express").Router();
 const configuration = require("../configuration.js");
 const url = require("url");
 const User = require("../models/User.js");
+const bodyParser = require("body-parser");
 
-router.get("/api/users/:userID", async (request, response) => {
+let urlencodedParser = bodyParser.urlencoded({ extended: true });
+
+router.get("/api/users/:userID", urlencodedParser, async (request, response) => {
 	if (!request.headers["x-api-key"]) {
 		response.status(400).send("Error 400");
 		return;
@@ -21,14 +24,14 @@ router.get("/api/users/:userID", async (request, response) => {
 		return;
 	}
 
-	let safe = request.query.safe;
+	let safetyLevel = request.body.safetyLevel;
 
-	if (!(safe === "true" || safe === "false")) {
+	if (!(safetyLevel == 1 || safetyLevel === 0 || safetyLevel === "0")) {
 		response.status(400).send("Error 400");
 		return;
 	}
 
-	if (safe === "true") {
+	if (safetyLevel == 1) {
 		let data = await User.safeFindUserByUserID(request.params.userID);
 		response.status(200).json(data);
 		return;
