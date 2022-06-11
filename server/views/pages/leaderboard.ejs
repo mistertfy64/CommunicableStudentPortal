@@ -4,18 +4,26 @@
 		<%- include("../partials/head") %>
 		<title>CSP - Leaderboard</title>
 	</head>
-	
+
 	<body>
-		<header><%- include("../partials/header", {configuration: configuration}); %></header>
+		<header>
+			<%- include("../partials/header", {configuration: configuration});
+			%>
+		</header>
 		<h1><%= configuration.text.pages.user.leaderboard.titleText %></h1>
-		<p style="text-align:center"><%= configuration.text.pages.user.leaderboard.descriptionText %></p>
-		<div style="width:70%; margin:auto">
+		<p style="text-align: center">
+			<%= configuration.text.pages.user.leaderboard.descriptionText %>
+		</p>
+		<div style="width: 70%; margin: auto">
 			<ul class="breadcrumb">
 				<li><a href="/">Home</a></li>
 				<li>Leaderboard</li>
 			</ul>
 		</div>
-		<%- include("../partials/leaderboard-table") %>
-		<footer><%- include("../partials/footer", {configuration: configuration}); %></footer>
+		<%- include("../partials/leaderboard-table", {configuration: configuration}); %> 
+		<footer>
+			<%- include("../partials/footer", {configuration: configuration});
+			%>
+		</footer>
 	</body>
 </html>

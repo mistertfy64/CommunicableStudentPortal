@@ -27,7 +27,6 @@
                 },
                 "modifyUser": {
                     "titleText": "User Modification Tool"
-
                 },
                 "apiKeys": {
                     "titleText": "API Key Modification Tool",
@@ -42,7 +41,7 @@
             "user": {
                 "chatboardMenu": {
                     "titleText": "Chat Board Menu",
-                    "descriptionText" : "This is the chat board menu where links to dedicated chat boards for each subject and grade are listed.",
+                    "descriptionText": "This is the chat board menu where links to dedicated chat boards for each subject and grade are listed.",
                     "yearText": {
                         "year1": "Year 1",
                         "year2": "Year 2",
@@ -233,7 +232,7 @@
                 "titleText": "Technology Lecture on June 14th, 2022 (13:00)",
                 "descriptionText": "Dear students,there will be an online lecture hosted by Professor Davis about the future of AI. If you are interested, you may join by this link.",
                 "interestedText": "Interested",
-                "interestedNum":  "4",
+                "interestedNum": "4",
                 "commentsTitleText": "Comments"
             },
             "comments": {
@@ -254,13 +253,11 @@
                     "usernameText": "John Doe",
                     "scoreText": "Score"
                 },
-            
                 "2Place": {
                     "rankText": "2",
                     "usernameText": "Jane Doe",
                     "scoreText": "Score"
                 },
-
                 "3Place": {
                     "rankText": "3",
                     "usernameText": "Chad Moore",
@@ -272,7 +269,6 @@
                 "year4Text": "Year 4"
             }
         },
-        
         "global": {
             "copyrightText": "CommunicableStudentPortal 0.1.0-alpha (Proof of Concept) by mistertfy64, Taweikung09 and Enchantingplayz"
         }

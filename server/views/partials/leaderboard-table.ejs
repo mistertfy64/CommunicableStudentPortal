@@ -21,157 +21,72 @@
 			<tr>
 				<th>
 					<%=
-					configuration.text.partials.leaderboardTable.1Place.rankText
+					configuration.text.partials.leaderboardTable["1Place"].rankText
 					%>
 				</th>
 				<th>
 					<%=
-					configuration.text.partials.leaderboardTable.1Place.usernameText
+					configuration.text.partials.leaderboardTable["1Place"].usernameText
 					%>
 				</th>
 				<th>
 					<%=
-					configuration.text.partials.leaderboardTable.1Place.scoreText
-					%>
-				</th>
-			</tr>
-			<tr>
-				<th>
-					<%=
-					configuration.text.partials.leaderboardTable.2Place.rankText
-					%>
-				</th>
-				<th>
-					<%=
-					configuration.text.partials.leaderboardTable.2Place.usernameText
-					%>
-				</th>
-				<th>
-					<%=
-					configuration.text.partials.leaderboardTable.2Place.scoreText
+					configuration.text.partials.leaderboardTable["1Place"].scoreText
 					%>
 				</th>
 			</tr>
 			<tr>
 				<th>
 					<%=
-					configuration.text.partials.leaderboardTable.3Place.rankText
+					configuration.text.partials.leaderboardTable["2Place"].rankText
 					%>
 				</th>
 				<th>
 					<%=
-					configuration.text.partials.leaderboardTable.3Place.usernameText
+					configuration.text.partials.leaderboardTable["2Place"].usernameText
 					%>
 				</th>
 				<th>
 					<%=
-					configuration.text.partials.leaderboardTable.3Place.scoreText
+					configuration.text.partials.leaderboardTable["2Place"].scoreText
+					%>
+				</th>
+			</tr>
+			<tr>
+				<th>
+					<%=
+					configuration.text.partials.leaderboardTable["3Place"].rankText
+					%>
+				</th>
+				<th>
+					<%=
+					configuration.text.partials.leaderboardTable["3Place"].usernameText
+					%>
+				</th>
+				<th>
+					<%=
+					configuration.text.partials.leaderboardTable["3Place"].scoreText
 					%>
 				</th>
 			</tr>
 		</table>
 		<br />
 	</div>
-	<!-- <br>
-    <button type="button" class="collapsible"><%= configuration.text.partials.leaderboardTable.year2Text %></button>
-    <div class="collapsible-content">
-        <br>
-        <table id="leaderboard" class="horizontal-center">
-            <tr>
-                <th><%= configuration.text.partials.leaderboardTable.rankText %></th>
-                <th><%= configuration.text.partials.leaderboardTable.usernameText %></th>
-                <th><%= configuration.text.partials.leaderboardTable.scoreText %></th>
-            </tr>
-            <tr>
-                <th><%= configuration.text.partials.leaderboardTable.1Place.rankText %></th>
-                <th><%= configuration.text.partials.leaderboardTable.1Place.usernameText %></th>
-                <th><%= configuration.text.partials.leaderboardTable.1Place.scoreText %></th>
-            </tr>
-            <tr>
-                <th><%= configuration.text.partials.leaderboardTable.2Place.rankText %></th>
-                <th><%= configuration.text.partials.leaderboardTable.2Place.usernameText %></th>
-                <th><%= configuration.text.partials.leaderboardTable.2Place.scoreText %></th>
-            </tr>
-            <tr>
-                <th><%= configuration.text.partials.leaderboardTable.3Place.rankText %></th>
-                <th><%= configuration.text.partials.leaderboardTable.3Place.usernameText %></th>
-                <th><%= configuration.text.partials.leaderboardTable.3Place.scoreText %></th>
-            </tr>
-        </table>
-        <br>
-    </div>
-    <br>
-    <button type="button" class="collapsible"><%= configuration.text.partials.leaderboardTable.year3Text %></button>
-    <div class="collapsible-content">
-        <br>
-        <table id="leaderboard" class="horizontal-center">
-            <tr>
-                <th><%= configuration.text.partials.leaderboardTable.rankText %></th>
-                <th><%= configuration.text.partials.leaderboardTable.usernameText %></th>
-                <th><%= configuration.text.partials.leaderboardTable.scoreText %></th>
-            </tr>
-            <tr>
-                <th><%= configuration.text.partials.leaderboardTable.1Place.rankText %></th>
-                <th><%= configuration.text.partials.leaderboardTable.1Place.usernameText %></th>
-                <th><%= configuration.text.partials.leaderboardTable.1Place.scoreText %></th>
-            </tr>
-            <tr>
-                <th><%= configuration.text.partials.leaderboardTable.2Place.rankText %></th>
-                <th><%= configuration.text.partials.leaderboardTable.2Place.usernameText %></th>
-                <th><%= configuration.text.partials.leaderboardTable.2Place.scoreText %></th>
-            </tr>
-            <tr>
-                <th><%= configuration.text.partials.leaderboardTable.3Place.rankText %></th>
-                <th><%= configuration.text.partials.leaderboardTable.3Place.usernameText %></th>
-                <th><%= configuration.text.partials.leaderboardTable.3Place.scoreText %></th>
-            </tr>
-        </table>
-        <br>
-    </div>
-    <br>
-    <button type="button" class="collapsible"><%= configuration.text.partials.leaderboardTable.year4Text %></button>
-    <div class="collapsible-content">
-        <br>
-        <table id="leaderboard" class="horizontal-center">
-            <tr>
-                <th><%= configuration.text.partials.leaderboardTable.rankText %></th>
-                <th><%= configuration.text.partials.leaderboardTable.usernameText %></th>
-                <th><%= configuration.text.partials.leaderboardTable.scoreText %></th>
-            </tr>
-            <tr>
-                <th><%= configuration.text.partials.leaderboardTable.1Place.rankText %></th>
-                <th><%= configuration.text.partials.leaderboardTable.1Place.usernameText %></th>
-                <th><%= configuration.text.partials.leaderboardTable.1Place.scoreText %></th>
-            </tr>
-            <tr>
-                <th><%= configuration.text.partials.leaderboardTable.2Place.rankText %></th>
-                <th><%= configuration.text.partials.leaderboardTable.2Place.usernameText %></th>
-                <th><%= configuration.text.partials.leaderboardTable.2Place.scoreText %></th>
-            </tr>
-            <tr>
-                <th><%= configuration.text.partials.leaderboardTable.3Place.rankText %></th>
-                <th><%= configuration.text.partials.leaderboardTable.3Place.usernameText %></th>
-                <th><%= configuration.text.partials.leaderboardTable.3Place.scoreText %></th>
-            </tr>
-        </table>
-        <br>
-    </div> -->
-	<div>
-		<script>
-			var coll = document.getElementsByClassName("collapsible");
-			var i;
-
-			for (i = 0; i < coll.length; i++) {
-				coll[i].addEventListener("click", function () {
-					this.classList.toggle("active");
-					var content = this.nextElementSibling;
-					if (content.style.maxHeight) {
-						content.style.maxHeight = null;
-					} else {
-						content.style.maxHeight = content.scrollHeight + "px";
-					}
-				});
-			}
-		</script>
-	</div>
 </div>
+
+<script>
+	var coll = document.getElementsByClassName("collapsible");
+	var i;
+
+	for (i = 0; i < coll.length; i++) {
+		coll[i].addEventListener("click", function () {
+			this.classList.toggle("active");
+			var content = this.nextElementSibling;
+			if (content.style.maxHeight) {
+				content.style.maxHeight = null;
+			} else {
+				content.style.maxHeight = content.scrollHeight + "px";
+			}
+		});
+	}
+</script>
