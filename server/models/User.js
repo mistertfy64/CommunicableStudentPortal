@@ -2,6 +2,8 @@ const mongoose = require("mongoose");
 const _ = require("lodash");
 const { SHA3 } = require("sha3");
 const log = require("../core/log.js");
+const bcrypt = require("bcrypt");
+
 
 const UserSchema = new mongoose.Schema({
 	name: String,
@@ -212,6 +214,13 @@ UserSchema.statics.deleteStatForUserID = async function (userID, key, value) {
 	delete user.statistics[key];
 	await user.markModified(`statistics`);
 	await user.save();
+};
+
+// =============================================================================
+UserSchema.statics.changePasswordForUserID = async function (userID, newPlaintextPassword) {
+	// FIXME: DANGEROUS, does not validate password.
+	let hashedPassword = await bcrypt.hash(newPlaintextPassword, 12);
+	await this.findOneAndUpdate({userID: userID}, {$set: {password: hashedPassword}});
 };
 
 module.exports = mongoose.model("User", UserSchema, "users");

@@ -1,1 +1,43 @@
 <h3><%= configuration.text.pages.user.studentDashboard.tabText.security %></h3>
+<div style="display: flex; flex-direction: column; width: 95%; left: 2.5%">
+	<!-- TODO: Convert everything into text.json -->
+	<div class="student-dashboard-box clearfix">
+		<div style="font-size: 24px">Password</div>
+		<div style="text-align: right">
+			<button
+				class="button-rounded button-color-neutral"
+				onClick="showChangePasswordInputField()"
+			>
+				Change Password
+			</button>
+			<form action="/operations/changePassword" method="POST">
+				<div id="change-password-input-field" style="display: none">
+					<input
+						type="password"
+						name="current-password"
+						placeholder="Current Password"
+					/>
+
+					<input
+						type="password"
+						name="new-password"
+						placeholder="New Password"
+					/>
+
+					<button
+						class="button-color-positive button-color-neutral"
+						type="submit"
+					>
+						Set New Password</button
+					><br />
+				</div>
+			</form>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script>
+		function showChangePasswordInputField() {
+			$("#change-password-input-field").show(0);
+		}
+	</script>
+</div>
