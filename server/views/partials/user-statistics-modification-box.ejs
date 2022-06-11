@@ -17,9 +17,10 @@
 			<div>
 				Change
 				<select name="key-to-modify" id="key-to-modify">
+					<% if (data.statistics) { %>
 					<% Object.keys(data.statistics).forEach((key) => { %>
 					<option value=<%=key%>><%=key%></option>
-					<% }); %></select
+					<% });} %></select
 				>'s value to <input type="text" name="value-to-modify-key-with"/><button
 					style="float: right"
 					formmethod="post"

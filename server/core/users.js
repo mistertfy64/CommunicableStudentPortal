@@ -6,11 +6,16 @@ const fs = require("fs");
 const log = require("./log.js");
 
 async function createUsers(options) {
+
+	console.log(options);
+	
 	let amount = options.amount;
 	let usernameType = options.usernameType;
 	let userIDType = options.userIDType;
 	let startingUsername = options.startingUsername;
 	let startingUserID = options.startingUserID;
+
+	console.log(options.startingUsername);
 
 	let createdUsers = {};
 	let usersWithWantedUserIDs;
@@ -30,26 +35,38 @@ async function createUsers(options) {
 		});
 	}
 
-	if (usersWithWantedUsernames || usersWithWantedUserIDs) {
+	if (usersWithWantedUsernames?.length > 0 || usersWithWantedUserIDs?.length > 0) {
 		return;
 	}
 
 	for (let i = 0; i < amount; i++) {
-		console.log(log.addMetadata(`Creating user ${i + 1} of ${amount}`, "info"));
+		console.log(
+			log.addMetadata(`Creating user ${i + 1} of ${amount}`, "info")
+		);
 
 		let username = "";
 		let userID = "";
 
 		if (usernameType === "ascending") {
-			username = (startingUsername + i).toString();
+			username = (parseInt(startingUsername) + i).toString();
+			console.log(username);
 		} else {
 			username = crypto.randomBytes(12).toString("base64");
+			let userWithUsername = await User.safeFindUserByUsername(username);
+			while (userWithUsername || username.indexOf("+") > -1 || username.indexOf("/") > -1 || username.indexOf("=") > -1) {
+				username = crypto.randomBytes(12).toString("base64");
+			}
 		}
 
 		if (userIDType === "ascending") {
-			userID = (startingUserID + i).toString();
+			userID = (parseInt(startingUserID) + i).toString();
+			console.log(userID);
 		} else {
 			userID = crypto.randomBytes(12).toString("base64");
+			let userWithUserID = await User.safeFindUserByUserID(userID);
+			while (userWithUserID || userID.indexOf("+") > -1 || userID.indexOf("/") > -1 || userID.indexOf("=") > -1) {
+				userID = crypto.randomBytes(12).toString("base64");
+			}
 		}
 
 		let password = crypto.randomBytes(16).toString("base64");

@@ -92,6 +92,7 @@ router.post(
 		console.log(log.addMetadata("Creating users...", "info"));
 
 		users.createUsers(options);
+		response.redirect("/administrator-dashboard/create-user");
 	}
 );
 

@@ -202,6 +202,9 @@ UserSchema.statics.changeStatValueForUserID = async function (userID, key, value
 
 UserSchema.statics.addStatWithValueForUserID = async function (userID, key, value) {
 	let user = await this.findOne({userID: userID});
+	if (!user.statistics){
+		user.statistics = {};
+	}
 	user.statistics[key] = value;
 	await user.markModified(`statistics`);
 	await user.save();
