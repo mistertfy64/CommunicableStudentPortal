@@ -8,6 +8,14 @@ const bcrypt = require("bcrypt");
 var User = require("./models/User.js");
 
 async function startSetUp(configuration) {
+	
+	// remove text from configuration
+	delete configuration.text;
+	
+	// let initialConfiguration = JSON.parse(fs.readFileSync(path.join("./server", "/configuration.json")));
+	
+
+
 	let itemsToSetUp = "";
 
 	console.log(chalk.white("Welcome to CommunicableStudentPortal!"));
@@ -91,9 +99,14 @@ async function startSetUp(configuration) {
 	configuration.environmentVariablesFileLocation = "credentials.env";
 	configuration.applicationIsSetUp = true;
 
+	delete configuration.safeConfiguration;
+	delete configuration.unsafeConfiguration;
+
+
 	// save settings
 	fs.writeFileSync(
 		path.join("./server", "/configuration.json"),
+		
 		JSON.stringify(configuration, null, 4)
 	);
 
@@ -202,6 +215,12 @@ async function startTopNavigationBarSectionSetup(configuration) {
 
 async function createDefaultSuperAdministratorAccount() {
 	
+	if (User.safeFindUserByUserID("sysop")){
+		console.warn(chalk.yellowBright("A super administrator account already exists. Skipping..."));
+		return;
+	}
+
+
 	let password;
 	let hashedPassword;
 
@@ -216,16 +235,6 @@ async function createDefaultSuperAdministratorAccount() {
 		.then((answers) => {
 			password = answers.defaultPassword;
 		});
-
-		// await bcrypt.genSalt(12, async (error, salt) => {
-		// 	await bcrypt.hash(
-		// 		password,
-		// 		salt,
-		// 		async function (error, hash) {
-		// 			hashedPassword = hash;
-		// 		}
-		// 	);
-		// });
 
 		let salt = bcrypt.genSaltSync(12);
 		hashedPassword = bcrypt.hashSync(password, salt)

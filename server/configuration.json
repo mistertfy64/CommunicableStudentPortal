@@ -1,6 +1,6 @@
 {
     "applicationIsSetUp": true,
-    "environmentVariablesFileLocation": "./server/credentials.env",
+    "environmentVariablesFileLocation": "credentials.env",
     "port": "22222",
     "name": "hi",
     "topNavigationBarSections": {
@@ -13,7 +13,7 @@
             "text": "Announcements",
             "link": "/announcements",
             "position": 2
-        }, 
+        },
         "repository": {
             "text": "GitHub Repository",
             "link": "https://github.com/mistertfy64/CommunicableStudentPortal",
@@ -26,5 +26,4 @@
         }
     },
     "maximumNumberOfUsersThatCanBeCreatedEachTime": 100
-    
 }

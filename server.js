@@ -47,7 +47,7 @@ mongoose.connection.on("connected", () => {
 
 function checkInitialSetUpProgress() {
 	if (!configuration.safeConfiguration.applicationIsSetUp) {
-		setup.startSetUp(_.cloneDeep(configuration));
+		setup.startSetUp(_.cloneDeep(configuration.unsafeConfiguration));
 	} else {
 		
 		initialize();

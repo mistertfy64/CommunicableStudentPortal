@@ -222,5 +222,5 @@ UserSchema.statics.changePasswordForUserID = async function (userID, newPlaintex
 	let hashedPassword = await bcrypt.hash(newPlaintextPassword, 12);
 	await this.findOneAndUpdate({userID: userID}, {$set: {password: hashedPassword}});
 };
-
+// =============================================================================
 module.exports = mongoose.model("User", UserSchema, "users");
