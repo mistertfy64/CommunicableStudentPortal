@@ -22,9 +22,10 @@ const { Server } = require("socket.io");
 const io = new Server(server);
 
 configuration.initialize();
+
 require("dotenv").config({
 	path: path.join(
-		__dirname,
+		__dirname, "server",
 		configuration.unsafeConfiguration.environmentVariablesFileLocation
 	),
 });
@@ -49,7 +50,6 @@ function checkInitialSetUpProgress() {
 	if (!configuration.safeConfiguration.applicationIsSetUp) {
 		setup.startSetUp(_.cloneDeep(configuration.unsafeConfiguration));
 	} else {
-		
 		initialize();
 	}
 }
