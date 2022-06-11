@@ -14,13 +14,13 @@
 		<p style="text-align: center">
 			<%= configuration.text.pages.user.leaderboard.descriptionText %>
 		</p>
-		<div style="width: 70%; margin: auto">
+		<!-- <div style="width: 70%; margin: auto">
 			<ul class="breadcrumb">
 				<li><a href="/">Home</a></li>
 				<li>Leaderboard</li>
 			</ul>
-		</div>
-		<%- include("../partials/leaderboard-table", {configuration: configuration}); %> 
+		</div> -->
+		<%- include("../partials/leaderboard-table", {configuration: configuration, data: data, stat: stat}); %> 
 		<footer>
 			<%- include("../partials/footer", {configuration: configuration});
 			%>

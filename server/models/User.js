@@ -223,4 +223,15 @@ UserSchema.statics.changePasswordForUserID = async function (userID, newPlaintex
 	await this.findOneAndUpdate({userID: userID}, {$set: {password: hashedPassword}});
 };
 // =============================================================================
+
+UserSchema.statics.getStatValueForLeaderboards = async function (stat) {
+	// await this.findOneAndUpdate({userID: userID}, {$set: {password: hashedPassword}});
+	let data = await this.find({[`statistics.${stat}`]: {$ne: null}}).select({
+		sessionTokens: 0,
+		sessionTokensWithExpiryTime: 0,
+		password: 0,
+		apiKey: 0,
+	});
+	return data;
+};
 module.exports = mongoose.model("User", UserSchema, "users");
