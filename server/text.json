@@ -111,7 +111,7 @@
                 },
                 "blogContent": {
                     "titleText": "Blog Content",
-                    "description": "The blog content page will show the full blog post.",
+                    "descriptionText": "The blog content page will show the full blog post.",
                     "blog1": {
                         "title": "Studying for exams is hard, here's how you should do it",
                         "username": "James Doe",
