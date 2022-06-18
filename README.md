@@ -10,7 +10,7 @@ This project is created for [Mahidol University International College's Young Te
 ## (Planned) Features
 - Fully customizable. (partially complete, check CSS file for details)
 - Integration with existing student portal software. ([partially complete](https://github.com/mistertfy64/CommunicableStudentPortal/wiki/HTTP-API))
-- Leaderboards for various stuff. (planned for later)
+- Leaderboards for various stuff. (partially complete)
 - Interactive setup wizard. (partially complete)
 - Private*!
 - Completely free to use and maintain**! ([pls donate to mistertfy64](https://www.patreon.com/mistertfy64))
@@ -21,6 +21,7 @@ This project is created for [Mahidol University International College's Young Te
 
 
 ## Setting Up
+
 ### Part 1: Downloading the Source Code
 
 (Note: If you plan on using this seriously, please fork the repository on GitHub first.)
@@ -44,7 +45,7 @@ npm install
 
 ### Part 2: Setting Up CommunicableStudentPortal
 
-Copy all the files in the `defaults` folder to the root directory.
+Copy all the files in the `defaults` folder to the `server` folder.
 
 (Note: You don't have to do this, however, it is highly recommended that you do. The reason is that not copying this file will use the developers' configuration file. Moreover, CommunicableStudentPortal requires a `.env` file to properly run and connect to the database.)
 
