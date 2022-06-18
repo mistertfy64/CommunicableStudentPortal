@@ -3,7 +3,7 @@ An open-source student portal with "social media" capabilities.
 
 [![CodeFactor](https://www.codefactor.io/repository/github/mistertfy64/communicablestudentportal/badge)](https://www.codefactor.io/repository/github/mistertfy64/communicablestudentportal)
 
-This project is created for [Mahidol University International College's Young Tech Creator (myTech) Challenge 2022](https://muic.mahidol.ac.th/eng/muic-young-tech-creator-mytech-challenge-2022/) by mistertfy64, Taweikug09, and Enchantingplayz.
+This project is created for [Mahidol University International College's Young Tech Creator (myTech) Challenge 2022](https://muic.mahidol.ac.th/eng/muic-young-tech-creator-mytech-challenge-2022/) by mistertfy64, Taweikung09, and Enchantingplayz.
 
 **Currently this project is in its Proof of Concept stage.** Therefore, project is incomplete, and is not recommended for serious/commerical/academic usage (as of 2022-06-08).
 
@@ -19,8 +19,11 @@ This project is created for [Mahidol University International College's Young Te
 
 \*\*CommunicableStudentPortal is free to download, use, and maintain. However, maintaining may require costs from your server provider (but not from the creators). Check your server provider for details.
 
-
 ## Setting Up
+
+### Part 0: Before Downloading the Source Code
+
+Get a [MongoDB](https://www.mongodb.com/) cluster, then create a database.
 
 ### Part 1: Downloading the Source Code
 
