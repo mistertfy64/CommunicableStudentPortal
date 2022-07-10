@@ -1,3 +1,5 @@
+# DEVELOPMENT HAS CAME TO A HALT UNTIL FURTHER NOTICE.
+
 # CommunicableStudentPortal
 An open-source student portal with "social media" capabilities.
 
